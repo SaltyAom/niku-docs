@@ -40,7 +40,7 @@ const DocumentationLayout: DocumentationLayoutComponent = ({
                 className={tw`fixed z-50 flex flex-row justify-center items-center w-full h-[64px] bg-system dark:bg-system-dark`}
             >
                 <div
-                    className={tw`flex flex-row items-center w-full max-w-[1120px] px-6`}
+                    className={tw`flex flex-row items-center w-full max-w-[1120px] pr-6 lg:px-6`}
                 >
                     <button
                         className={tw`block lg:hidden appearance-none text-gray-400 border-0 bg-transparent cursor-pointer`}
@@ -76,10 +76,10 @@ const DocumentationLayout: DocumentationLayoutComponent = ({
                 </div>
             </nav>
             <main
-                className={tw`flex flex-row w-full max-w-[1120px] mx-auto px-6 pt-[76px] pb-6`}
+                className={tw`flex flex-row w-full max-w-[1120px] mx-auto px-0 sm:px-6 pt-[76px] pb-6`}
             >
                 <aside
-                    className={tw`hidden lg:block relative lg:w-[180px]`}
+                    className={tw`hidden pl-6 lg:pl-0 lg:block relative lg:w-[180px]`}
                     key={showNavbar ? 1 : 0}
                     style={{
                         display: showNavbar ? 'block' : ''
