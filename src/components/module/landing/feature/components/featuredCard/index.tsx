@@ -4,7 +4,7 @@ import { FeaturedCardComponent } from './types'
 
 const FeaturedCard: FeaturedCardComponent = ({ title, icon: Icon }) => (
     <div className={tw`aspect-w-1 aspect-h-1`}>
-        <article className={tw`flex flex-col justify-center items-center p-4 bg-gray-50 rounded-lg`}>
+        <article className={tw`flex flex-col justify-center items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg`}>
             <Icon className={tw`mt-3`} style={{
                 stroke: '#007aff',
                 width: 48,

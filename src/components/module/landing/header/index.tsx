@@ -9,9 +9,9 @@ const LandingHeader = () => (
         className={tw`flex flex-row justify-between items-center w-full max-w-[868px] max-h-[826px] h-[100vh] mx-auto px-12 md:px-6`}
     >
         <section className={tw`flex flex-col justify-center`}>
-            <h1 className={tw`m-0 text-7xl font-normal`}>Niku</h1>
+            <h1 className={tw`m-0 text-7xl font-normal text-gray-900 dark:text-gray-100`}>Niku</h1>
             <p
-                className={tw`text-2xl text-gray-500 font-light max-w-sm m-0 mt-4`}
+                className={tw`text-2xl text-gray-500 dark:text-gray-400 font-light max-w-sm m-0 mt-4`}
             >
                 Effortless property builder for composing maintainable Flutter
                 UI

@@ -37,7 +37,7 @@ const DocumentationLayout: DocumentationLayoutComponent = ({
                 <title>{chapter.current} - Niku</title>
             </Head>
             <nav
-                className={tw`fixed z-50 flex flex-row justify-center items-center w-full h-[64px] bg-white`}
+                className={tw`fixed z-50 flex flex-row justify-center items-center w-full h-[64px] bg-system dark:bg-system-dark`}
             >
                 <div
                     className={tw`flex flex-row items-center w-full max-w-[1120px] px-6`}
@@ -57,7 +57,7 @@ const DocumentationLayout: DocumentationLayoutComponent = ({
                         <a
                             role="heading"
                             aria-level={1}
-                            className={tw`text-2xl text-gray-800 font-medium m-0 no-underline`}
+                            className={tw`text-2xl text-gray-800 dark:text-gray-100 font-medium m-0 no-underline`}
                         >
                             Niku
                         </a>
@@ -86,7 +86,7 @@ const DocumentationLayout: DocumentationLayoutComponent = ({
                     }}
                 >
                     <div
-                        className={tw`fixed z-40 top-[64px] bottom-0 flex flex-col w-full lg:w-[200px] transform -translate-x-3 overflow-y-scroll pl-3 bg-white`}
+                        className={tw`fixed z-40 top-[64px] bottom-0 flex flex-col w-full lg:w-[200px] transform -translate-x-3 overflow-y-scroll pl-3 bg-system dark:bg-system-dark`}
                         style={{
                             padding: 76 - 64 + 'px'
                         }}
@@ -95,7 +95,7 @@ const DocumentationLayout: DocumentationLayoutComponent = ({
                             <>
                                 <h1
                                     key={navigation.heading}
-                                    className={tw`text-md lg:text-sm text-gray-600 font-light mt-0 mb-2`}
+                                    className={tw`text-md lg:text-sm text-gray-600 dark:text-gray-500 font-light mt-0 mb-2`}
                                 >
                                     {navigation.heading}
                                 </h1>
@@ -117,9 +117,9 @@ const DocumentationLayout: DocumentationLayoutComponent = ({
                                             >
                                                 <a
                                                     className={tw(
-                                                        `text-md w-full px-3 py-2 mb-1 text-gray-400 no-underline rounded hover:text-blue-400 ${
+                                                        `text-md w-full px-3 py-2 mb-1 text-gray-400 dark:text-gray-300 no-underline rounded hover:text-blue-400 dark:hover:text-blue-500 ${
                                                             isActive
-                                                                ? 'bg-blue-50 text-blue-400'
+                                                                ? 'bg-blue-50 dark:bg-blue-700 text-blue-400 dark:text-white dark:hover:text-white'
                                                                 : ''
                                                         }`
                                                     )}
@@ -193,7 +193,7 @@ const DocumentationLayout: DocumentationLayoutComponent = ({
                             className={tw`fixed top-[76px] bottom-0 list-none flex flex-col w-[220px] overflow-y-scroll mt-0 pl-4`}
                         >
                             <h3
-                                className={tw`text-md font-light text-gray-500 px-2 m-0 mb-4`}
+                                className={tw`text-md font-light text-gray-500 dark:text-gray-300 px-2 m-0 mb-4`}
                             >
                                 Contents
                             </h3>
@@ -201,7 +201,7 @@ const DocumentationLayout: DocumentationLayoutComponent = ({
                             {contents.map((content) => (
                                 <li className={tw`p-2 mb-1`}>
                                     <a
-                                        className={tw`no-underline text-md text-gray-400 font-light hover:text-blue-400`}
+                                        className={tw`no-underline text-md text-gray-400 dark:text-gray-200 font-light hover:text-blue-400`}
                                         href={`#${transformTitleToId(content)}`}
                                     >
                                         {content}

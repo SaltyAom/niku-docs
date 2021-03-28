@@ -22,8 +22,8 @@ module.exports = {
                     dark: '#313131'
                 },
                 system: {
-                    DEFAULT: '#edf2f7',
-                    dark: '#4a5568'
+                    DEFAULT: '#ffffff',
+                    dark: '#212121'
                 }
             }
         }
