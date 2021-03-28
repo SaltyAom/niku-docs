@@ -1,0 +1,53 @@
+
+# Overview
+Niku uses property builder to compose UI in Flutter as the following:
+```dart
+Text("Hello World")
+  .asNiku()
+  .color(Colors.blue)
+  .bold()
+```
+
+There are two types of property builder in Niku
+  
+1) Style Builder 
+  
+2) Parent Builder
+
+## Style Builder
+Style Property builder uses to compose styling on each predefined widget and only exists on some like `Text`, `TextButton`, or `TextField`.
+
+To use property builder, you have to use a predefined Widget.
+```dart
+NikuText("Hello World")
+  ..color(Colors.blue)
+  ..fontSize(21);
+```
+
+However, you can also use `.asNiku()` on widgets which has the same type as a predefined Widgets.
+```dart
+Text("Hello World")
+  .asNiku()
+  ..color(Colors.blue)
+  ..fontSize(21);
+```
+
+## Parent Builder
+Parent Property Builder uses to compose parent widget on where the method is called.
+Wrapping the widget inside the property builder as a result.
+
+Unlike style builder, parent builder can be called on any widget which extends `Widget`.
+
+To use parent builder, simply call `.niku()`.
+```dart
+Text("Hello World")
+  .niku()
+  ..bg(Colors.blue);
+```
+Above code will return nested widget in traditional Flutter:
+```dart
+ColoredBox(
+  color: Colors.blue,
+  child: Text("Hello World"),
+);
+```

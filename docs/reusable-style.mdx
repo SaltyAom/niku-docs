@@ -1,0 +1,49 @@
+
+# Reusable Style
+One of the most convenient benefits of Niku is,  you can create reusable styles anywhere in your codebase.
+
+If you come from a web background, this is like a CSS class.
+If you have some SwiftUI background, this is exactly like a custom modifier.
+
+This is an inspiration to create Niku in the first place.
+To be able to reuse styling anywhere not limited to a single codebase.
+
+## apply()
+For style builder, there's `apply()` which takes another instance itself and extracts and inherits the styling.
+```dart
+final title = NikuText()
+  ..color(Colors.blue);
+
+return NikuText("Hello World")
+  ..apply(title)
+```
+
+You can also add more styling property after apply the styling.
+```dart
+final title = NikuText()
+  ..color(Colors.blue);
+
+return NikuText("Hello World")
+  ..apply(title)
+  ..fontSize(21);
+```
+
+## Multuple Styling
+You can also apply multiple styling
+```dart
+final title = NikuText()
+  ..color(Colors.blue)
+  ..fontSize(21);
+
+final bold = NikuText()
+  ..bold();
+
+return NikuText("Hello World")
+  ..apply(title)
+  ..apply(bold);
+```
+
+## Limitation
+Although apply will inherits the style, it won't inherit the parent widget and it only accepts an instance of itself.
+
+For Parent Builder, you can use the `builder()` method to compose multiple parents and reuse it instead.

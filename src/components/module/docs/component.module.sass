@@ -1,0 +1,84 @@
+.h1
+    @apply text-4xl sm:text-5xl text-gray-900 dark:text-gray-100 font-medium mb-7 mt-0
+
+    @screen dark
+        @apply text-gray-100
+
+.h2
+    @apply text-3xl sm:text-4xl text-gray-900 font-medium dark:text-gray-100 my-4
+    scroll-margin-top: 76px
+
+    @screen dark
+        @apply text-gray-100
+
+.h3
+    @apply text-2xl text-gray-800 dark:text-gray-200 mb-6 mt-0 mt-0
+
+    @screen dark
+        @apply text-gray-200
+
+.h4
+    @apply text-xl text-gray-700 dark:text-gray-300 mb-3 font-normal mt-0
+
+    @screen dark
+        @apply text-gray-300
+
+.h5
+    @apply text-lg text-gray-600 dark:text-gray-400 mb-3 font-normal mt-0
+
+    @screen dark
+        @apply text-gray-400
+
+.h6
+    @apply text-sm text-gray-400 dark:text-gray-400 mb-2 font-light mt-0
+
+    @screen dark
+        @apply text-gray-400
+
+.p
+    @apply text-gray-600 dark:text-gray-400 mb-5 text-xl mt-0 leading-normal
+    line-height: 1.75
+
+    @screen dark
+        @apply text-gray-300
+
+.a
+    @apply text-blue-400 no-underline p-1 rounded-sm transition-colors
+
+    &:hover
+        background-color: rgba(0,123,255,.1)
+
+.ul
+    @apply pl-2 text-gray-600 dark:text-gray-300 list-none my-4
+
+    @screen dark
+        @apply text-gray-300
+
+.li
+    @apply text-gray-600 text-lg dark:text-gray-300 mb-2
+
+    &::before
+        @apply mr-1
+        content: "ー"
+
+    @screen dark
+        @apply text-gray-300
+
+.figure
+    @apply bg-preload dark:bg-preload-dark rounded-sm overflow-hidden mx-0 mb-2 mt-0
+    box-shadow: 0 8px 25px rgba(0 0 0 / 21%)
+
+    &.png
+        @apply bg-transparent dark:bg-transparent
+        box-shadow: unset !important
+
+    & > div
+        display: block !important
+
+.strong
+    @apply p-1 font-sans text-blue-400 inline rounded
+    background-color: rgba(0,123,255,.075)
+
+.pre
+    content-visibility: auto
+    margin: 0 0 1rem 0 !important

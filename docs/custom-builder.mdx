@@ -1,0 +1,35 @@
+# Builder
+Parent builder only has a limited set of predefined widgets, sometimes you want to go beyond that or using a custom widget with Niku.
+
+With `builder()` you can wrap any widget as a parent using Parent Builder.
+```dart
+Niku()
+  ..size(100, 100)
+  ..builder((child) => CustomWidget(child: child))
+```
+Just like any `builder` method, the builder takes Function with a child as a parameter, returning the current instance of the widget and return your custom widget as need.
+
+## Reusability
+You can create a function that returns any widget and reuse it anywhere just like apply().
+```dart
+final card = (Widget child) => CustomCard(child: child)
+
+Niku()
+  ..size(100, 100)
+  ..builder(card)
+```
+
+## Factory
+Or creating a factory function to providing a property.
+```dart
+final card = ({ 
+  double width,
+}) => (Widget child) 
+    => CustomCard(child: child, width);
+
+Niku()
+  ..size(100, 100)
+  ..builder(card)
+```
+
+Now you can compose any 3rd widget or create custom parent builder property and seamlessly apply it to Niku.

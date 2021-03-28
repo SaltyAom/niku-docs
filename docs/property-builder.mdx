@@ -1,0 +1,80 @@
+# Property Builder
+Niku uses property builder to compose UI in Flutter as the following:
+```dart
+Text("Hello World")
+  .asNiku()
+  .color(Colors.blue)
+  .bold();
+```
+
+Niku read from top-to-bottom instead of inside-out.
+
+## Order
+The order of property is important.
+Each method uses to overwrite the internal style property of the widget in order.
+If the property were called multiple times, Niku will use the last property and overwrite the previous one.
+```dart
+// Will display as red.
+Text()
+  .asNiku()
+  .color(Colors.blue)
+  .color(Colors.red);
+```
+
+## Transformation between type
+As Niku's property use to mutate internal property, you can use cascade notation where transforming between type is not need.
+```dart
+// Valid
+Text()
+  .asNiku()   // Using text property builder
+  ..color(Colors.blue)
+  ..fontSize(21);
+
+// Valid
+Text()
+  .niku()     // Wrap with Niku(Text())
+  .p(24);
+
+// Invalid
+Text()
+  .asNiku()   // Using text property builder
+  ..color(Colors.blue)
+  ..niku()    // Invalid, dot cascade don't transform type
+  ..p(20);
+```
+
+In case which you want to use property builder with parent builder, you can either wrap dot cascade in parenthesis or use dot notation instead.
+
+## Dot cascade
+Dot cascade in Dart uses `..` instead of setting property one by one but doesn't support transformation between types.
+
+As a workaround, you can wrap parenthesis to be able to transform into another type.
+```dart
+// Invalid
+(Text()
+  .asNiku()   // Using text property builder
+  ..color(Colors.blue))
+  .niku()      // Using parent builder
+  ..p(20);
+```
+
+But this approach will wrap the widget in parenthesis where might be annoying.
+
+## Dot Notation
+Instead of using dot cascade, dot notation allows developers to transform between types.
+```dart
+Text()
+  .asNiku()
+  .color(Colors.blue))
+  .niku()
+  .p(20);
+```
+
+If the property type doesn't change, you can also use dot cascade in the parent's builder.
+```dart
+Text()
+  .asNiku()
+  .color(Colors.blue))
+  .niku()
+  ..p(20);
+```

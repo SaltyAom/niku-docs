@@ -1,0 +1,77 @@
+
+# Style Builder
+Property builder uses to compose styling on each predefined widget and only exists on some like `Text`, `TextButton`, or `TextField`.
+
+## Predefined Widget
+To use property builder, you have to use a predefined Widget.
+```dart
+NikuText("Hello World")
+  ..color(Colors.blue)
+  ..fontSize(21);
+```
+
+Having multiple predefined Widgets in the codebase might lead to confusion, as to read the widget type, you've to read the word "Niku" first.
+
+## As Niku
+Niku solves this by providing an extension `.asNiku()` on widgets which has the same type as a predefined Widgets.
+```dart
+Text("Hello World")
+  .asNiku()
+  ..color(Colors.blue)
+  ..fontSize(21);
+```
+
+Note: Using `.asNiku()` won't import property from a widget, instead it will return a new instance of predefined Widget and import only required property instead.
+
+For example:
+```dart
+// Won't import "fontSize"
+Text("Hello World", fontSize: 21)
+  .asNiku()
+  ..color(Colors.blue);
+
+// Above code will return this instance
+NikuText("Hello World")
+  ..color(Colors.blue);
+```
+
+
+## Parent Builder
+After finishing composing styles property, you can also call parent builder.
+```dart
+Text("Hello World")
+  .asNiku()
+  .fontSize(21)
+  .color(Colors.white)
+  .niku()
+  .bg(Colors.blue);
+```
+
+## Niku Core
+Every predefined property extends `NikuCore` class which contains useful additional property like margin.
+
+This means every property Niku property can call margin without transforming itself into a parent builder but will transform into `NikuCore` instead.
+
+It's recommended to called margin the last property when using style builder because it'll transform itself Core itself which doesn't have any style builder.
+```dart
+Text()
+  .asNiku()
+  .color(Colors.blue)
+  .fontSize(21)
+  .m(20);
+```
+
+## Internal Mutation
+As NikuCore extends `Widget`, it can also call `.niku()` to use parent builder.
+```dart
+Text()
+  .asNiku()
+  .color(Colors.white)
+  .fontSize(21)
+  .m(20)
+  .niku();
+  .bg(Color.blue);
+```
+
+Unlike property builder, NikuCore doesn't stack Widget, instead, it uses internal property mutation.
+This means if you call multiple margins, it'll result in only a single margin instead.

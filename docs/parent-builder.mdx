@@ -1,0 +1,44 @@
+# Parent Builder
+Parent Property Builder uses to compose parent widget on where the method is called.
+Wrapping the widget inside the property builder as a result.
+
+To use parent builder, simply call `.niku()`.
+```dart
+Text("Hello World")
+  .niku()
+  ..bg(Colors.blue);
+```
+Above code will return nested widget in traditional Flutter:
+```dart
+ColoredBox(
+  color: Colors.blue,
+  child: Text("Hello World"),
+);
+```
+
+Unlike style builder, parent builder can be called on any widget which extends `Widget`.
+
+## Internal Mutation
+While the method is called, Niku doesn't create a new instance of Widget and stack the widget.
+Instead, it uses mutate one single internal property instead of spawning a new instance and wrap it with Niku to reuse property.
+This reduces unnecessary widgets from being build.
+
+When the widget has to build, the internal property will be return and create a widget at the build method.
+
+## Predefined Widget
+If you want to create Parent Builder without a child, you can use the predefined `Niku()` widget instead.
+This widget will take `SizedBox.shrink()` which has a size of 0 as a child instead.
+
+```dart
+Niku()
+  .size(100, 100)
+  .bg(Colors.blue)
+```
+
+You can also wrap a child in Niku widget which results in the same as calling `.niku()`
+```dart
+Niku(
+  Text("Hello World")
+)
+  .bg(Colors.blue);
+```

@@ -1,0 +1,1 @@
+export { transformTitleToId } from './text'

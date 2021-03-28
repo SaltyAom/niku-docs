@@ -1,0 +1,28 @@
+
+# Installation
+Niku doesn't have any dependency, using native dart code, and doesn't use any code generation.
+It's a straightforward way of composing classes and creating an extension.
+Any codebase should be able to adopt Niku effortlessly.
+
+Niku also supports Flutter 2 with sound null-safety and using Flutter 2 as a minimum requirement for composing an app with Niku.
+
+## Adding to pubspec
+Like every dependency, add Niku to "pubspec.yaml" and it should work out of a box.
+```yaml
+# pubspec.yaml
+# ...
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ...others dependencies
+  niku: # Use the latest version
+# ...
+```
+
+Finally, download Niku to your codebase with `pub get`:
+```bash
+flutter pub get
+```
+
+Now you're ready to use Niku in your codebase.
