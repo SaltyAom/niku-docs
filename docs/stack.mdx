@@ -1,0 +1,663 @@
+## Niku Stack
+Style property builder for building "Stack".
+
+## Example usage:
+As Widget
+```dart
+NikuStack([
+  Text("1"),
+  Text("2"),
+])
+  ..mainStart();
+```
+
+As Property
+```dart
+Stack(
+  children: [
+    Text("1"),
+    Text("2"),
+  ]
+)
+  .asNiku()
+  ..mainStart();
+```
+
+## Availability: 
+To use this widget, you can import from the following:
+
+```dart
+// All Widget
+import 'package:niku/niku.dart';
+
+// Extension
+import 'package:niku/extension/widget.dart';
+
+// With relatated widget
+import 'package:niku/widget/axis.dart';
+
+// Just widget
+import 'package:niku/widget/stack.dart';
+```
+
+## niku
+Switch to use parent property builder.
+
+Example Usage:
+```dart
+NikuStack()
+  .niku();
+```
+
+Equivalent to
+```dart
+Niku(
+  Stack(),
+);
+```
+
+## alignment
+Apply alignment to stack.
+
+Example Usage:
+```dart
+NikuStack()
+  ..alignment(AlignmentDirectional.topStart);
+```
+
+Equivalent to
+```dart
+Stack(
+  alignment: input,
+);
+```
+
+## alignment
+###### Shorten syntax of `alignment`
+
+Apply alignment to stack.
+
+Example Usage:
+```dart
+NikuStack()
+  ..align(AlignmentDirectional.topStart);
+```
+
+Equivalent to
+```dart
+Stack(
+  alignment: input,
+);
+```
+
+## topStart
+###### Shorten syntax of `alignment`
+
+Apply alignment to stack using `AlignmentDirectional.topStart`.
+
+Example Usage:
+```dart
+NikuStack()
+  ..topStart();
+```
+
+Equivalent to
+```dart
+Stack(
+  alignment: input,
+);
+```
+
+## topCenter
+###### Shorten syntax of `alignment`
+
+Apply alignment to stack using `AlignmentDirectional.topCenter`.
+
+Example Usage:
+```dart
+NikuStack()
+  ..topCenter();
+```
+
+Equivalent to
+```dart
+Stack(
+  alignment: input,
+);
+```
+
+## topEnd
+###### Shorten syntax of `alignment`
+
+Apply alignment to stack using `AlignmentDirectional.topEnd`.
+
+Example Usage:
+```dart
+NikuStack()
+  ..topEnd();
+```
+
+Equivalent to
+```dart
+Stack(
+  alignment: input,
+);
+```
+
+## centerStart
+###### Shorten syntax of `alignment`
+
+Apply alignment to stack using `AlignmentDirectional.centerStart`.
+
+Example Usage:
+```dart
+NikuStack()
+  ..centerStart();
+```
+
+Equivalent to
+```dart
+Stack(
+  alignment: input,
+);
+```
+
+## center
+###### Shorten syntax of `alignment`
+
+Apply alignment to stack using `AlignmentDirectional.center`.
+
+Example Usage:
+```dart
+NikuStack()
+  ..centerCenter();
+```
+
+Equivalent to
+```dart
+Stack(
+  alignment: input,
+);
+```
+
+## centerEnd
+###### Shorten syntax of `alignment`
+
+Apply alignment to stack using `AlignmentDirectional.centerEnd`.
+
+Example Usage:
+```dart
+NikuStack()
+  ..centerEnd();
+```
+
+Equivalent to
+```dart
+Stack(
+  alignment: input,
+);
+```
+
+## bottomStart
+###### Shorten syntax of `alignment`
+
+Apply alignment to stack using `AlignmentDirectional.bottomStart`.
+
+Example Usage:
+```dart
+NikuStack()
+  ..bottomStart();
+```
+
+Equivalent to
+```dart
+Stack(
+  alignment: input,
+);
+```
+
+## bottomCenter
+###### Shorten syntax of `alignment`
+
+Apply alignment to stack using `AlignmentDirectional.bottomCenter`.
+
+Example Usage:
+```dart
+NikuStack()
+  ..bottomCenter();
+```
+
+Equivalent to
+```dart
+Stack(
+  alignment: input,
+);
+```
+
+## bottomEnd
+###### Shorten syntax of `alignment`
+
+Apply alignment to stack using `AlignmentDirectional.bottomEnd`.
+
+Example Usage:
+```dart
+NikuStack()
+  ..bottomEnd();
+```
+
+Equivalent to
+```dart
+Stack(
+  alignment: input,
+);
+```
+
+## textDirection
+Set whether text is left-to-right or right-to-left direction.
+
+Example Usage:
+```dart
+NikuStack()
+  ..textDirection(TextDirection.ltr);
+```
+
+Equivalent to
+```dart
+Stack(
+  textDirection: input,
+);
+```
+
+## ltr
+###### Shorten syntax of `textDirection`
+
+Set whether text is left-to-right or right-to-left direction.
+
+Using `TextDirection.ltr`.
+
+Example Usage:
+```dart
+NikuStack()
+  ..ltr();
+```
+
+Equivalent to
+```dart
+Stack(
+  textDirection: TextDirection.ltr,
+);
+```
+
+## rtl
+###### Shorten syntax of `textDirection`
+
+Set whether text is left-to-right or right-to-left direction.
+
+Using `TextDirection.rtl`.
+
+Example Usage:
+```dart
+NikuStack()
+  ..rtl();
+```
+
+Equivalent to
+```dart
+Stack(
+  textDirection: TextDirection.rtl,
+);
+```
+
+## fit
+Adjust fit using "StackFit" of stack.
+
+Example Usage:
+```dart
+NikuStack()
+  ..fit(StackFit.expand);
+```
+
+Equivalent to
+```dart
+Stack(
+  fit: input,
+);
+```
+
+## stackFit
+###### Shorten syntax of `fit`
+
+Adjust fit using "StackFit" of stack.
+
+Example Usage:
+```dart
+NikuStack()
+  ..stackFit(StackFit.expand);
+```
+
+Equivalent to
+```dart
+Stack(
+  fit: input,
+);
+```
+
+## expand
+###### Shorten syntax of `fit`
+
+Adjust fit using "StackFit" of stack using `StackFit.expand`
+
+Example Usage:
+```dart
+NikuStack()
+  ..expand();
+```
+
+Equivalent to
+```dart
+Stack(
+  fit: StackFit.expand,
+);
+```
+
+## loose
+###### Shorten syntax of `fit`
+
+Adjust fit using "StackFit" of stack using `StackFit.loose`
+
+Example Usage:
+```dart
+NikuStack()
+  ..loose();
+```
+
+Equivalent to
+```dart
+Stack(
+  fit: StackFit.loose,
+);
+```
+
+## passthrough
+###### Shorten syntax of `fit`
+
+Adjust fit using "StackFit" of stack using `StackFit.passthrough`
+
+Example Usage:
+```dart
+NikuStack()
+  ..expand();
+```
+
+Equivalent to
+```dart
+Stack(
+  fit: StackFit.passthrough,
+);
+```
+
+## clipBehavior
+Set clip behavior of widget.
+
+Example Usage:
+```dart
+NikuStack()
+  ..clipBehavior(Clip.antiAlias);
+```
+
+Equivalent to
+```dart
+Stack(
+  clipBehavior: input,
+);
+```
+
+## clip
+###### Shorten syntax of `clipBehavior`
+
+Set clip behavior of widget.
+
+Example Usage:
+```dart
+NikuStack()
+  ..clip(Clip.antiAlias);
+```
+
+Equivalent to
+```dart
+Stack(
+  clipBehavior: input,
+);
+```
+
+## child
+Append child.
+
+Example Usage:
+```dart
+NikuStack()
+  ..child(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Stack(
+  children: [
+    # Others children,
+    input,
+  ]
+);
+```
+
+## append
+Append child.
+
+Example Usage:
+```dart
+NikuStack()
+  ..child(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Stack(
+  children: [
+    # Others children,
+    input,
+  ]
+);
+```
+
+## appendChild
+Append child.
+
+Example Usage:
+```dart
+NikuStack()
+  ..appendChild(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Stack(
+  children: [
+    # Others children,
+    input,
+  ]
+);
+```
+
+## children
+Append children.
+
+Example Usage:
+```dart
+NikuStack()
+  ..children([
+    Text("Child")
+  ]);
+```
+
+Equivalent to
+```dart
+Stack(
+  children: [
+    # Others children,
+    ...input,
+  ]
+);
+```
+
+## appendChildren
+Append children.
+
+Example Usage:
+```dart
+NikuStack()
+  ..appendChildren([
+    Text("Child")
+  ]);
+```
+
+Equivalent to
+```dart
+Stack(
+  children: [
+    # Others children,
+    ...input,
+  ]
+);
+```
+
+## prepend
+Prepend child.
+
+Example Usage:
+```dart
+NikuStack()
+  ..child(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Stack(
+  children: [
+    input,
+    # Others children,
+  ]
+);
+```
+
+## prependChild
+Prepend child.
+
+Example Usage:
+```dart
+NikuStack()
+  ..prependChild(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Stack(
+  children: [
+    input,
+    # Others children,
+  ]
+);
+```
+
+## children
+Prepend children.
+
+Example Usage:
+```dart
+NikuStack()
+  ..children([
+    Text("Child")
+  ]);
+```
+
+Equivalent to
+```dart
+Stack(
+  children: [
+    ...input,
+    # Others children,
+  ]
+);
+```
+
+## prependChildren
+Prepend children.
+
+Example Usage:
+```dart
+NikuStack()
+  ..prependChildren([
+    Text("Child")
+  ]);
+```
+
+Equivalent to
+```dart
+Stack(
+  children: [
+    ...input,
+    # Others children,
+  ]
+);
+```
+
+## insert
+Insert child at specific index.
+
+Example Usage:
+```dart
+NikuStack()
+  ..insert(2, Text("Child"));
+```
+
+Equivalent to
+```dart
+Stack(
+  children: [
+    # Others children,
+    input,
+    # Others children,
+  ]
+);
+```
+
+## insertAll
+Insert children at specific index.
+
+Example Usage:
+```dart
+NikuStack()
+  ..insert(2, [
+    Text("Child"),
+    Text("Child"),
+  ]);
+```
+
+Equivalent to
+```dart
+Stack(
+  children: [
+    # Others children,
+    ...input,
+    # Others children,
+  ]
+);
+```

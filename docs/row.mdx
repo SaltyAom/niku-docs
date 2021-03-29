@@ -1,0 +1,854 @@
+## Niku Row
+Style property builder for building "Row".
+
+## Example usage:
+As Widget
+```dart
+NikuRow([
+  Text("1"),
+  Text("2"),
+])
+  ..mainStart();
+```
+
+As Property
+```dart
+Row(
+  children: [
+    Text("1"),
+    Text("2"),
+  ]
+)
+  .asNiku()
+  ..mainStart();
+```
+
+## Availability: 
+To use this widget, you can import from the following:
+
+```dart
+// All Widget
+import 'package:niku/niku.dart';
+
+// Extension
+import 'package:niku/extension/widget.dart';
+
+// With relatated widget
+import 'package:niku/widget/axis.dart';
+
+// Just widget
+import 'package:niku/widget/row.dart';
+```
+
+## niku
+Switch to use parent property builder.
+
+Example Usage:
+```dart
+NikuRow()
+  .niku();
+```
+
+Equivalent to
+```dart
+Niku(
+  Row(),
+);
+```
+
+## mainAxisAlignment
+Set main axis alignment.
+
+Example Usage:
+```dart
+NikuRow()
+  ..mainAxisAlignment(MainAxisAlignment.center);
+```
+
+Equivalent to
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+);
+```
+
+## mainAxis
+###### Shorten syntax of `mainAxisAlignment`
+
+Set main axis alignment.
+
+Example Usage:
+```dart
+NikuRow()
+  ..mainAxis(MainAxisAlignment.center);
+```
+
+Equivalent to
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+);
+```
+
+## mainStart
+###### Shorten syntax of `mainAxisAlignment`
+
+Set main axis alignment using `MainAxisAlignment.start`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..mainStart();
+```
+
+Equivalent to
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.start,
+);
+```
+
+## justifyStart
+###### Shorten syntax of `mainAxisAlignment`
+
+Set main axis alignment using `MainAxisAlignment.start`.
+
+As a reference to CSS flexbox, `justify-content`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..mainStart();
+```
+
+Equivalent to
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.start,
+);
+```
+
+## mainCenter
+###### Shorten syntax of `mainAxisAlignment`
+
+Set main axis alignment using `MainAxisAlignment.center`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..mainCenter();
+```
+
+Equivalent to
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+);
+```
+
+## justifyCenter
+###### Shorten syntax of `mainAxisAlignment`
+
+Set main axis alignment using `MainAxisAlignment.center`.
+
+As a reference to CSS flexbox, `justify-content`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..mainCenter();
+```
+
+Equivalent to
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+);
+```
+
+## mainEnd
+###### Shorten syntax of `mainAxisAlignment`
+
+Set main axis alignment using `MainAxisAlignment.end`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..mainEnd();
+```
+
+Equivalent to
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.end,
+);
+```
+
+## justifyEnd
+###### Shorten syntax of `mainAxisAlignment`
+
+Set main axis alignment using `MainAxisAlignment.end`.
+
+As a reference to CSS flexbox, `justify-content`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..mainEnd();
+```
+
+Equivalent to
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.end,
+);
+```
+
+## spaceAround
+###### Shorten syntax of `mainAxisAlignment`
+
+Set main axis alignment using `MainAxisAlignment.spaceAround`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..spaceAround();
+```
+
+Equivalent to
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceAround,
+);
+```
+
+## spaceBetween
+###### Shorten syntax of `mainAxisAlignment`
+
+Set main axis alignment using `MainAxisAlignment.spaceBetween`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..spaceBetween();
+```
+
+Equivalent to
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+);
+```
+
+## spaceEnd
+###### Shorten syntax of `mainAxisAlignment`
+
+Set main axis alignment using `MainAxisAlignment.spaceEnd`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..spaceEnd();
+```
+
+Equivalent to
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceEnd,
+);
+```
+
+## spaceEvenly
+###### Shorten syntax of `mainAxisAlignment`
+
+Set main axis alignment using `MainAxisAlignment.spaceEvenly`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..spaceEvenly();
+```
+
+Equivalent to
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+);
+```
+
+## crossAxisAlignment
+Set cross axis alignment.
+
+Example Usage:
+```dart
+NikuRow()
+  ..crossAxisAlignment(CrossAxisAlignment.center);
+```
+
+Equivalent to
+```dart
+Row(
+  crossAxisAlignment: CrossAxisAlignment.center,
+);
+```
+
+## crossAxis
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment.
+
+Example Usage:
+```dart
+NikuRow()
+  ..crossAxis(CrossAxisAlignment.center);
+```
+
+Equivalent to
+```dart
+Row(
+  crossAxisAlignment: CrossAxisAlignment.center,
+);
+```
+
+## crossStart
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment using `CrossAxisAlignment.start`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..crossStart();
+```
+
+Equivalent to
+```dart
+Row(
+  crossAxisAlignment: CrossAxisAlignment.start,
+);
+```
+
+## itemsStart
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment using `CrossAxisAlignment.start`.
+
+As a reference to CSS flexbox, `align-items`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..crossStart();
+```
+
+Equivalent to
+```dart
+Row(
+  crossAxisAlignment: CrossAxisAlignment.start,
+);
+```
+
+## crossCenter
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment using `CrossAxisAlignment.center`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..crossCenter();
+```
+
+Equivalent to
+```dart
+Row(
+  crossAxisAlignment: CrossAxisAlignment.center,
+);
+```
+
+## itemsCenter
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment using `CrossAxisAlignment.center`.
+
+As a reference to CSS flexbox, `align-items`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..crossCenter();
+```
+
+Equivalent to
+```dart
+Row(
+  crossAxisAlignment: CrossAxisAlignment.center,
+);
+```
+
+## crossEnd
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment using `CrossAxisAlignment.end`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..crossEnd();
+```
+
+Equivalent to
+```dart
+Row(
+  crossAxisAlignment: CrossAxisAlignment.end,
+);
+```
+
+## itemsEnd
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment using `CrossAxisAlignment.end`.
+
+As a reference to CSS flexbox, `align-items`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..crossEnd();
+```
+
+## baseline
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment using `CrossAxisAlignment.baseline`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..baseline();
+```
+
+Equivalent to
+```dart
+Row(
+  crossAxisAlignment: CrossAxisAlignment.baseline,
+);
+```
+
+## stretch
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment using `CrossAxisAlignment.stretch`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..stretch();
+```
+
+Equivalent to
+```dart
+Row(
+  crossAxisAlignment: CrossAxisAlignment.stretch,
+);
+```
+
+## textDirection
+Set whether text is left-to-right or right-to-left direction.
+
+Example Usage:
+```dart
+NikuRow()
+  ..textDirection(TextDirection.ltr);
+```
+
+Equivalent to
+```dart
+Row(
+  textDirection: input,
+);
+```
+
+## ltr
+###### Shorten syntax of `textDirection`
+
+Set whether text is left-to-right or right-to-left direction.
+
+Using `TextDirection.ltr`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..ltr();
+```
+
+Equivalent to
+```dart
+Row(
+  textDirection: TextDirection.ltr,
+);
+```
+
+## rtl
+###### Shorten syntax of `textDirection`
+
+Set whether text is left-to-right or right-to-left direction.
+
+Using `TextDirection.rtl`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..rtl();
+```
+
+Equivalent to
+```dart
+Row(
+  textDirection: TextDirection.rtl,
+);
+```
+
+## verticalDirection
+A direction in which boxes flow vertically.
+
+Example Usage:
+```dart
+NikuRow()
+  ..verticalDirection(VerticalDirection.up);
+```
+
+Equivalent to
+```dart
+Row(
+  verticalDirection: input,
+);
+```
+
+## up
+###### Shorten syntax of `verticalDirection`
+
+A direction in which boxes flow vertically.
+
+Using `VerticalDirection.up`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..verticalDirection(VerticalDirection.up);
+```
+
+Equivalent to
+```dart
+Row(
+  verticalDirection: VerticalDirection.up,
+);
+```
+
+## down
+###### Shorten syntax of `verticalDirection`
+
+A direction in which boxes flow vertically.
+
+Using `VerticalDirection.down`.
+
+Example Usage:
+```dart
+NikuRow()
+  ..verticalDirection(VerticalDirection.down);
+```
+
+Equivalent to
+```dart
+Row(
+  verticalDirection: VerticalDirection.down,
+);
+```
+
+## textBaseline
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Example Usage:
+```dart
+NikuRow()
+  ..textBaseline(TextBaseline.alphabetic);
+```
+
+Equivalent to
+```dart
+Row(
+  textBaseline: input,
+);
+```
+
+## alphabetic
+###### Shorten syntax of `textBaseline`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextBaseline.alphabetic`
+
+Example Usage:
+```dart
+NikuRow()
+  ..alphabetic();
+```
+
+Equivalent to
+```dart
+Row(
+  textBaseline: TextBaseline.alphabetic,
+);
+```
+
+## ideographic
+###### Shorten syntax of `textBaseline`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextBaseline.alphabetic`
+
+Example Usage:
+```dart
+NikuRow()
+  ..ideographic();
+```
+
+Equivalent to
+```dart
+Row(
+  textBaseline: TextBaseline.ideographic,
+);
+```
+
+## child
+Append child.
+
+Example Usage:
+```dart
+NikuRow()
+  ..child(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Row(
+  children: [
+    # Others children,
+    input,
+  ]
+);
+```
+
+## append
+Append child.
+
+Example Usage:
+```dart
+NikuRow()
+  ..child(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Row(
+  children: [
+    # Others children,
+    input,
+  ]
+);
+```
+
+## appendChild
+Append child.
+
+Example Usage:
+```dart
+NikuRow()
+  ..appendChild(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Row(
+  children: [
+    # Others children,
+    input,
+  ]
+);
+```
+
+## children
+Append children.
+
+Example Usage:
+```dart
+NikuRow()
+  ..children([
+    Text("Child")
+  ]);
+```
+
+Equivalent to
+```dart
+Row(
+  children: [
+    # Others children,
+    ...input,
+  ]
+);
+```
+
+## appendChildren
+Append children.
+
+Example Usage:
+```dart
+NikuRow()
+  ..appendChildren([
+    Text("Child")
+  ]);
+```
+
+Equivalent to
+```dart
+Row(
+  children: [
+    # Others children,
+    ...input,
+  ]
+);
+```
+
+## prepend
+Prepend child.
+
+Example Usage:
+```dart
+NikuRow()
+  ..child(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Row(
+  children: [
+    input,
+    # Others children,
+  ]
+);
+```
+
+## prependChild
+Prepend child.
+
+Example Usage:
+```dart
+NikuRow()
+  ..prependChild(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Row(
+  children: [
+    input,
+    # Others children,
+  ]
+);
+```
+
+## children
+Prepend children.
+
+Example Usage:
+```dart
+NikuRow()
+  ..children([
+    Text("Child")
+  ]);
+```
+
+Equivalent to
+```dart
+Row(
+  children: [
+    ...input,
+    # Others children,
+  ]
+);
+```
+
+## prependChildren
+Prepend children.
+
+Example Usage:
+```dart
+NikuRow()
+  ..prependChildren([
+    Text("Child")
+  ]);
+```
+
+Equivalent to
+```dart
+Row(
+  children: [
+    ...input,
+    # Others children,
+  ]
+);
+```
+
+## insert
+Insert child at specific index.
+
+Example Usage:
+```dart
+NikuRow()
+  ..insert(2, Text("Child"));
+```
+
+Equivalent to
+```dart
+Row(
+  children: [
+    # Others children,
+    input,
+    # Others children,
+  ]
+);
+```
+
+## insertAll
+Insert children at specific index.
+
+Example Usage:
+```dart
+NikuRow()
+  ..insert(2, [
+    Text("Child"),
+    Text("Child"),
+  ]);
+```
+
+Equivalent to
+```dart
+Row(
+  children: [
+    # Others children,
+    ...input,
+    # Others children,
+  ]
+);
+```
