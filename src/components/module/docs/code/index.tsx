@@ -9,7 +9,7 @@ const Code: MarkdownCodeComponent = ({ children, className = '' }) => {
     let syntaxHighlight = useMemo(
         () => async (element: HTMLElement) => {
             let Prism = await require('prismjs')
-            await require('prismjs/components/prism-typescript')
+            await require('prismjs/components/prism-dart')
             await require('prismjs/components/prism-yaml')
 
             Prism.highlightElement(element)
