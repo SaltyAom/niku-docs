@@ -46,6 +46,9 @@ const DocumentationLayout: DocumentationLayoutComponent = ({
                         className={tw`block lg:hidden appearance-none text-gray-400 border-0 bg-transparent cursor-pointer`}
                         onClick={toggleNavbar}
                         type="button"
+                        name={
+                            showNavbar ? 'Close Navigation' : 'Show Navigation'
+                        }
                         style={{
                             width: 64,
                             height: 64
@@ -66,6 +69,7 @@ const DocumentationLayout: DocumentationLayoutComponent = ({
                     <section className={tw`flex flex-row`}>
                         <a
                             className={tw`text-gray-400 no-underline`}
+                            aria-label="Niku on Github"
                             href="https://github.com/SaltyAom/niku"
                             target="_blank"
                             rel="noreferrer"
