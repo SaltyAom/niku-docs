@@ -29,7 +29,8 @@ export const navigations = [
             'Row',
             'Stack',
             'Button',
-            'Icon Button'
+            'Icon Button',
+            'TextField'
         ]
     },
     {

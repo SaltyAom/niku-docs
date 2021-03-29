@@ -1,0 +1,1089 @@
+## Niku Text
+Style property builder for building "Text".
+
+## Example usage:
+As Widget
+```dart
+TextNiku("As widget")
+  ..color(Colors.blue)
+  ..fontSize(21)
+```
+
+As Property
+```dart
+Text("As Property")
+  .asNiku()
+  ..color(Colors.blue)
+  ..fontSize(21)
+```
+
+## Availability: 
+To use this widget, you can import from the following:
+
+```dart
+// All Widget
+import 'package:niku/niku.dart';
+
+// Extension
+import 'package:niku/extension/widget.dart';
+
+// Just widget
+import 'package:niku/widget/text.dart';
+```
+
+## niku
+Switch to use parent property builder.
+
+Example Usage:
+```dart
+NikuText()
+  .niku();
+```
+
+Equivalent to
+```dart
+Niku(
+  Text(),
+);
+```
+
+## apply
+Apply predefined style properties to widget.
+
+Example Usage:
+```dart
+final title = NikuText()
+  ..color(Colors.red)
+  ..fontSize(21);
+
+NikuText()
+  ..apply(title);
+```
+
+Equivalent to
+```dart
+Text()
+  ..color(Colors.red)
+  ..fontSize(21);
+```
+
+
+## text
+Set text's value.
+
+Example Usage:
+```dart
+NikuText("Old Text")
+  ..text("New Text");
+```
+
+Equivalent to
+```dart
+Text(input);
+```
+
+## color
+Set text's color.
+
+Example Usage:
+```dart
+final title = NikuText()
+  ..color(Colors.red);
+
+NikuText()
+  ..apply(title);
+```
+
+Equivalent to
+```dart
+Text(
+  color: input,
+)
+```
+
+## backgroundColor
+Set background color.
+
+Example Usage:
+```dart
+NikuText()
+  ..backgroundColor(Colors.red);
+```
+
+Equivalent to
+```dart
+Text(
+  backgroundColor: input,
+);
+```
+
+## bg
+###### Shorten syntax of `backgroundColor`
+
+Set background color.
+
+Example Usage:
+```dart
+NikuText()
+  ..bg(Colors.red);
+```
+
+Equivalent to
+```dart
+Text(
+  backgroundColor: input,
+);
+```
+
+## fontSize
+Set font size.
+
+Example Usage:
+```dart
+NikuText()
+  ..fontSize(21);
+```
+
+Equivalent to
+```dart
+Text(
+  fontSize: input,
+);
+```
+
+## fontWeight
+Set font weight.
+
+Example Usage:
+```dart
+NikuText()
+  ..fontWeight(fontWeight.bold);
+```
+
+Equivalent to
+```dart
+Text(
+  fontWeight: input,
+);
+```
+
+## bold
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.bold`.
+
+Example Usage:
+```dart
+NikuText()
+  ..bold();
+```
+
+Equivalent to
+```dart
+Text(
+  fontWeight: FontWeight.bold,
+);
+```
+
+## w100
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w100`.
+
+Example Usage:
+```dart
+NikuText()
+  ..w100();
+```
+
+Equivalent to
+```dart
+Text(
+  fontWeight: FontWeight.w100,
+);
+```
+
+## w200
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w200`.
+
+Example Usage:
+```dart
+NikuText()
+  ..w200();
+```
+
+Equivalent to
+```dart
+Text(
+  fontWeight: FontWeight.w200,
+);
+```
+
+## w300
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w300`.
+
+Example Usage:
+```dart
+NikuText()
+  ..w300();
+```
+
+Equivalent to
+```dart
+Text(
+  fontWeight: FontWeight.w300,
+);
+```
+
+## w400
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w400`.
+
+Example Usage:
+```dart
+NikuText()
+  ..w400();
+```
+
+Equivalent to
+```dart
+Text(
+  fontWeight: FontWeight.w400,
+);
+```
+
+## w500
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w500`.
+
+Example Usage:
+```dart
+NikuText()
+  ..w500();
+```
+
+Equivalent to
+```dart
+Text(
+  fontWeight: FontWeight.w500,
+);
+```
+
+## w600
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w600`.
+
+Example Usage:
+```dart
+NikuText()
+  ..w600();
+```
+
+Equivalent to
+```dart
+Text(
+  fontWeight: FontWeight.w600,
+);
+```
+
+## w700
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w700`.
+
+Example Usage:
+```dart
+NikuText()
+  ..w700();
+```
+
+Equivalent to
+```dart
+Text(
+  fontWeight: FontWeight.w700,
+);
+```
+
+## w800
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w800`.
+
+Example Usage:
+```dart
+NikuText()
+  ..w800();
+```
+
+Equivalent to
+```dart
+Text(
+  fontWeight: FontWeight.w800,
+);
+```
+
+## w900
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w900`.
+
+Example Usage:
+```dart
+NikuText()
+  ..w900();
+```
+
+Equivalent to
+```dart
+Text(
+  fontWeight: FontWeight.w900,
+);
+```
+
+## fontStyle
+Set font style.
+
+Example Usage:
+```dart
+NikuText()
+  ..fontStyle(FontStyle.italic);
+```
+
+Equivalent to
+```dart
+Text(
+  fontStyle: input,
+);
+```
+
+## italic
+###### Shorten syntax of `fontStyle`
+Set font weight using `FontStyle.italic`.
+
+Example Usage:
+```dart
+NikuText()
+  ..italic();
+```
+
+Equivalent to
+```dart
+Text(
+  fontStyle: FontStyle.italic,
+);
+```
+
+## letterSpacing
+Set letter spacing.
+
+Example Usage:
+```dart
+NikuText()
+  ..letterSpacing(2);
+```
+
+Equivalent to
+```dart
+Text(
+  letterSpacing: input,
+);
+```
+
+## wordSpacing
+Set word spacing.
+
+Example Usage:
+```dart
+NikuText()
+  ..wordSpacing(2);
+```
+
+Equivalent to
+```dart
+Text(
+  wordSpacing: input,
+);
+```
+
+## height
+Set height.
+
+Example Usage:
+```dart
+NikuText()
+  ..letterSpacing(2);
+```
+
+Equivalent to
+```dart
+Text(
+  letterSpacing: input,
+);
+```
+
+## foreground
+The paint drawn as a foreground for the text.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuText()
+  ..foreground(paint);
+```
+
+Equivalent to
+```dart
+Text(
+  foreground: input,
+);
+```
+
+## background
+The paint drawn as a foreground for the text.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuText()
+  ..background(paint);
+```
+
+Equivalent to
+```dart
+Text(
+  background: input,
+);
+```
+
+## shadows
+Collection of text's shadow.
+
+Example Usage:
+```dart
+NikuText()
+  ..shadows([
+    Shadow(
+      offset: Offset(0, 4),
+      blurRadius: 8,
+      color: Colors.black.withOpacity(.1),
+    )
+  ]);
+```
+
+Equivalent to
+```dart
+Text(
+  shadows: input,
+);
+```
+
+## fontFeature
+A feature tag and value that affect the selection of glyphs in a font.
+
+Example Usage:
+```dart
+NikuText()
+  ..fontFeatures([
+    FontFeature.enable('smcp'),
+  ]);
+```
+
+Equivalent to
+```dart
+Text(
+  fontFeatures: input,
+);
+```
+
+## textDecoration
+Add `TextDecoration`.
+
+Example Usage:
+```dart
+NikuText()
+  ..textDecoration(TextDecoration.underline);
+```
+
+Equivalent to
+```dart
+Text(
+  textDecoration: input,
+);
+```
+
+## textDecorationColor
+Set Color of text decoration
+
+Example Usage:
+```dart
+NikuText()
+  ..textDecorationColor(Colors.blue);
+```
+
+Equivalent to
+```dart
+Text(
+  textDecorationColor: input,
+);
+```
+
+## textDecorationThickness
+Set thickness of text decoration
+
+Example Usage:
+```dart
+NikuText()
+  ..textDecorationThickness(2);
+```
+
+Equivalent to
+```dart
+Text(
+  textDecorationThickness: input,
+);
+```
+
+## fontFamily
+Set font of text.
+
+Example Usage:
+```dart
+NikuText()
+  ..fontFamily('Helvetica Neue');
+```
+
+Equivalent to
+```dart
+Text(
+  fontFamily: input,
+);
+```
+
+## fontFamilyFallback
+Set font fallback of text if fontFamily is missing.
+
+Example Usage:
+```dart
+NikuText()
+  ..fontFamilyFallback([
+    'Roboto',
+    'Segoe UI',
+    'Open Sans',
+  ]);
+```
+
+Equivalent to
+```dart
+Text(
+  fontFamilyFallback: input,
+);
+```
+
+## textBaseline
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Example Usage:
+```dart
+NikuText()
+  ..textBaseline(Textbaseline.alphabetic);
+```
+
+Equivalent to
+```dart
+Text(
+  textBaseline: input,
+);
+```
+
+## alphabetic
+###### Shorten syntax of `textBaseline`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `Textbaseline.alphabetic`
+
+Example Usage:
+```dart
+NikuText()
+  ..alphabetic();
+```
+
+Equivalent to
+```dart
+Text(
+  textBaseline: Textbaseline.alphabetic,
+);
+```
+
+## ideographic
+###### Shorten syntax of `textBaseline`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `Textbaseline.alphabetic`
+
+Example Usage:
+```dart
+NikuText()
+  ..ideographic();
+```
+
+Equivalent to
+```dart
+Text(
+  textBaseline: Textbaseline.ideographic,
+);
+```
+
+## align
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Example Usage:
+```dart
+NikuText()
+  ..align(TextAlign.center);
+```
+
+Equivalent to
+```dart
+Text(
+  textAlign: input,
+);
+```
+
+## alignLeft
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.left`.
+
+Example Usage:
+```dart
+NikuText()
+  ..alignLeft();
+```
+
+Equivalent to
+```dart
+Text(
+  textAlign: TextAlign.left,
+);
+```
+
+## left
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.left`.
+
+Example Usage:
+```dart
+NikuText()
+  ..left();
+```
+
+Equivalent to
+```dart
+Text(
+  textAlign: TextAlign.left,
+);
+```
+
+## alignCenter
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.center`.
+
+Example Usage:
+```dart
+NikuText()
+  ..alignCenter();
+```
+
+Equivalent to
+```dart
+Text(
+  textAlign: TextAlign.center,
+);
+```
+
+## center
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.center`.
+
+Example Usage:
+```dart
+NikuText()
+  ..center();
+```
+
+Equivalent to
+```dart
+Text(
+  textAlign: TextAlign.center,
+);
+```
+
+## alignRight
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.right`.
+
+Example Usage:
+```dart
+NikuText()
+  ..alignRight();
+```
+
+Equivalent to
+```dart
+Text(
+  textAlign: TextAlign.right,
+);
+```
+
+## right
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.right`.
+
+Example Usage:
+```dart
+NikuText()
+  ..right();
+```
+
+Equivalent to
+```dart
+Text(
+  textAlign: TextAlign.right,
+);
+```
+
+## alignStart
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.start`.
+
+Example Usage:
+```dart
+NikuText()
+  ..alignStart();
+```
+
+Equivalent to
+```dart
+Text(
+  textAlign: TextAlign.start,
+);
+```
+
+## start
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.start`.
+
+Example Usage:
+```dart
+NikuText()
+  ..start();
+```
+
+Equivalent to
+```dart
+Text(
+  textAlign: TextAlign.start,
+);
+```
+
+## alignEnd
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.end`.
+
+Example Usage:
+```dart
+NikuText()
+  ..alignEnd();
+```
+
+Equivalent to
+```dart
+Text(
+  textAlign: TextAlign.end,
+);
+```
+
+## end
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.end`.
+
+Example Usage:
+```dart
+NikuText()
+  ..end();
+```
+
+Equivalent to
+```dart
+Text(
+  textAlign: TextAlign.end,
+);
+```
+
+## alignJustify
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.justify`.
+
+Example Usage:
+```dart
+NikuText()
+  ..alignJustify();
+```
+
+Equivalent to
+```dart
+Text(
+  textAlign: TextAlign.justify,
+);
+```
+
+## justify
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.justify`.
+
+Example Usage:
+```dart
+NikuText()
+  ..justify();
+```
+
+Equivalent to
+```dart
+Text(
+  textAlign: TextAlign.justify,
+);
+```
+
+## textDirection
+Set whether text is left-to-right or right-to-left direction.
+
+Example Usage:
+```dart
+NikuText()
+  ..textDirection(TextDirection.ltr);
+```
+
+Equivalent to
+```dart
+Text(
+  textDirection: input,
+);
+```
+
+## ltr
+###### Shorten syntax of `textDirection`
+
+Set whether text is left-to-right or right-to-left direction.
+
+Using `TextDirection.ltr`.
+
+Example Usage:
+```dart
+NikuText()
+  ..textDirection(TextDirection.ltr);
+```
+
+Equivalent to
+```dart
+Text(
+  textDirection: TextDirection.ltr,
+);
+```
+
+## rtl
+###### Shorten syntax of `textDirection`
+
+Set whether text is left-to-right or right-to-left direction.
+
+Using `TextDirection.rtl`.
+
+Example Usage:
+```dart
+NikuText()
+  ..textDirection(TextDirection.rtl);
+```
+
+Equivalent to
+```dart
+Text(
+  textDirection: TextDirection.rtl,
+);
+```
+
+## locale
+Whether the text should break at soft line breaks.
+
+Example Usage:
+```dart
+NikuText()
+  ..softWrap(true);
+```
+
+Equivalent to
+```dart
+Text(
+  softWrap: input,
+);
+```
+
+## overflow
+How visual overflow should be handled.
+
+Example Usage:
+```dart
+NikuText()
+  ..overflow(TextOverflow.ellipsis);
+```
+
+Equivalent to
+```dart
+Text(
+  overflow: input,
+);
+```
+
+## textScaleFactor
+The number of font pixels for each logical pixel.
+
+Example Usage:
+```dart
+NikuText()
+  ..textScaleFactor(2);
+```
+
+Equivalent to
+```dart
+Text(
+  textScaleFactor: input,
+);
+```
+
+## maxLines
+Set max line for text.
+
+Example Usage:
+```dart
+NikuText()
+  ..maxLines(3);
+```
+
+Equivalent to
+```dart
+Text(
+  maxLines: input,
+);
+```
+
+## semanticsLabel
+Semantics label for text, good for screen reader.
+
+Example Usage:
+```dart
+NikuText()
+  ..semanticsLabel("Hello World");
+```
+
+Equivalent to
+```dart
+Text(
+  semanticsLabel: input,
+);
+```
+
+## label
+###### Shorten syntax of `semanticsLabel`
+
+Semantics label for text, good for screen reader.
+
+Example Usage:
+```dart
+NikuText()
+  ..label("Hello World");
+```
+
+Equivalent to
+```dart
+Text(
+  semanticsLabel: input,
+);
+```
+
+## textWidthBasis
+Defines how to measure the width of the rendered text.
+
+Example Usage:
+```dart
+NikuText()
+  ..textWidthBasis(textWidthBasis.parent);
+```
+
+Equivalent to
+```dart
+Text(
+  textWidthBasis: input,
+);
+```
+
+## textHeightBehavior
+Defines how the paragraph will apply [TextStyle.height] to the ascent of the first line and descent of the last line.
+
+Example Usage:
+```dart
+NikuText()
+  ..textHeightBehavior(
+    textHeightBehavior.fromEncoded(2),
+  );
+```
+
+Equivalent to
+```dart
+Text(
+  textWidthBasis: input,
+);
+```
