@@ -4,7 +4,7 @@ import { transformTitleToId } from '@services/transform'
 
 import { DocumentationContentsComponent } from './types'
 
-import styles from './documentation.module.sass'
+import styles from './content.module.sass'
 
 const Contents: DocumentationContentsComponent = ({ contents }) => (
     <aside

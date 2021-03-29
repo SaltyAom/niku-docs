@@ -4,13 +4,14 @@ import Head from 'next/head'
 
 import tw from '@tailwind'
 
-import { DocumentationLayoutComponent } from './types'
 import {
     DocumentationContents,
     DocumentationNavbar,
-    DocumentationNavigation
+    DocumentationNavigation,
+    DocumentationFooter
 } from './components'
-import DocumentationFooter from './components/footer'
+
+import { DocumentationLayoutComponent } from './types'
 
 const DocumentationLayout: DocumentationLayoutComponent = ({
     children,
