@@ -23,7 +23,7 @@ const BenefitSection: BenefitSectionComponent = ({ title, details, code }) => (
             className={tw`flex flex-col flex-2 justify-center flex-1 mt-8 sm:mt-0`}
         >
             <Code
-                className={tw`inline-block text-white p-4 text-xl font-code bg-black rounded-lg mx-auto`}
+                className={tw`inline-block text-white p-4 text-md md:text-xl font-code bg-black rounded-lg mx-auto`}
                 style={{
                     boxShadow: '0 8px 25px rgba(0,0,0,.375)'
                 }}
