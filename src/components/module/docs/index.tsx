@@ -1,12 +1,9 @@
-import dynamic from 'next/dynamic'
-
 import { h1, h2, h3, h4, h5, h6, p, strong } from './text'
 import MarkdownImage from './image'
 import MarkdownLink from './link'
 import MarkdownPre from './pre'
+import MarkdownCode from './code'
 import { ul, li } from './list'
-
-const MarkdownCode = dynamic(() => import('./code'))
 
 const components = {
     a: MarkdownLink,

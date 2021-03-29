@@ -1,10 +1,10 @@
 # Introduction
 Creating UI in Flutter is easy. Its declarative enables developers to control every detail and outcome of how it should be.
 
-To describe the styling in the complex form for each property in a perfect hard code way is hard.
-It's like low-level programming UI, having to adapt between property which is hard when some are more complex than others, for instance, MaterialStateProperty.
+To create styling in Flutter, developers have to describe every detail to Widget.
+It's like low-level programming UI, having to adapt between property is hard when some are more complex than others, for instance, MaterialStateProperty.
 
-When to codebase gets more complex, the syntax of Flutter itself is too nested, verbose than it should be, result being hard to maintain from "Nested Hell".
+When the codebase gets more complex, the syntax of Flutter itself is too verbose, nested than it should be, result being hard to maintain mostly known as "Nested Hell".
 
 Niku helps to solve the problem by providing a toolkit to style widgets with property builders.
 To provide a smoother, shorter yet, more straightforward and maintainable way to compose styling in Flutter.
@@ -19,7 +19,7 @@ Padding(
     "Hello World",
     style: const TextStyle(
       color: Colors.blue,
-      fontSize: 21
+      fontSize: 21,
     ),
   ),
 );
@@ -35,8 +35,7 @@ Let's rewrite the upper code with Niku:
 ```dart
 import 'package:niku/niku.dart'; // <--- Import Niku library
 
-Text("Hello World")
-  .asNiku()   // <--- Compose Styling of Text
+NikuText("Hello World")
   .color(Colors.blue)
   .fontSize(21)
   .niku()       // <--- Compose Parent Widget
