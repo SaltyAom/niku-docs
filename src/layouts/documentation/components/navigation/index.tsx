@@ -25,7 +25,7 @@ const DocumentationNavigation: DocumentationNavigationComponent = ({
             }}
         >
             <div
-                className={tw`fixed z-40 top-[64px] bottom-0 flex flex-col w-full lg:w-[200px] transform -translate-x-3 overflow-y-scroll pl-3 bg-system dark:bg-system-dark`}
+                className={tw`fixed z-40 top-[64px] bottom-0 flex flex-col w-full lg:w-[200px] transform -translate-x-3 overflow-x-hidden overflow-y-auto pl-3 bg-system dark:bg-system-dark`}
                 style={{
                     padding: 76 - 64 + 'px'
                 }}
