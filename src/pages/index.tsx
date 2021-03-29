@@ -33,7 +33,7 @@ const benefits: BenefitSectionProps[] = [
   ..onPressed(log)
   ..fontSize(24)
   ..splash(Colors.blue)
-  ..rounded(8)`
+  ..rounded(8);`
     },
     {
         title: 'Reusable style',
@@ -71,8 +71,7 @@ return NikuTextField().
   ..animated(
     controller,
     (child) => Niku()..bg(value);
-  )
-});`
+  );`
     }
 ]
 
