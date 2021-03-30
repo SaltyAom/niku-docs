@@ -38,14 +38,60 @@ Switch to use parent property builder.
 
 Example Usage:
 ```dart
-NikuTextField()
-  .niku();
+NikuTextField("Username")
+  .controller(controller)
+  .outlined(
+    color: Colors.blue,
+    width: 2,
+  )
+  .niku()
+  .px(8);
 ```
 
 Equivalent to
 ```dart
 Niku(
-  Text(),
+  Padding(
+    padding: EdgeInsets.symmetric(
+      horizontal: 8,
+    ),
+    NikuTextField(
+      controller: controller,
+      decoration: InputDecoration(
+        labelText: "Username",
+        border: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: color,
+            width: width,
+          ),
+        ),
+        enableBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: color,
+            width: width,
+          ),
+        ),
+        disabledorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: color,
+            width: width,
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: color,
+            width: width,
+          ),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: color,
+            width: width,
+          ),
+        ),
+      ),
+    ),
+  ),
 );
 ```
 
