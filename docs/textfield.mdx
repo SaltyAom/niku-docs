@@ -1,0 +1,7873 @@
+## Niku TextField
+Style property builder for building "TextField" and "TextFormField".
+
+## Example usage:
+As Widget
+```dart
+NikuTextField("Username")
+  ..outlined(
+    color: Colors.blue,
+  );
+```
+
+As Property
+```dart
+TextField("Username")
+  .asNiku()
+  ..outlined(
+    color: Colors.blue,
+  );
+```
+
+## Availability: 
+To use this widget, you can import from the following:
+
+```dart
+// All Widget
+import 'package:niku/niku.dart';
+
+// Extension
+import 'package:niku/extension/widget.dart';
+
+// Just widget
+import 'package:niku/widget/text.dart';
+```
+
+## niku
+Switch to use parent property builder.
+
+Example Usage:
+```dart
+NikuTextField()
+  .niku();
+```
+
+Equivalent to
+```dart
+Niku(
+  Text(),
+);
+```
+
+## apply
+Apply predefined style properties to widget.
+
+Example Usage:
+```dart
+final title = NikuTextField()
+  ..color(Colors.red)
+  ..fontSize(21);
+
+NikuTextField()
+  ..apply(title);
+```
+
+Equivalent to
+```dart
+Text()
+  ..color(Colors.red)
+  ..fontSize(21);
+```
+
+## TextEditingController
+Input controller for editable textfield.
+
+Example Usage:
+```dart
+final controller = TextEditingController();
+
+NikuTextField()
+  ..textEditingController(controller);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  controller: input,
+);
+```
+
+## controller
+Input controller for editable textfield.
+
+Example Usage:
+```dart
+final controller = TextEditingController();
+
+NikuTextField()
+  ..controller(controller);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  controller: input,
+);
+```
+
+## initialValue
+Initial value of text field.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..initialValue("Username")
+```
+
+Equivalent to
+```dart
+TextFormField(
+  initialValue: input,
+);
+```
+
+## initial
+###### Shorten syntax of `initialValue`
+
+Initial value of text field.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..initial("Username")
+```
+
+Equivalent to
+```dart
+TextFormField(
+  initialValue: input,
+);
+```
+
+## focusNode
+An object that can be used by a stateful widget to obtain the keyboard focus and to handle keyboard events.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..focusNode(
+    FocusNode(
+      canRequestFocus: true,
+    ),
+  );
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  focusNode: input,
+);
+```
+
+## keyboardType
+The type of information for which to optimize the text input control.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..keyboardType(
+    TextInputType.multiline,
+  );
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  focusNode: input,
+);
+```
+
+## dateTimeKeyboard
+###### Shorten syntax of `keyboardType`
+
+The type of information for which to optimize the text input control.
+
+Using `TextInputType.datetime`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..dateTimeKeyboard();
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  keyboardType: TextInputType.datetime,
+);
+```
+
+## emailKeyboard
+###### Shorten syntax of `keyboardType`
+
+The type of information for which to optimize the text input control.
+
+Using `TextInputType.emailAddress`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..emailKeyboard();
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  keyboardType: TextInputType.emailAddress,
+);
+```
+
+## multilineKeyboard
+###### Shorten syntax of `keyboardType`
+
+The type of information for which to optimize the text input control.
+
+Using `TextInputType.multiline`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..multilineKeyboard();
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  keyboardType: TextInputType.multiline,
+);
+```
+
+## nameKeyboard
+###### Shorten syntax of `keyboardType`
+
+The type of information for which to optimize the text input control.
+
+Using `TextInputType.name`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..nameKeyboard();
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  keyboardType: TextInputType.name,
+);
+```
+
+## phoneKeyboard
+###### Shorten syntax of `keyboardType`
+
+The type of information for which to optimize the text input control.
+
+Using `TextInputType.phone`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..phoneKeyboard();
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  keyboardType: TextInputType.phone,
+);
+```
+
+## addressKeyboard
+###### Shorten syntax of `keyboardType`
+
+The type of information for which to optimize the text input control.
+
+Using `TextInputType.datetime`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..addressKeyboard();
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  keyboardType: TextInputType.streetAddress,
+);
+```
+
+## textKeyboard
+###### Shorten syntax of `keyboardType`
+
+The type of information for which to optimize the text input control.
+
+Using `TextInputType.text`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..textKeyboard();
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  keyboardType: TextInputType.text,
+);
+```
+
+## urlKeyboard
+###### Shorten syntax of `keyboardType`
+
+The type of information for which to optimize the text input control.
+
+Using `TextInputType.url`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..urlKeyboard();
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  keyboardType: TextInputType.url,
+);
+```
+
+## visiblePasswordKeyboard
+###### Shorten syntax of `keyboardType`
+
+The type of information for which to optimize the text input control.
+
+Using `TextInputType.visiblePassword`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..visiblePasswordKeyboard();
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  keyboardType: TextInputType.visiblePassword,
+);
+```
+
+## textCapitalization
+Configures how the platform keyboard will select an uppercase or lowercase keyboard.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..textCapitalization(
+    TextCapitalization.sentences,
+  );
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textCapitalization: input,
+);
+```
+
+## capitalizeCharacters
+###### Shorten syntax of `textCapitalization`
+
+Configures how the platform keyboard will select an uppercase or lowercase keyboard.
+
+Using `TextCapitalization.characters`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..textCapitalization(
+    TextCapitalization.characters,
+  );
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textCapitalization: input,
+);
+```
+
+## capitalizeNone
+###### Shorten syntax of `textCapitalization`
+
+Configures how the platform keyboard will select an uppercase or lowercase keyboard.
+
+Using `TextCapitalization.none`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..textCapitalization(
+    TextCapitalization.none,
+  );
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textCapitalization: input,
+);
+```
+
+## capitalizeSentences
+###### Shorten syntax of `textCapitalization`
+
+Configures how the platform keyboard will select an uppercase or lowercase keyboard.
+
+Using `TextCapitalization.sentences`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..textCapitalization(
+    TextCapitalization.sentences,
+  );
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textCapitalization: input,
+);
+```
+
+## capitalizeWords
+###### Shorten syntax of `textCapitalization`
+
+Configures how the platform keyboard will select an uppercase or lowercase keyboard.
+
+Using `TextCapitalization.words`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..textCapitalization(
+    TextCapitalization.words,
+  );
+;
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textCapitalization: input,
+);
+```
+
+## align
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..align(TextAlign.center);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textAlign: input,
+);
+```
+
+## alignLeft
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.left`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..alignLeft();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textAlign: TextAlign.left,
+);
+```
+
+## left
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.left`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..left();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textAlign: TextAlign.left,
+);
+```
+
+## alignCenter
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.center`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..alignCenter();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textAlign: TextAlign.center,
+);
+```
+
+## center
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.center`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..center();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textAlign: TextAlign.center,
+);
+```
+
+## alignRight
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.right`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..alignRight();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textAlign: TextAlign.right,
+);
+```
+
+## right
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.right`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..right();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textAlign: TextAlign.right,
+);
+```
+
+## alignStart
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.start`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..alignStart();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textAlign: TextAlign.start,
+);
+```
+
+## start
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.start`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..start();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textAlign: TextAlign.start,
+);
+```
+
+## alignEnd
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.end`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..alignEnd();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textAlign: TextAlign.end,
+);
+```
+
+## end
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.end`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..end();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textAlign: TextAlign.end,
+);
+```
+
+## alignJustify
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.justify`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..alignJustify();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textAlign: TextAlign.justify,
+);
+```
+
+## justify
+###### Shorten syntax of `textAlign`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `TextAlign.justify`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..justify();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textAlign: TextAlign.justify,
+);
+```
+
+## readOnly
+Should text field be readonly.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..readOnly();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  textAlign: TextAlign.justify,
+);
+```
+
+## toolbarOptions
+Toolbar is a context menu that will show up when user right click or long press the [EditableText]. It includes several options: cut, copy, paste, and select all.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..toolbarOptions(
+    ToolbarOptions(
+      copy: false,
+    ),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  toolbarOptions: input,
+);
+```
+
+## toolbarOptions
+###### Shorten syntax of `toolbarOptions`
+
+Toolbar is a context menu that will show up when user right click or long press the [EditableText]. It includes several options: cut, copy, paste, and select all.
+
+#### The argument accept named paramters:
+- copy
+- paste
+- cut
+- selectAll
+
+Example Usage:
+```dart
+NikuTextField()
+  ..toolbar(
+    copy: false,
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  toolbarOptions: ToolbarOptions(
+    copy: copy,
+    paste: paste,
+    cut: cut,
+    selectAll: selectAll,
+  ),
+);
+```
+
+## allowCopy
+###### Shorten syntax of `toolbarOptions`
+
+Toolbar is a context menu that will show up when user right click or long press the [EditableText]. It includes several options: cut, copy, paste, and select all.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..allowCopy(true);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  toolbarOptions: ToolbarOptions(
+    # ...others property
+    copy: input,
+  ),
+);
+```
+
+## allowPaste
+###### Shorten syntax of `toolbarOptions`
+
+Toolbar is a context menu that will show up when user right click or long press the [EditableText]. It includes several options: cut, copy, paste, and select all.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..allowPaste(true);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  toolbarOptions: ToolbarOptions(
+    # ...others property
+    paste: input,
+  ),
+);
+```
+
+## allowCut
+###### Shorten syntax of `toolbarOptions`
+
+Toolbar is a context menu that will show up when user right click or long press the [EditableText]. It includes several options: cut, copy, paste, and select all.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..allowCut(true);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  toolbarOptions: ToolbarOptions(
+    # ...others property
+    cut: input,
+  ),
+);
+```
+
+## allowSelectAll
+###### Shorten syntax of `toolbarOptions`
+
+Toolbar is a context menu that will show up when user right click or long press the [EditableText]. It includes several options: cut, copy, paste, and select all.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..allowSelectAll(true);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  toolbarOptions: ToolbarOptions(
+    # ...others property
+    selectAll: input,
+  ),
+);
+```
+
+## showCursor
+Should textfield cursor be showned.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..showCursor(true);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  showCursor: input,
+);
+```
+
+## obscuringCharacter
+Display of "hidden" character like password.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..obscuringCharacter("-");
+```
+
+Equivalent to
+```dart
+TextFormField(
+  obscuringCharacter: input,
+);
+```
+
+## obscureText
+Should text be obscure eg. password field.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..obscureText(true);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  obscureText: input,
+);
+```
+
+## asPassword
+###### Shorten syntax of `obscureText`
+
+Should text be obscure eg. password field.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..asPassword();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  obscureText: true,
+  toolbarOptions: ToolbarOptions(
+    # ...others property
+    copy: false,
+  ),
+);
+```
+
+## autoCorrect
+Should autocorrect apply to textfield.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..autoCorrect(true);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  autoCorrect: input,
+);
+```
+
+## smartDashesType
+Indicates how to handle the intelligent replacement of dashes in text input.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..smartDashesType(SmartDashesType.enabled);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  autoCorrect: input,
+);
+```
+
+## enableSmartDashes
+###### Shorten syntax of `smartDashesType`
+
+Indicates how to handle the intelligent replacement of dashes in text input.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..enableDashes(true);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  smartDashesType: input ? SmartDashesType.enabled : SmartDashesType.disabled,
+);
+```
+
+## smartQuotesType
+Indicates how to handle the intelligent replacement of dashes in text input.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..smartQuotesType(SmartQuotesType.enabled);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  autoCorrect: input,
+);
+```
+
+## enableSmartQuotes
+###### Shorten syntax of `smartQuotesType`
+
+Indicates how to handle the intelligent replacement of dashes in text input.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..enableQuotes(true);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  smartQuotesType: input ? SmartQuotesType.enabled : SmartQuotesType.disabled,
+);
+```
+
+## enableSuggestions
+Should suggestion be used.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..enableSuggestions(true);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  enableSuggestions: input,
+);
+```
+
+## maxLines
+The maximum number of lines for the text to span, wrapping if necessary.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..maxLines(5);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  maxLines: input
+);
+```
+
+## minLines
+The minimum number of lines to occupy when the content spans fewer lines
+
+Example Usage:
+```dart
+NikuTextField()
+  ..minLines(2);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  minLines: input
+);
+```
+
+## expands
+Whether this widget's height will be sized to fill its parent.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..expands(true);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  expands: input,
+);
+```
+
+## expands
+#### Default value is: `true`.
+
+Whether this widget's height will be sized to fill its parent
+
+Example Usage:
+```dart
+NikuTextField()
+  ..expands(true);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  expands: input,
+);
+```
+
+## maxLength
+The maximum number of characters (Unicode scalar values) to allow in the text field.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..maxLength(160);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  maxLength: input,
+);
+```
+
+## onChanged
+Called when the value of textfield is changed.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..onChanged((text) {
+    print("Changed Text $text");
+  });
+```
+
+Equivalent to
+```dart
+TextFormField(
+  onChanged: input,
+);
+```
+
+## onTap
+Called for each distinct tap except for every second tap of a double tap.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..onTap(() {
+    print("Tap");
+  });
+```
+
+Equivalent to
+```dart
+TextFormField(
+  onTap: input,
+);
+```
+
+## onEditingComplete
+Called for when editing text is complete and "leave" from textfield.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..onEditingComplete(() {
+    print("Tap");
+  });
+```
+
+Equivalent to
+```dart
+TextFormField(
+  onEditingComplete: input,
+);
+```
+
+## onFieldSubmitted
+Called when the user indicates that they are done editing the text in the field.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..onFieldSubmitted((text) {
+    print("Submit value: $text");
+  });
+```
+
+Equivalent to
+```dart
+TextFormField(
+  onFieldSubmitted: input,
+);
+```
+
+## onSubmitted
+###### Shorten syntax of `onFieldSubmitted`
+
+Called when the user indicates that they are done editing the text in the field.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..onSubmitted((text) {
+    print("Submit value: $text");
+  });
+```
+
+Equivalent to
+```dart
+TextFormField(
+  onFieldSubmitted: input,
+);
+```
+
+## onSaved
+Call with the final value when the form is saved via [FormState.save].
+
+Example Usage:
+```dart
+NikuTextField()
+  ..onSaved((text) {
+    print("Saved value: $text");
+  });
+```
+
+Equivalent to
+```dart
+TextFormField(
+  onSaved: input,
+);
+```
+
+## on
+Set multiple event listener at once.
+
+#### The argument accept named paramters:
+- changed
+- tap
+- editingComplete
+- submitted
+- saved
+
+Example Usage:
+```dart
+NikuTextField()
+  ..on(
+    changed: (text) {
+      print("Value $text");
+    },
+    tap: () {
+      print("Tap");
+    },
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  onChanged: changed,
+  onTap: tap,
+  onEditingComplete: editingComplete,
+  onSubmitted: submitted,
+  onSaved: saved,
+);
+```
+
+## validator
+An optional method that validates an input. Returns an error string to display if the input is invalid, or null otherwise.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..validator((value) {
+      if (value == null || value.isEmpty)
+        return 'Please enter some text';
+
+      return null;
+    },
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  validator: input,
+);
+```
+
+## validator
+An optional method that validates an input. Returns an error string to display if the input is invalid, or null otherwise.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..validator((value) {
+      if (value == null || value.isEmpty)
+        return 'Please enter some text';
+
+      return null;
+    },
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  validator: input,
+);
+```
+
+## inputFormatters
+Optional input validation and formatting overrides.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..inputFormatters([
+    FilteringTextInputFormatter.digitsOnly,
+  ]);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  inputFormatters: input,
+);
+```
+
+## enabled
+If false the text field is "disabled", ignores taps and [decoration] is rendered in grey.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..enabled(true);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  enabled: input,
+);
+```
+
+## cursorWidth
+How thick the cursor will be.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..cursorWidth(2);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  cursorWidth: input,
+);
+```
+
+## cursorHeight
+How tall the cursor will be.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..cursorHeight(16);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  cursorHeight: input,
+);
+```
+
+## cursorRadius
+How rounded the corners of the cursor should be.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..cursorRadius(
+    Radius.circular(20),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  cursorRadius: input,
+);
+```
+
+## cursorRounded
+###### Shorten syntax of `cursorRadius`
+
+How rounded the corners of the cursor should be.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..cursorRadius(
+    Radius.circular(20),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  cursorRadius: Radius.circular(input),
+);
+```
+
+## cursorColor
+Color of cursor.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..cursorColor(
+    Colors.blue,
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  cursorColor: input,
+);
+```
+
+## cursor
+Set property of cursor at once.
+
+#### The argument accept named paramters:
+- width
+- height
+- radius
+- color
+
+Example Usage:
+```dart
+NikuTextField()
+  ..cursor(
+    width: 2,
+    color: Colors.blue,
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  cursorWidth: width,
+  cursorHeight: height,
+  cursorRadius: radius,
+  cursorColor: color,
+);
+```
+
+## keyboardAppearance
+The appearance of the keyboard, only honored on iOS devices.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..keyboardAppearance(
+    Brightness.light,
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  keyboardAppearance: input,
+);
+```
+
+## lightKeyboard
+The appearance of the keyboard, only honored on iOS devices.
+
+Using [Brightness.light].
+
+Example Usage:
+```dart
+NikuTextField()
+  ..lightKeyboard();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  keyboardAppearance: Brightness.light,
+);
+```
+
+## darkKeyboard
+The appearance of the keyboard, only honored on iOS devices.
+
+Using [Brightness.dark].
+
+Example Usage:
+```dart
+NikuTextField()
+  ..darkKeyboard();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  keyboardAppearance: Brightness.dark,
+);
+```
+
+## scrollPadding
+Configures padding to edges surrounding a [Scrollable] when the Textfield scrolls into view.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..scrollPadding(
+    EdgeInsets.all(20),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  scrollPadding: input,
+);
+```
+
+## scrollP
+###### Shorten syntax of `scrollPadding`
+
+Configures padding to edges surrounding a [Scrollable] when the Textfield scrolls into view.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..scrollP(20);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  scrollPadding: EdgeInsets.all(20),
+);
+```
+
+## enableInteractiveSelection
+Whether to enable user interface affordances for changing the text selection.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..enableInteractiveSelection(true);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  enableInteractiveSelection: input,
+);
+```
+
+## builderCounter
+Whether to enable user interface affordances for changing the text selection.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..buildCounter((
+    context,
+    {
+      currentLength,
+      maxLength,
+      isFocused,
+    }
+  ) {
+    return Text(
+      '$currentLength of $maxLength characters',
+      semanticsLabel: 'character count',
+    );
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  buildCounter: input,
+);
+```
+
+## autoFillHints
+A list of strings that helps the autofill service identify the type of this text input.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..autoFillHints([
+      AutofillHints.password,
+  ]);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  autoFillHints: input
+);
+```
+
+## autoValidateMode
+Validation of value of field.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..autoValidateMode(
+    AutoValidateMode.always,
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  autoValidateMode: input,
+);
+```
+
+## alwaysValidate
+###### Shorten syntax of `autoValidateMode`
+
+Validation of value of field using `AutoValidateMode.always`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..alwaysValidate();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  autoValidateMode: AutoValidateMode.always,
+);
+```
+
+## disableValidate
+###### Shorten syntax of `autoValidateMode`
+
+Validation of value of field using `AutoValidateMode.disabled`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..disableValidate();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  autoValidateMode: AutoValidateMode.disabled,
+);
+```
+
+## validateOnUserInteraction
+###### Shorten syntax of `autoValidateMode`
+
+Validation of value of field using `AutoValidateMode.onUserInteraction`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..validateOnUserInteraction();
+```
+
+Equivalent to
+```dart
+TextFormField(
+  autoValidateMode: AutoValidateMode.onUserInteraction,
+);
+```
+
+## icon
+An icon to show before the input field and outside of the decoration's container.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..icon(
+    Icon(Icons.edit),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    icon: input,
+  )
+);
+```
+
+## labelText
+Label text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelText("Username");
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    labelText: input,
+  )
+);
+```
+
+## label
+###### Shorten syntax of `labelText`
+
+Label text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..label("Username");
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    labelText: input,
+  )
+);
+```
+
+## labelStyle
+Stying of label using [TextStyle].
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelStyle(
+    TextStyle(
+      color: Colors.blue,
+      fontSize: 21,
+    ),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    labelStyle: TextStyle(
+      colors: MaterialStateProperty.resolveWith<T>((states) {
+        return input;
+      });
+    ),
+  );
+);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    labelText: input,
+  )
+);
+```
+
+## labelColors
+Set color of label.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelColors(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    colors: MaterialStateProperty.resolveWith<T>((states) {
+      return input;
+    });
+  ),
+);
+```
+
+## labelBackgroundColor
+Set background color of label.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelBackgroundColor(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## labelBg
+###### Shorten syntax of `labelBackgroundColor`
+
+Set background color of label.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelBg(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## labelFontSize
+Set font size of label.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelFontSize(21);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontSize: input,
+  ),
+);
+```
+
+## labelFontWeight
+Set font weight of label.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelFontWeight(fontWeight.bold);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontWeight: input,
+  ),
+);
+```
+
+## labelBold
+###### Shorten syntax of `labelFontWeight`
+
+Set font weight using `FontWeight.bold`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelBold();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontWeight: FontWeight.bold,
+  ),
+);
+```
+
+## labelW100
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w100`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelW100();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontWeight: FontWeight.w100,
+  ),
+);
+```
+
+## labelW200
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w200`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelW200();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontWeight: FontWeight.w200,
+  ),
+);
+```
+
+## labelW300
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w300`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelW300();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontWeight: FontWeight.w300,
+  ),
+);
+```
+
+## labelW400
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w400`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelW400();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontWeight: FontWeight.w400,
+  ),
+);
+```
+
+## labelW500
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w500`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelW500();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontWeight: FontWeight.w500,
+  ),
+);
+```
+
+## labelW600
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w600`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelW600();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontWeight: FontWeight.w600,
+  ),
+);
+```
+
+## labelW700
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w700`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelW700();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontWeight: FontWeight.w700,
+  ),
+);
+```
+
+## labelW800
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w800`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelW800();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontWeight: FontWeight.w800,
+  ),
+);
+```
+
+## labelW900
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w900`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelW900();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontWeight: FontWeight.w900,
+  ),
+);
+```
+
+## labelFontStyle
+Set font style of label.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelFontStyle(FontStyle.italic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontStyle: input,
+  ),
+);
+```
+
+## labelItalic
+###### Shorten syntax of `labelFontStyle`
+Set font weight using `FontStyle.italic`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelItalic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontStyle: FontStyle.italic,
+  ),
+);
+```
+
+## labelLetterSpacing
+Set letter spacing of label.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelLetterSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    letterSpacing: input,
+  ),
+);
+```
+
+## labelWordSpacing
+Set word spacing of label.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelWordSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    wordSpacing: input,
+  ),
+);
+```
+
+## labelHeight
+Set height.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelHeight(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    labelHeight: input,
+  ),
+);
+```
+
+## labelForeground
+The paint drawn as a foreground for the label.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..foreground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    foreground: input,
+  ),
+);
+```
+
+## labelBackground
+The paint drawn as a foreground for the label.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..labelBackground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    background: input,
+  ),
+);
+```
+
+## labelShadows
+Collection of label's shadow.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelShadows([
+    Shadow(
+      offset: Offset(0, 4),
+      blurRadius: 8,
+      color: Colors.black.withOpacity(.1),
+    )
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    shadows: input,
+  ),
+);
+```
+
+## labelFontFeature
+A feature tag and value that affect the selection of glyphs in a font.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelFontFeatures([
+    FontFeature.enable('smcp'),
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontFeatures: input,
+  ),
+);
+```
+
+## labelDecoration
+Add `TextDecoration`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelDecoration(TextDecoration.underline);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    labelDecoration: input,
+  ),
+);
+```
+
+## labelDecorationColor
+Set Color of label decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelDecorationColor(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(labelDecorationColor: input,
+);
+```
+
+## labelDecorationThickness
+Set thickness of label decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelDecorationThickness(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    labelDecorationThickness: input,
+  ),
+);
+```
+
+## labelFontFamily
+Set font of label.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelFontFamily('Helvetica Neue');
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontFamily: input,
+  ),
+);
+```
+
+## labelFontFamilyFallback
+Set font fallback of label if fontFamily is missing.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelFontFamilyFallback([
+    'Roboto',
+    'Segoe UI',
+    'Open Sans',
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    fontFamilyFallback: input,
+  ),
+);
+```
+
+## labelBaseline
+The common baseline that should be aligned between this label span and its parent label span, or, for the root label spans, with the line box.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelBaseline(Textbaseline.alphabetic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    labelBaseline: input,
+  ),
+);
+```
+
+## labelAlphabetic
+###### Shorten syntax of `labelBaseline`
+
+The common baseline that should be aligned between this label span and its parent label span, or, for the root label spans, with the line box.
+
+Using `Textbaseline.alphabetic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelAlphabetic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    labelBaseline: Textbaseline.alphabetic,
+  ),
+);
+```
+
+## labelIdeographic
+###### Shorten syntax of `labelBaseline`
+
+The common baseline that should be aligned between this label span and its parent label span, or, for the root label spans, with the line box.
+
+Using `Textbaseline.ideographic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..labelIdeographic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  labelStyle: TextStyle(
+    labelBaseline: Textbaseline.ideographic,
+  ),
+);
+```
+
+## hintText
+Hint text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintText("Username");
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    hintText: input,
+  )
+);
+```
+
+## hintMaxlines
+Maximum line of hint text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintMaxLines(3);
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    hintMaxLines: 3,
+  );
+);
+```
+
+## hintStyle
+Stying of label using [TextStyle].
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintStyle(
+    TextStyle(
+      color: Colors.blue,
+      fontSize: 21,
+    ),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    hintStyle: TextStyle(
+      colors: MaterialStateProperty.resolveWith<T>((states) {
+        return input;
+      });
+    ),
+  );
+);
+```
+
+## hintColors
+Set color of hint.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintColors(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    colors: MaterialStateProperty.resolveWith<T>((states) {
+      return input;
+    });
+  ),
+);
+```
+
+## hintBackgroundColor
+Set background color of hint.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintBackgroundColor(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## hintBg
+###### Shorten syntax of `hintBackgroundColor`
+
+Set background color of hint.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintBg(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## hintFontSize
+Set font size of hint.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintFontSize(21);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontSize: input,
+  ),
+);
+```
+
+## hintFontWeight
+Set font weight of hint.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintFontWeight(fontWeight.bold);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontWeight: input,
+  ),
+);
+```
+
+## hintBold
+###### Shorten syntax of `hintFontWeight`
+
+Set font weight using `FontWeight.bold`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintBold();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontWeight: FontWeight.bold,
+  ),
+);
+```
+
+## hintW100
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w100`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintW100();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontWeight: FontWeight.w100,
+  ),
+);
+```
+
+## hintW200
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w200`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintW200();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontWeight: FontWeight.w200,
+  ),
+);
+```
+
+## hintW300
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w300`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintW300();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontWeight: FontWeight.w300,
+  ),
+);
+```
+
+## hintW400
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w400`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintW400();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontWeight: FontWeight.w400,
+  ),
+);
+```
+
+## hintW500
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w500`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintW500();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontWeight: FontWeight.w500,
+  ),
+);
+```
+
+## hintW600
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w600`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintW600();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontWeight: FontWeight.w600,
+  ),
+);
+```
+
+## hintW700
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w700`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintW700();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontWeight: FontWeight.w700,
+  ),
+);
+```
+
+## hintW800
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w800`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintW800();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontWeight: FontWeight.w800,
+  ),
+);
+```
+
+## hintW900
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w900`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintW900();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontWeight: FontWeight.w900,
+  ),
+);
+```
+
+## hintFontStyle
+Set font style of hint.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintFontStyle(FontStyle.italic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontStyle: input,
+  ),
+);
+```
+
+## hintItalic
+###### Shorten syntax of `hintFontStyle`
+Set font weight using `FontStyle.italic`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintItalic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontStyle: FontStyle.italic,
+  ),
+);
+```
+
+## hintLetterSpacing
+Set letter spacing of hint.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintLetterSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    letterSpacing: input,
+  ),
+);
+```
+
+## hintWordSpacing
+Set word spacing of hint.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintWordSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    wordSpacing: input,
+  ),
+);
+```
+
+## hintHeight
+Set height.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintHeight(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    hintHeight: input,
+  ),
+);
+```
+
+## hintForeground
+The paint drawn as a foreground for the hint.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..foreground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    foreground: input,
+  ),
+);
+```
+
+## hintBackground
+The paint drawn as a foreground for the hint.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..hintBackground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    background: input,
+  ),
+);
+```
+
+## hintShadows
+Collection of hint's shadow.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintShadows([
+    Shadow(
+      offset: Offset(0, 4),
+      blurRadius: 8,
+      color: Colors.black.withOpacity(.1),
+    )
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    shadows: input,
+  ),
+);
+```
+
+## hintFontFeature
+A feature tag and value that affect the selection of glyphs in a font.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintFontFeatures([
+    FontFeature.enable('smcp'),
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontFeatures: input,
+  ),
+);
+```
+
+## hintDecoration
+Add `TextDecoration`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintDecoration(TextDecoration.underline);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    hintDecoration: input,
+  ),
+);
+```
+
+## hintDecorationColor
+Set Color of hint decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintDecorationColor(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(hintDecorationColor: input,
+);
+```
+
+## hintDecorationThickness
+Set thickness of hint decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintDecorationThickness(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    hintDecorationThickness: input,
+  ),
+);
+```
+
+## hintFontFamily
+Set font of hint.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintFontFamily('Helvetica Neue');
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontFamily: input,
+  ),
+);
+```
+
+## hintFontFamilyFallback
+Set font fallback of hint if fontFamily is missing.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintFontFamilyFallback([
+    'Roboto',
+    'Segoe UI',
+    'Open Sans',
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    fontFamilyFallback: input,
+  ),
+);
+```
+
+## hintBaseline
+The common baseline that should be aligned between this hint span and its parent hint span, or, for the root hint spans, with the line box.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintBaseline(Textbaseline.alphabetic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    hintBaseline: input,
+  ),
+);
+```
+
+## hintAlphabetic
+###### Shorten syntax of `hintBaseline`
+
+The common baseline that should be aligned between this hint span and its parent hint span, or, for the root hint spans, with the line box.
+
+Using `Textbaseline.alphabetic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintAlphabetic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    hintBaseline: Textbaseline.alphabetic,
+  ),
+);
+```
+
+## hintIdeographic
+###### Shorten syntax of `hintBaseline`
+
+The common baseline that should be aligned between this hint span and its parent hint span, or, for the root hint spans, with the line box.
+
+Using `Textbaseline.ideographic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hintIdeographic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hintStyle: TextStyle(
+    hintBaseline: Textbaseline.ideographic,
+  ),
+);
+```
+
+## helperText
+Hint text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperText("Username");
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    helperText: input,
+  )
+);
+```
+
+## helperStyle
+Stying of label using [TextStyle].
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperStyle(
+    TextStyle(
+      color: Colors.blue,
+      fontSize: 21,
+    ),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    helperStyle: TextStyle(
+      colors: MaterialStateProperty.resolveWith<T>((states) {
+        return input;
+      });
+    ),
+  );
+);
+```
+
+## helperColors
+Set color of helper.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperColors(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    colors: MaterialStateProperty.resolveWith<T>((states) {
+      return input;
+    });
+  ),
+);
+```
+
+## helperBackgroundColor
+Set background color of helper.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperBackgroundColor(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## helperBg
+###### Shorten syntax of `helperBackgroundColor`
+
+Set background color of helper.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperBg(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## helperFontSize
+Set font size of helper.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperFontSize(21);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontSize: input,
+  ),
+);
+```
+
+## helperFontWeight
+Set font weight of helper.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperFontWeight(fontWeight.bold);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontWeight: input,
+  ),
+);
+```
+
+## helperBold
+###### Shorten syntax of `helperFontWeight`
+
+Set font weight using `FontWeight.bold`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperBold();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontWeight: FontWeight.bold,
+  ),
+);
+```
+
+## helperW100
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w100`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperW100();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontWeight: FontWeight.w100,
+  ),
+);
+```
+
+## helperW200
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w200`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperW200();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontWeight: FontWeight.w200,
+  ),
+);
+```
+
+## helperW300
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w300`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperW300();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontWeight: FontWeight.w300,
+  ),
+);
+```
+
+## helperW400
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w400`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperW400();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontWeight: FontWeight.w400,
+  ),
+);
+```
+
+## helperW500
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w500`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperW500();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontWeight: FontWeight.w500,
+  ),
+);
+```
+
+## helperW600
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w600`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperW600();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontWeight: FontWeight.w600,
+  ),
+);
+```
+
+## helperW700
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w700`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperW700();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontWeight: FontWeight.w700,
+  ),
+);
+```
+
+## helperW800
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w800`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperW800();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontWeight: FontWeight.w800,
+  ),
+);
+```
+
+## helperW900
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w900`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperW900();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontWeight: FontWeight.w900,
+  ),
+);
+```
+
+## helperFontStyle
+Set font style of helper.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperFontStyle(FontStyle.italic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontStyle: input,
+  ),
+);
+```
+
+## helperItalic
+###### Shorten syntax of `helperFontStyle`
+Set font weight using `FontStyle.italic`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperItalic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontStyle: FontStyle.italic,
+  ),
+);
+```
+
+## helperLetterSpacing
+Set letter spacing of helper.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperLetterSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    letterSpacing: input,
+  ),
+);
+```
+
+## helperWordSpacing
+Set word spacing of helper.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperWordSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    wordSpacing: input,
+  ),
+);
+```
+
+## helperHeight
+Set height.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperHeight(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    helperHeight: input,
+  ),
+);
+```
+
+## helperForeground
+The paint drawn as a foreground for the helper.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..foreground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    foreground: input,
+  ),
+);
+```
+
+## helperBackground
+The paint drawn as a foreground for the helper.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..helperBackground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    background: input,
+  ),
+);
+```
+
+## helperShadows
+Collection of helper's shadow.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperShadows([
+    Shadow(
+      offset: Offset(0, 4),
+      blurRadius: 8,
+      color: Colors.black.withOpacity(.1),
+    )
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    shadows: input,
+  ),
+);
+```
+
+## helperFontFeature
+A feature tag and value that affect the selection of glyphs in a font.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperFontFeatures([
+    FontFeature.enable('smcp'),
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontFeatures: input,
+  ),
+);
+```
+
+## helperDecoration
+Add `TextDecoration`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperDecoration(TextDecoration.underline);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    helperDecoration: input,
+  ),
+);
+```
+
+## helperDecorationColor
+Set Color of helper decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperDecorationColor(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(helperDecorationColor: input,
+);
+```
+
+## helperDecorationThickness
+Set thickness of helper decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperDecorationThickness(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    helperDecorationThickness: input,
+  ),
+);
+```
+
+## helperFontFamily
+Set font of helper.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperFontFamily('Helvetica Neue');
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontFamily: input,
+  ),
+);
+```
+
+## helperFontFamilyFallback
+Set font fallback of helper if fontFamily is missing.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperFontFamilyFallback([
+    'Roboto',
+    'Segoe UI',
+    'Open Sans',
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    fontFamilyFallback: input,
+  ),
+);
+```
+
+## helperBaseline
+The common baseline that should be aligned between this helper span and its parent helper span, or, for the root helper spans, with the line box.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperBaseline(Textbaseline.alphabetic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    helperBaseline: input,
+  ),
+);
+```
+
+## helperAlphabetic
+###### Shorten syntax of `helperBaseline`
+
+The common baseline that should be aligned between this helper span and its parent helper span, or, for the root helper spans, with the line box.
+
+Using `Textbaseline.alphabetic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperAlphabetic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    helperBaseline: Textbaseline.alphabetic,
+  ),
+);
+```
+
+## helperIdeographic
+###### Shorten syntax of `helperBaseline`
+
+The common baseline that should be aligned between this helper span and its parent helper span, or, for the root helper spans, with the line box.
+
+Using `Textbaseline.ideographic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..helperIdeographic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  helperStyle: TextStyle(
+    helperBaseline: Textbaseline.ideographic,
+  ),
+);
+```
+
+## errorText
+Hint text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorText("Username");
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    errorText: input,
+  )
+);
+```
+
+## errorStyle
+Stying of label using [TextStyle].
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorStyle(
+    TextStyle(
+      color: Colors.blue,
+      fontSize: 21,
+    ),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    errorStyle: TextStyle(
+      colors: MaterialStateProperty.resolveWith<T>((states) {
+        return input;
+      });
+    ),
+  );
+);
+```
+
+## errorColors
+Set color of error.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorColors(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    colors: MaterialStateProperty.resolveWith<T>((states) {
+      return input;
+    });
+  ),
+);
+```
+
+## errorBackgroundColor
+Set background color of error.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorBackgroundColor(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## errorBg
+###### Shorten syntax of `errorBackgroundColor`
+
+Set background color of error.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorBg(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## errorFontSize
+Set font size of error.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorFontSize(21);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontSize: input,
+  ),
+);
+```
+
+## errorFontWeight
+Set font weight of error.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorFontWeight(fontWeight.bold);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontWeight: input,
+  ),
+);
+```
+
+## errorBold
+###### Shorten syntax of `errorFontWeight`
+
+Set font weight using `FontWeight.bold`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorBold();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontWeight: FontWeight.bold,
+  ),
+);
+```
+
+## errorW100
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w100`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorW100();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontWeight: FontWeight.w100,
+  ),
+);
+```
+
+## errorW200
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w200`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorW200();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontWeight: FontWeight.w200,
+  ),
+);
+```
+
+## errorW300
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w300`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorW300();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontWeight: FontWeight.w300,
+  ),
+);
+```
+
+## errorW400
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w400`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorW400();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontWeight: FontWeight.w400,
+  ),
+);
+```
+
+## errorW500
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w500`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorW500();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontWeight: FontWeight.w500,
+  ),
+);
+```
+
+## errorW600
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w600`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorW600();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontWeight: FontWeight.w600,
+  ),
+);
+```
+
+## errorW700
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w700`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorW700();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontWeight: FontWeight.w700,
+  ),
+);
+```
+
+## errorW800
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w800`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorW800();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontWeight: FontWeight.w800,
+  ),
+);
+```
+
+## errorW900
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w900`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorW900();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontWeight: FontWeight.w900,
+  ),
+);
+```
+
+## errorFontStyle
+Set font style of error.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorFontStyle(FontStyle.italic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontStyle: input,
+  ),
+);
+```
+
+## errorItalic
+###### Shorten syntax of `errorFontStyle`
+Set font weight using `FontStyle.italic`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorItalic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontStyle: FontStyle.italic,
+  ),
+);
+```
+
+## errorLetterSpacing
+Set letter spacing of error.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorLetterSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    letterSpacing: input,
+  ),
+);
+```
+
+## errorWordSpacing
+Set word spacing of error.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorWordSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    wordSpacing: input,
+  ),
+);
+```
+
+## errorHeight
+Set height.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorHeight(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    errorHeight: input,
+  ),
+);
+```
+
+## errorForeground
+The paint drawn as a foreground for the error.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..foreground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    foreground: input,
+  ),
+);
+```
+
+## errorBackground
+The paint drawn as a foreground for the error.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..errorBackground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    background: input,
+  ),
+);
+```
+
+## errorShadows
+Collection of error's shadow.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorShadows([
+    Shadow(
+      offset: Offset(0, 4),
+      blurRadius: 8,
+      color: Colors.black.withOpacity(.1),
+    )
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    shadows: input,
+  ),
+);
+```
+
+## errorFontFeature
+A feature tag and value that affect the selection of glyphs in a font.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorFontFeatures([
+    FontFeature.enable('smcp'),
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontFeatures: input,
+  ),
+);
+```
+
+## errorDecoration
+Add `TextDecoration`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorDecoration(TextDecoration.underline);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    errorDecoration: input,
+  ),
+);
+```
+
+## errorDecorationColor
+Set Color of error decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorDecorationColor(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(errorDecorationColor: input,
+);
+```
+
+## errorDecorationThickness
+Set thickness of error decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorDecorationThickness(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    errorDecorationThickness: input,
+  ),
+);
+```
+
+## errorFontFamily
+Set font of error.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorFontFamily('Helvetica Neue');
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontFamily: input,
+  ),
+);
+```
+
+## errorFontFamilyFallback
+Set font fallback of error if fontFamily is missing.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorFontFamilyFallback([
+    'Roboto',
+    'Segoe UI',
+    'Open Sans',
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    fontFamilyFallback: input,
+  ),
+);
+```
+
+## errorBaseline
+The common baseline that should be aligned between this error span and its parent error span, or, for the root error spans, with the line box.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorBaseline(Textbaseline.alphabetic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    errorBaseline: input,
+  ),
+);
+```
+
+## errorAlphabetic
+###### Shorten syntax of `errorBaseline`
+
+The common baseline that should be aligned between this error span and its parent error span, or, for the root error spans, with the line box.
+
+Using `Textbaseline.alphabetic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorAlphabetic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    errorBaseline: Textbaseline.alphabetic,
+  ),
+);
+```
+
+## errorIdeographic
+###### Shorten syntax of `errorBaseline`
+
+The common baseline that should be aligned between this error span and its parent error span, or, for the root error spans, with the line box.
+
+Using `Textbaseline.ideographic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorIdeographic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorStyle: TextStyle(
+    errorBaseline: Textbaseline.ideographic,
+  ),
+);
+```
+
+## floatingLabelBehavior
+Defines the behavior of the floating label.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..flaotingLabelBehavior(
+    FloatingLabelBehavior.always,
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  floatingLabelBehavior: FloatingLabelBehavior: input,
+);
+```
+
+## isCollapsed
+Whether the decoration is the same size as the input field.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..isCollapsed(true);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  isCollpase: input,
+);
+```
+
+## isDense
+Whether the [InputDecorator.child] is part of a dense form (i.e., uses less vertical space).
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..isDense(true);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  isDense: input,
+);
+```
+
+## contentPadding
+The padding for the input decoration's container.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..contentPadding(EdgeInsets.all(20));
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  contentPadding: input,
+);
+```
+
+## prefixIcon
+An icon that appears before the [prefix] or [prefixText] and before the editable part of the text field, within the decoration's container.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixIcon(
+    Icon(Icons.edit),
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixIcon: input,
+);
+```
+
+## prefixIconConstraints
+An icon that appears before the [prefix] or [prefixText] and before the editable part of the text field, within the decoration's container.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixIconConstraints(
+    BoxConstraints(
+      minWidth: 32,
+    ),
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixIconConstraints: input,
+);
+```
+
+## prefix
+Hint text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefix(
+    Text("Username"),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    prefixText: input,
+  )
+);
+```
+
+## prefixText
+Hint text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixText("Username");
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    prefixText: input,
+  )
+);
+```
+
+## prefixStyle
+Stying of label using [TextStyle].
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixStyle(
+    TextStyle(
+      color: Colors.blue,
+      fontSize: 21,
+    ),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    prefixStyle: TextStyle(
+      colors: MaterialStateProperty.resolveWith<T>((states) {
+        return input;
+      });
+    ),
+  );
+);
+```
+
+## prefixColors
+Set color of prefix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixColors(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    colors: MaterialStateProperty.resolveWith<T>((states) {
+      return input;
+    });
+  ),
+);
+```
+
+## prefixBackgroundColor
+Set background color of prefix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixBackgroundColor(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## prefixBg
+###### Shorten syntax of `prefixBackgroundColor`
+
+Set background color of prefix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixBg(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## prefixFontSize
+Set font size of prefix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixFontSize(21);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontSize: input,
+  ),
+);
+```
+
+## prefixFontWeight
+Set font weight of prefix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixFontWeight(fontWeight.bold);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontWeight: input,
+  ),
+);
+```
+
+## prefixBold
+###### Shorten syntax of `prefixFontWeight`
+
+Set font weight using `FontWeight.bold`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixBold();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontWeight: FontWeight.bold,
+  ),
+);
+```
+
+## prefixW100
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w100`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixW100();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontWeight: FontWeight.w100,
+  ),
+);
+```
+
+## prefixW200
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w200`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixW200();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontWeight: FontWeight.w200,
+  ),
+);
+```
+
+## prefixW300
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w300`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixW300();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontWeight: FontWeight.w300,
+  ),
+);
+```
+
+## prefixW400
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w400`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixW400();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontWeight: FontWeight.w400,
+  ),
+);
+```
+
+## prefixW500
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w500`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixW500();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontWeight: FontWeight.w500,
+  ),
+);
+```
+
+## prefixW600
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w600`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixW600();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontWeight: FontWeight.w600,
+  ),
+);
+```
+
+## prefixW700
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w700`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixW700();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontWeight: FontWeight.w700,
+  ),
+);
+```
+
+## prefixW800
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w800`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixW800();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontWeight: FontWeight.w800,
+  ),
+);
+```
+
+## prefixW900
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w900`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixW900();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontWeight: FontWeight.w900,
+  ),
+);
+```
+
+## prefixFontStyle
+Set font style of prefix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixFontStyle(FontStyle.italic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontStyle: input,
+  ),
+);
+```
+
+## prefixItalic
+###### Shorten syntax of `prefixFontStyle`
+Set font weight using `FontStyle.italic`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixItalic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontStyle: FontStyle.italic,
+  ),
+);
+```
+
+## prefixLetterSpacing
+Set letter spacing of prefix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixLetterSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    letterSpacing: input,
+  ),
+);
+```
+
+## prefixWordSpacing
+Set word spacing of prefix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixWordSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    wordSpacing: input,
+  ),
+);
+```
+
+## prefixHeight
+Set height.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixHeight(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    prefixHeight: input,
+  ),
+);
+```
+
+## prefixForeground
+The paint drawn as a foreground for the prefix.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..foreground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    foreground: input,
+  ),
+);
+```
+
+## prefixBackground
+The paint drawn as a foreground for the prefix.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..prefixBackground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    background: input,
+  ),
+);
+```
+
+## prefixShadows
+Collection of prefix's shadow.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixShadows([
+    Shadow(
+      offset: Offset(0, 4),
+      blurRadius: 8,
+      color: Colors.black.withOpacity(.1),
+    )
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    shadows: input,
+  ),
+);
+```
+
+## prefixFontFeature
+A feature tag and value that affect the selection of glyphs in a font.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixFontFeatures([
+    FontFeature.enable('smcp'),
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontFeatures: input,
+  ),
+);
+```
+
+## prefixDecoration
+Add `TextDecoration`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixDecoration(TextDecoration.underline);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    prefixDecoration: input,
+  ),
+);
+```
+
+## prefixDecorationColor
+Set Color of prefix decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixDecorationColor(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(prefixDecorationColor: input,
+);
+```
+
+## prefixDecorationThickness
+Set thickness of prefix decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixDecorationThickness(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    prefixDecorationThickness: input,
+  ),
+);
+```
+
+## prefixFontFamily
+Set font of prefix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixFontFamily('Helvetica Neue');
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontFamily: input,
+  ),
+);
+```
+
+## prefixFontFamilyFallback
+Set font fallback of prefix if fontFamily is missing.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixFontFamilyFallback([
+    'Roboto',
+    'Segoe UI',
+    'Open Sans',
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    fontFamilyFallback: input,
+  ),
+);
+```
+
+## prefixBaseline
+The common baseline that should be aligned between this prefix span and its parent prefix span, or, for the root prefix spans, with the line box.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixBaseline(Textbaseline.alphabetic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    prefixBaseline: input,
+  ),
+);
+```
+
+## prefixAlphabetic
+###### Shorten syntax of `prefixBaseline`
+
+The common baseline that should be aligned between this prefix span and its parent prefix span, or, for the root prefix spans, with the line box.
+
+Using `Textbaseline.alphabetic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixAlphabetic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    prefixBaseline: Textbaseline.alphabetic,
+  ),
+);
+```
+
+## prefixIdeographic
+###### Shorten syntax of `prefixBaseline`
+
+The common baseline that should be aligned between this prefix span and its parent prefix span, or, for the root prefix spans, with the line box.
+
+Using `Textbaseline.ideographic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..prefixIdeographic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  prefixStyle: TextStyle(
+    prefixBaseline: Textbaseline.ideographic,
+  ),
+);
+```
+
+## suffixIcon
+An icon that appears before the [suffix] or [suffixText] and before the editable part of the text field, within the decoration's container.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixIcon(
+    Icon(Icons.edit),
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixIcon: input,
+);
+```
+
+## suffixIconConstraints
+An icon that appears before the [suffix] or [suffixText] and before the editable part of the text field, within the decoration's container.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixIconConstraints(
+    BoxConstraints(
+      minWidth: 32,
+    ),
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixIconConstraints: input,
+);
+```
+
+## suffix
+Hint text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffix(
+    Text("Username"),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    suffixText: input,
+  )
+);
+```
+
+## suffixText
+Hint text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixText("Username");
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    suffixText: input,
+  )
+);
+```
+
+## suffixStyle
+Stying of label using [TextStyle].
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixStyle(
+    TextStyle(
+      color: Colors.blue,
+      fontSize: 21,
+    ),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    suffixStyle: TextStyle(
+      colors: MaterialStateProperty.resolveWith<T>((states) {
+        return input;
+      });
+    ),
+  );
+);
+```
+
+## suffixColors
+Set color of suffix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixColors(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    colors: MaterialStateProperty.resolveWith<T>((states) {
+      return input;
+    });
+  ),
+);
+```
+
+## suffixBackgroundColor
+Set background color of suffix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixBackgroundColor(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## suffixBg
+###### Shorten syntax of `suffixBackgroundColor`
+
+Set background color of suffix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixBg(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## suffixFontSize
+Set font size of suffix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixFontSize(21);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontSize: input,
+  ),
+);
+```
+
+## suffixFontWeight
+Set font weight of suffix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixFontWeight(fontWeight.bold);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontWeight: input,
+  ),
+);
+```
+
+## suffixBold
+###### Shorten syntax of `suffixFontWeight`
+
+Set font weight using `FontWeight.bold`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixBold();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontWeight: FontWeight.bold,
+  ),
+);
+```
+
+## suffixW100
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w100`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixW100();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontWeight: FontWeight.w100,
+  ),
+);
+```
+
+## suffixW200
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w200`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixW200();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontWeight: FontWeight.w200,
+  ),
+);
+```
+
+## suffixW300
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w300`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixW300();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontWeight: FontWeight.w300,
+  ),
+);
+```
+
+## suffixW400
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w400`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixW400();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontWeight: FontWeight.w400,
+  ),
+);
+```
+
+## suffixW500
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w500`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixW500();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontWeight: FontWeight.w500,
+  ),
+);
+```
+
+## suffixW600
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w600`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixW600();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontWeight: FontWeight.w600,
+  ),
+);
+```
+
+## suffixW700
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w700`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixW700();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontWeight: FontWeight.w700,
+  ),
+);
+```
+
+## suffixW800
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w800`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixW800();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontWeight: FontWeight.w800,
+  ),
+);
+```
+
+## suffixW900
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w900`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixW900();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontWeight: FontWeight.w900,
+  ),
+);
+```
+
+## suffixFontStyle
+Set font style of suffix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixFontStyle(FontStyle.italic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontStyle: input,
+  ),
+);
+```
+
+## suffixItalic
+###### Shorten syntax of `suffixFontStyle`
+Set font weight using `FontStyle.italic`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixItalic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontStyle: FontStyle.italic,
+  ),
+);
+```
+
+## suffixLetterSpacing
+Set letter spacing of suffix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixLetterSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    letterSpacing: input,
+  ),
+);
+```
+
+## suffixWordSpacing
+Set word spacing of suffix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixWordSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    wordSpacing: input,
+  ),
+);
+```
+
+## suffixHeight
+Set height.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixHeight(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    suffixHeight: input,
+  ),
+);
+```
+
+## suffixForeground
+The paint drawn as a foreground for the suffix.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..foreground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    foreground: input,
+  ),
+);
+```
+
+## suffixBackground
+The paint drawn as a foreground for the suffix.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..suffixBackground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    background: input,
+  ),
+);
+```
+
+## suffixShadows
+Collection of suffix's shadow.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixShadows([
+    Shadow(
+      offset: Offset(0, 4),
+      blurRadius: 8,
+      color: Colors.black.withOpacity(.1),
+    )
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    shadows: input,
+  ),
+);
+```
+
+## suffixFontFeature
+A feature tag and value that affect the selection of glyphs in a font.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixFontFeatures([
+    FontFeature.enable('smcp'),
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontFeatures: input,
+  ),
+);
+```
+
+## suffixDecoration
+Add `TextDecoration`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixDecoration(TextDecoration.underline);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    suffixDecoration: input,
+  ),
+);
+```
+
+## suffixDecorationColor
+Set Color of suffix decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixDecorationColor(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(suffixDecorationColor: input,
+);
+```
+
+## suffixDecorationThickness
+Set thickness of suffix decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixDecorationThickness(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    suffixDecorationThickness: input,
+  ),
+);
+```
+
+## suffixFontFamily
+Set font of suffix.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixFontFamily('Helvetica Neue');
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontFamily: input,
+  ),
+);
+```
+
+## suffixFontFamilyFallback
+Set font fallback of suffix if fontFamily is missing.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixFontFamilyFallback([
+    'Roboto',
+    'Segoe UI',
+    'Open Sans',
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    fontFamilyFallback: input,
+  ),
+);
+```
+
+## suffixBaseline
+The common baseline that should be aligned between this suffix span and its parent suffix span, or, for the root suffix spans, with the line box.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixBaseline(Textbaseline.alphabetic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    suffixBaseline: input,
+  ),
+);
+```
+
+## suffixAlphabetic
+###### Shorten syntax of `suffixBaseline`
+
+The common baseline that should be aligned between this suffix span and its parent suffix span, or, for the root suffix spans, with the line box.
+
+Using `Textbaseline.alphabetic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixAlphabetic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    suffixBaseline: Textbaseline.alphabetic,
+  ),
+);
+```
+
+## suffixIdeographic
+###### Shorten syntax of `suffixBaseline`
+
+The common baseline that should be aligned between this suffix span and its parent suffix span, or, for the root suffix spans, with the line box.
+
+Using `Textbaseline.ideographic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..suffixIdeographic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  suffixStyle: TextStyle(
+    suffixBaseline: Textbaseline.ideographic,
+  ),
+);
+```
+
+## counter
+Hint text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counter(
+    Text("Username"),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    counterText: input,
+  )
+);
+```
+
+## counterText
+Hint text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterText("Username");
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    counterText: input,
+  )
+);
+```
+
+## counterStyle
+Stying of label using [TextStyle].
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterStyle(
+    TextStyle(
+      color: Colors.blue,
+      fontSize: 21,
+    ),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    counterStyle: TextStyle(
+      colors: MaterialStateProperty.resolveWith<T>((states) {
+        return input;
+      });
+    ),
+  );
+);
+```
+
+## counterColors
+Set color of counter.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterColors(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    colors: MaterialStateProperty.resolveWith<T>((states) {
+      return input;
+    });
+  ),
+);
+```
+
+## counterBackgroundColor
+Set background color of counter.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterBackgroundColor(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## counterBg
+###### Shorten syntax of `counterBackgroundColor`
+
+Set background color of counter.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterBg(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## counterFontSize
+Set font size of counter.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterFontSize(21);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontSize: input,
+  ),
+);
+```
+
+## counterFontWeight
+Set font weight of counter.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterFontWeight(fontWeight.bold);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontWeight: input,
+  ),
+);
+```
+
+## counterBold
+###### Shorten syntax of `counterFontWeight`
+
+Set font weight using `FontWeight.bold`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterBold();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontWeight: FontWeight.bold,
+  ),
+);
+```
+
+## counterW100
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w100`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterW100();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontWeight: FontWeight.w100,
+  ),
+);
+```
+
+## counterW200
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w200`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterW200();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontWeight: FontWeight.w200,
+  ),
+);
+```
+
+## counterW300
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w300`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterW300();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontWeight: FontWeight.w300,
+  ),
+);
+```
+
+## counterW400
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w400`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterW400();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontWeight: FontWeight.w400,
+  ),
+);
+```
+
+## counterW500
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w500`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterW500();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontWeight: FontWeight.w500,
+  ),
+);
+```
+
+## counterW600
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w600`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterW600();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontWeight: FontWeight.w600,
+  ),
+);
+```
+
+## counterW700
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w700`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterW700();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontWeight: FontWeight.w700,
+  ),
+);
+```
+
+## counterW800
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w800`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterW800();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontWeight: FontWeight.w800,
+  ),
+);
+```
+
+## counterW900
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w900`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterW900();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontWeight: FontWeight.w900,
+  ),
+);
+```
+
+## counterFontStyle
+Set font style of counter.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterFontStyle(FontStyle.italic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontStyle: input,
+  ),
+);
+```
+
+## counterItalic
+###### Shorten syntax of `counterFontStyle`
+Set font weight using `FontStyle.italic`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterItalic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontStyle: FontStyle.italic,
+  ),
+);
+```
+
+## counterLetterSpacing
+Set letter spacing of counter.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterLetterSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    letterSpacing: input,
+  ),
+);
+```
+
+## counterWordSpacing
+Set word spacing of counter.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterWordSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    wordSpacing: input,
+  ),
+);
+```
+
+## counterHeight
+Set height.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterHeight(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    counterHeight: input,
+  ),
+);
+```
+
+## counterForeground
+The paint drawn as a foreground for the counter.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..foreground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    foreground: input,
+  ),
+);
+```
+
+## counterBackground
+The paint drawn as a foreground for the counter.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..counterBackground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    background: input,
+  ),
+);
+```
+
+## counterShadows
+Collection of counter's shadow.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterShadows([
+    Shadow(
+      offset: Offset(0, 4),
+      blurRadius: 8,
+      color: Colors.black.withOpacity(.1),
+    )
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    shadows: input,
+  ),
+);
+```
+
+## counterFontFeature
+A feature tag and value that affect the selection of glyphs in a font.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterFontFeatures([
+    FontFeature.enable('smcp'),
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontFeatures: input,
+  ),
+);
+```
+
+## counterDecoration
+Add `TextDecoration`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterDecoration(TextDecoration.underline);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    counterDecoration: input,
+  ),
+);
+```
+
+## counterDecorationColor
+Set Color of counter decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterDecorationColor(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(counterDecorationColor: input,
+);
+```
+
+## counterDecorationThickness
+Set thickness of counter decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterDecorationThickness(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    counterDecorationThickness: input,
+  ),
+);
+```
+
+## counterFontFamily
+Set font of counter.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterFontFamily('Helvetica Neue');
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontFamily: input,
+  ),
+);
+```
+
+## counterFontFamilyFallback
+Set font fallback of counter if fontFamily is missing.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterFontFamilyFallback([
+    'Roboto',
+    'Segoe UI',
+    'Open Sans',
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    fontFamilyFallback: input,
+  ),
+);
+```
+
+## counterBaseline
+The common baseline that should be aligned between this counter span and its parent counter span, or, for the root counter spans, with the line box.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterBaseline(Textbaseline.alphabetic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    counterBaseline: input,
+  ),
+);
+```
+
+## counterAlphabetic
+###### Shorten syntax of `counterBaseline`
+
+The common baseline that should be aligned between this counter span and its parent counter span, or, for the root counter spans, with the line box.
+
+Using `Textbaseline.alphabetic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterAlphabetic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    counterBaseline: Textbaseline.alphabetic,
+  ),
+);
+```
+
+## counterIdeographic
+###### Shorten syntax of `counterBaseline`
+
+The common baseline that should be aligned between this counter span and its parent counter span, or, for the root counter spans, with the line box.
+
+Using `Textbaseline.ideographic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..counterIdeographic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  counterStyle: TextStyle(
+    counterBaseline: Textbaseline.ideographic,
+  ),
+);
+```
+
+## filled
+If true the decoration's container is filled with [fillColor].
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..filled(true);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  filled: input
+);
+```
+
+## fillColor
+The base fill color of the decoration's container color.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..fillColor(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  fillColor: input,
+);
+```
+
+## hoverColor
+The base fill color of the decoration's container color when hovered.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..hoverColor(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  hoverColor: input,
+);
+```
+
+## focusColor
+The base fill color of the decoration's container color when focused.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..focusColor(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  focusColor: input,
+);
+```
+
+## setFillColor
+Set multiple [FillColor] at once.
+
+#### The argument accept named paramters:
+- base
+- hover
+- focus
+
+Example Usage:
+```dart
+NikuTextField()
+  ..fill(
+    base: Colors.grey,
+    focus: Colors.blue
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  filled: true,
+  fillColor: base
+  focusColor: input,
+  focus: focus,
+);
+```
+
+## setFillColor
+Set multiple [FillColor] at once.
+
+#### The argument accept named paramters:
+- base
+- hover
+- focus
+
+Example Usage:
+```dart
+NikuTextField()
+  ..fill(
+    base: Colors.grey,
+    focus: Colors.blue
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  filled: true,
+  fillColor: base
+  focusColor: input,
+  focus: focus,
+);
+```
+
+## border
+The shape of the border to draw around the decorations' container.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..border(
+    OutlineInputBorder(
+      BorderSide(
+        width: 2,
+        color: Colors.blue,
+      ),
+    ),
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  border: input,
+);
+```
+
+## b
+###### Shorten syntax of `setBorder`
+
+Set all shape of the border to draw around the decoration's container.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..b(
+    OutlineInputBorder(
+      BorderSide(
+        width: 2,
+        color: Colors.blue,
+      ),
+    ),
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  border: input,
+  enabledBorder: input,
+  disabledBorder: input,
+  focusedBorder: input,
+  errorBorder: input,
+);
+```
+
+## setBorder
+Set multiple shape of the border to draw around the decoration's container.
+
+#### The argument accept named paramters:
+- base
+- enabled
+- disabled
+- focused
+- error
+
+Example Usage:
+```dart
+NikuTextField()
+  ..border(
+    base: OutlineInputBorder(
+      BorderSide(
+        width: 2,
+        color: Colors.blue,
+      ),
+    ),
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  border: input,
+  enabledBorder: input,
+  disabledBorder: input,
+  focusedBorder: input,
+  errorBorder: input,
+);
+```
+
+## enabledBorder
+The shape of the border to draw around the decorations' container.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorBorder(
+    OutlineInputBorder(
+      BorderSide(
+        width: 2,
+        color: Colors.blue,
+      ),
+    ),
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  enabledBorder: input,
+);
+```
+
+## errorBorder
+The shape of the border to draw around the decorations' container.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorBorder(
+    OutlineInputBorder(
+      BorderSide(
+        width: 2,
+        color: Colors.blue,
+      ),
+    ),
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorBorder: input,
+);
+```
+
+## focusedBorder
+The shape of the border to draw around the decorations' container.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..focusedBorder(
+    OutlineInputBorder(
+      BorderSide(
+        width: 2,
+        color: Colors.blue,
+      ),
+    ),
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  focusedBorder: input,
+);
+```
+
+## disabledBorder
+The shape of the border to draw around the decorations' container.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..disabledBorder(
+    OutlineInputBorder(
+      BorderSide(
+        width: 2,
+        color: Colors.blue,
+      ),
+    ),
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  disabledBorder: OutlineInputBorder(
+    BorderSide(
+      width: 2,
+      color: Colors.blue,
+    ),
+  ),
+);
+```
+
+## outlined
+The shape of the border to draw around the decoration's container
+
+Using `OutlinedInputBorder`
+
+#### The argument accept named paramters:
+- width
+- color
+- style
+- borderRadius
+- gap
+
+Example Usage:
+```dart
+NikuTextField()
+  ..outlined(
+    width: 2,
+    color: Colors.blue,
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  border: OutlineInputBorder(
+    BorderSide(
+      width: width,
+      color: color,
+      style: style
+    ),
+    borderRadius: borderRadius,
+    gapPadding: gap,
+  ),
+  enabledBorder: OutlineInputBorder(
+    BorderSide(
+      width: width,
+      color: color,
+      style: style
+    ),
+    borderRadius: borderRadius,
+    gapPadding: gap,
+  ),
+  disabledBorder: OutlineInputBorder(
+    BorderSide(
+      width: width,
+      color: color,
+      style: style
+    ),
+    borderRadius: borderRadius,
+    gapPadding: gap,
+  ),
+  focusedBorder: OutlineInputBorder(
+    BorderSide(
+      width: width,
+      color: color,
+      style: style
+    ),
+    borderRadius: borderRadius,
+    gapPadding: gap,
+  ),
+  errorBorder: OutlineInputBorder(
+    BorderSide(
+      width: width,
+      color: color,
+      style: style
+    ),
+    borderRadius: borderRadius,
+    gapPadding: gap,
+  ),
+);
+```
+
+## underlined
+The shape of the border to draw around the decoration's container
+
+Using `UnderlineInputBorder`
+
+#### The argument accept named paramters:
+- width
+- color
+- style
+- borderRadius
+- gap
+
+Example Usage:
+```dart
+NikuTextField()
+  ..underlined(
+    width: 2,
+    color: Colors.blue,
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  border: UnderlineInputBorder(
+    BorderSide(
+      width: width,
+      color: color,
+      style: style
+    ),
+    borderRadius: borderRadius,
+  ),
+  enabledBorder: UnderlineInputBorder(
+    BorderSide(
+      width: width,
+      color: color,
+      style: style
+    ),
+    borderRadius: borderRadius,
+  ),
+  disabledBorder: UnderlineInputBorder(
+    BorderSide(
+      width: width,
+      color: color,
+      style: style
+    ),
+    borderRadius: borderRadius,
+  ),
+  focusedBorder: UnderlineInputBorder(
+    BorderSide(
+      width: width,
+      color: color,
+      style: style
+    ),
+    borderRadius: borderRadius,
+  ),
+  errorBorder: UnderlineInputBorder(
+    BorderSide(
+      width: width,
+      color: color,
+      style: style
+    ),
+    borderRadius: borderRadius,
+  ),
+);
+```
+
+## borderColor
+Setting multiple border color at once.
+
+#### The argument accept named paramters:
+- base
+- enabled
+- disabled
+- focused
+- error
+
+Example Usage:
+```dart
+NikuTextField()
+  ..borderColor(
+    base: Colors.grey,
+    focused: Colors.blue,
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  border: UnderlineInputBorder(
+    BorderSide(
+      # ...Others properties
+      color: color,
+    ),
+  ),
+  enabledBorder: UnderlineInputBorder(
+    BorderSide(
+      # ...Others properties
+      color: color,
+    ),
+  ),
+  disabledBorder: UnderlineInputBorder(
+    BorderSide(
+      # ...Others properties
+      color: color,
+    ),
+  ),
+  focusedBorder: UnderlineInputBorder(
+    BorderSide(
+      # ...Others properties
+      color: color,
+    ),
+  ),
+  errorBorder: UnderlineInputBorder(
+    BorderSide(
+      # ...Others properties
+      color: color,
+    ),
+  ),
+);
+```
+
+## enableInputDecoration
+If false [helperText], [errorText], and [counterText] are not displayed, and the opacity of the remaining visual elements is reduced.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..enableInputDecoration(true);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  enabled: input,
+);
+```
+
+## semanticCounterText
+A semantic label for the [counterText].
+
+Example Usage:
+```dart
+NikuTextField()
+  ..semanticCounterText("Username");
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  semanticCounterText: input,
+);
+```
+
+## alignLabelWithHint
+Align label as same level as hint.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..alignLabelWithHint(true);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  alignLabelWithHint: input,
+);
+```
+
+## textStyle
+Stying of text using [TextStyle].
+
+Example Usage:
+```dart
+NikuTextField()
+  ..textStyle(
+    TextStyle(
+      color: Colors.blue,
+      fontSize: 21,
+    ),
+  );
+```
+
+Equivalent to
+```dart
+TextFormField(
+  decoration: InputDecoration(
+    style: input,
+  ),
+);
+```
+
+## colors
+Set color of text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..colors(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    colors: input,
+  ),
+);
+```
+
+## backgroundColor
+Set background color of text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..backgroundColor(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## bg
+###### Shorten syntax of `backgroundColor`
+
+Set background color of text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..bg(Colors.red);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    backgroundColor: input,
+  ),
+);
+```
+
+## fontSize
+Set font size of text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..fontSize(21);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontSize: input,
+  ),
+);
+```
+
+## fontWeight
+Set font weight of text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..fontWeight(fontWeight.bold);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontWeight: input,
+  ),
+);
+```
+
+## bold
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.bold`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..bold();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontWeight: FontWeight.bold,
+  ),
+);
+```
+
+## w100
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w100`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..w100();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontWeight: FontWeight.w100,
+  ),
+);
+```
+
+## w200
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w200`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..w200();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontWeight: FontWeight.w200,
+  ),
+);
+```
+
+## w300
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w300`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..w300();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontWeight: FontWeight.w300,
+  ),
+);
+```
+
+## w400
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w400`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..w400();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontWeight: FontWeight.w400,
+  ),
+);
+```
+
+## w500
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w500`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..w500();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontWeight: FontWeight.w500,
+  ),
+);
+```
+
+## w600
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w600`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..w600();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontWeight: FontWeight.w600,
+  ),
+);
+```
+
+## w700
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w700`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..w700();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontWeight: FontWeight.w700,
+  ),
+);
+```
+
+## w800
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w800`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..w800();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontWeight: FontWeight.w800,
+  ),
+);
+```
+
+## w900
+###### Shorten syntax of `fontWeight`
+
+Set font weight using `FontWeight.w900`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..w900();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontWeight: FontWeight.w900,
+  ),
+);
+```
+
+## fontStyle
+Set font style of text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..fontStyle(FontStyle.italic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontStyle: input,
+  ),
+);
+```
+
+## italic
+###### Shorten syntax of `fontStyle`
+Set font weight using `FontStyle.italic`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..italic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontStyle: FontStyle.italic,
+  ),
+);
+```
+
+## letterSpacing
+Set letter spacing of text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..letterSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    letterSpacing: input,
+  ),
+);
+```
+
+## wordSpacing
+Set word spacing of text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..wordSpacing(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    wordSpacing: input,
+  ),
+);
+```
+
+## textHeight
+Set height.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..textHeight(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    textHeight: input,
+  ),
+);
+```
+
+## foreground
+The paint drawn as a foreground for the text.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..foreground(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    foreground: input,
+  ),
+);
+```
+
+## background
+The paint drawn as a foreground for the text.
+
+Example Usage:
+```dart
+final paint = Paint()..color = Colors.blue;
+
+NikuTextField()
+  ..background(paint);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    background: input,
+  ),
+);
+```
+
+## shadows
+Collection of text's shadow.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..shadows([
+    Shadow(
+      offset: Offset(0, 4),
+      blurRadius: 8,
+      color: Colors.black.withOpacity(.1),
+    )
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    shadows: input,
+  ),
+);
+```
+
+## fontFeature
+A feature tag and value that affect the selection of glyphs in a font.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..fontFeatures([
+    FontFeature.enable('smcp'),
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontFeatures: input,
+  ),
+);
+```
+
+## textDecoration
+Add `TextDecoration`.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..textDecoration(TextDecoration.underline);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    textDecoration: input,
+  ),
+);
+```
+
+## textDecorationColor
+Set Color of text decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..textDecorationColor(Colors.blue);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(textDecorationColor: input,
+);
+```
+
+## textDecorationThickness
+Set thickness of text decoration
+
+Example Usage:
+```dart
+NikuTextField()
+  ..textDecorationThickness(2);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    textDecorationThickness: input,
+  ),
+);
+```
+
+## fontFamily
+Set font of text.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..fontFamily('Helvetica Neue');
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontFamily: input,
+  ),
+);
+```
+
+## fontFamilyFallback
+Set font fallback of text if fontFamily is missing.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..fontFamilyFallback([
+    'Roboto',
+    'Segoe UI',
+    'Open Sans',
+  ]);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    fontFamilyFallback: input,
+  ),
+);
+```
+
+## textBaseline
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..textBaseline(Textbaseline.alphabetic);
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    textBaseline: input,
+  ),
+);
+```
+
+## alphabetic
+###### Shorten syntax of `textBaseline`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `Textbaseline.alphabetic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..alphabetic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    textBaseline: Textbaseline.alphabetic,
+  ),
+);
+```
+
+## textIdeographic
+###### Shorten syntax of `textBaseline`
+
+The common baseline that should be aligned between this text span and its parent text span, or, for the root text spans, with the line box.
+
+Using `Textbaseline.ideographic`
+
+Example Usage:
+```dart
+NikuTextField()
+  ..ideographic();
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  style: TextStyle(
+    textBaseline: Textbaseline.ideographic,
+  ),
+);
+```

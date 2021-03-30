@@ -12,6 +12,7 @@ const DocumentationFooter: DocumentationFooterComponent = ({ chapter }) => (
 
         <footer className={tw`flex flex-row justify-between mb-12`}>
             <ChapterNavigation
+                before
                 title={chapter.previous}
                 icon={<ArrowLeft className={tw`mr-1`} width={21} height={21} />}
             />

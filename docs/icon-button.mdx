@@ -1,0 +1,1001 @@
+## Niku IconButton
+Style property builder for building "IconButton".
+
+## Example usage:
+As Widget
+```dart
+NikuIconButton(
+  Icon(Icons.edit)
+)
+  ..color(Colors.blue)
+  ..p(40)
+```
+
+As Property
+```dart
+IconButton("As Property")
+  .asNiku()
+  ..color(Colors.blue)
+  ..p(40)
+```
+
+## Availability: 
+To use this widget, you can import from the following:
+
+```dart
+// All Widget
+import 'package:niku/niku.dart';
+
+// Extension
+import 'package:niku/extension/widget.dart';
+
+// Just widget
+import 'package:niku/widget/text.dart';
+```
+
+## niku
+Switch to use parent property builder.
+
+Example Usage:
+```dart
+NikuText()
+  .niku();
+```
+
+Equivalent to
+```dart
+Niku(
+  Text(),
+);
+```
+
+## apply
+Apply predefined style properties to widget.
+
+Example Usage:
+```dart
+final title = NikuText()
+  ..color(Colors.red)
+  ..fontSize(21);
+
+NikuText()
+  ..apply(title);
+```
+
+Equivalent to
+```dart
+Text()
+  ..color(Colors.red)
+  ..fontSize(21);
+```
+
+## onPressed
+Callback when button is pressed.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..onPressed(() {
+    print("Clicked");
+  }));
+```
+
+Equivalent to
+```dart
+IconButton(
+  onPressed: input,
+);
+```
+
+## visualDensity
+Defines the visual density of user interface components.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..visualDensity(
+    VisualDensity.adaptivePlatformDensity,
+  );
+```
+
+Equivalent to
+```dart
+IconButton(
+  visualDensity: input,
+);
+```
+
+## padding
+Apply padding using `EdgeInsets`.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..padding(EdgeInsets.all(20));
+```
+
+Equivalent to
+```dart
+IconButton(
+  padding: input,
+);
+```
+
+## p
+###### Shorten syntax of `padding`
+
+Apply padding to all side.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..p(20);
+```
+
+Equivalent to
+```dart
+IconButton(
+  padding: EdgeInsets.all(input),
+);
+```
+
+## px
+###### Shorten syntax of `padding`
+
+Apply padding to x-axis.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..px(20);
+```
+
+Equivalent to
+```dart
+IconButton(
+  padding: EdgeInsets.symmetric(horizontal: input),
+);
+```
+
+## py
+###### Shorten syntax of `padding`
+
+Apply padding to y-axis.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..px(20);
+```
+
+Equivalent to
+```dart
+IconButton(
+  padding: EdgeInsets.symmetric(vertical: input),
+);
+```
+
+## pt
+###### Shorten syntax of `padding`
+
+Apply padding to top.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..pt(20);
+```
+
+Equivalent to
+```dart
+IconButton(
+  padding: EdgeInsets.only(top: input),
+);
+```
+
+## pb
+###### Shorten syntax of `padding`
+
+Apply padding to bottom.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..pb(20);
+```
+
+Equivalent to
+```dart
+IconButton(
+  padding: EdgeInsets.only(bottom: input),
+);
+```
+
+## pl
+###### Shorten syntax of `padding`
+
+Apply padding to left.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..pl(20);
+```
+
+Equivalent to
+```dart
+IconButton(
+  padding: EdgeInsets.only(left: input),
+);
+```
+
+## pr
+###### Shorten syntax of `padding`
+
+Apply padding to right.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..pr(20);
+```
+
+## alignment
+Apply alignment to widget.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..alignment(Alignment.topLeft);
+```
+
+Equivalent to
+```dart
+IconButton(
+  alignment: input,
+);
+```
+
+## align
+Apply alignment to widget.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..align(Alignment.topLeft);
+```
+
+Equivalent to
+```dart
+IconButton(
+  alignment: input,
+);
+```
+
+## topLeft
+###### Shorten syntax of `align`
+
+Apply alignment to widget as `Alignment.topLeft`
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..topLeft();
+```
+
+Equivalent to
+```dart
+IconButton(
+  alignment: Alignment.topLeft,
+);
+```
+
+## topCenter
+###### Shorten syntax of `align`
+
+Apply alignment to widget as `Alignment.topLeft`
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..topCenter();
+```
+
+Equivalent to
+```dart
+IconButton(
+  alignment: Alignment.topCenter,
+);
+```
+
+## topRight
+###### Shorten syntax of `align`
+
+Apply alignment to widget as `Alignment.topRight`
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..topRight();
+```
+
+Equivalent to
+```dart
+IconButton(
+  alignment: Alignment.topRight,
+);
+```
+
+## centerLeft
+###### Shorten syntax of `align`
+
+Apply alignment to widget as `Alignment.centerLeft`
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..centerLeft();
+```
+
+Equivalent to
+```dart
+IconButton(
+  alignment: Alignment.centerLeft,
+);
+```
+
+## center
+###### Shorten syntax of `align`
+
+Apply alignment to widget as `Alignment.centerLeft`
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..center();
+```
+
+Equivalent to
+```dart
+IconButton(
+  alignment: Alignment.center,
+);
+```
+
+## centerRight
+###### Shorten syntax of `align`
+
+Apply alignment to widget as `Alignment.centerRight`
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..centerRight();
+```
+
+Equivalent to
+```dart
+IconButton(
+  alignment: Alignment.centerRight,
+);
+```
+
+## bottomLeft
+###### Shorten syntax of `align`
+
+Apply alignment to widget as `Alignment.bottomLeft`
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..bottomLeft();
+```
+
+Equivalent to
+```dart
+IconButton(
+  alignment: Alignment.bottomLeft,
+);
+```
+
+## bottomCenter
+###### Shorten syntax of `align`
+
+Apply alignment to widget as `Alignment.bottomLeft`
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..bottomCenter();
+```
+
+Equivalent to
+```dart
+IconButton(
+  alignment: Alignment.bottomCenter,
+);
+```
+
+## bottomRight
+###### Shorten syntax of `align`
+
+Apply alignment to widget as `Alignment.bottomRight`
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..bottomRight();
+```
+
+Equivalent to
+```dart
+IconButton(
+  alignment: Alignment.bottomRight,
+);
+```
+
+## splashRadius
+Determine radius size of splash/ripple of button.
+
+If null, default splash radius of [Material.defaultSplashRadius] is used.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..splashRadius(8);
+```
+
+Equivalent to
+```dart
+IconButton(
+  splashRadius: input,
+);
+```
+
+## setColor
+Apply multiple variants of button's background.
+
+#### The argument accept named paramters:
+- color
+- disabled
+- focus
+- hover
+- press
+- splash
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..setColor(
+    base: Colors.blue,
+    disabled: Colors.gray.shade200
+  );
+```
+
+Equivalent to
+```dart
+IconButton(
+  color: input,
+);
+```
+
+## color
+###### Shorten syntax of `setColor`
+
+Apply color to button background.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..color(Colors.blue);
+```
+
+Equivalent to
+```dart
+IconButton(
+  color: input,
+);
+```
+
+## disabled
+###### Shorten syntax of `setColor`
+
+Background color of button when disabled.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..disabled(Colors.blue);
+```
+
+Equivalent to
+```dart
+IconButton(
+  disabledColor: input,
+);
+```
+
+## focus
+###### Shorten syntax of `setColor`
+
+Background color of button when focused.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..focused(Colors.blue);
+```
+
+Equivalent to
+```dart
+IconButton(
+  focusedColor: input,
+);
+```
+
+## hover
+###### Shorten syntax of `setColor`
+
+Background color of button when hovered.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..hovered(Colors.blue);
+```
+
+Equivalent to
+```dart
+IconButton(
+  hoveredColor: input,
+);
+```
+
+## highlight
+###### Shorten syntax of `setColor`
+
+Background color of button when highlighted.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..highlighted(Colors.blue);
+```
+
+Equivalent to
+```dart
+IconButton(
+  highlightedColor: input,
+);
+```
+
+## splash
+###### Shorten syntax of `setColor`
+
+Splash/Ripple color of button
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..splash(Colors.blue);
+```
+
+Equivalent to
+```dart
+IconButton(
+  splashColor: input,
+);
+```
+
+## mouseCursor
+Set cursor when hovered on widget, providing to each MaterialStateProperty.
+
+#### The argument accept named paramters:
+- base
+- disabled
+- dragged
+- error
+- focused
+- hovered
+- pressed
+- selected
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..mouseCursor(
+    disabled: MouseCursor.uncontrolled,
+  );
+```
+
+Equivalent to
+```dart
+IconButton(
+  mouseCursor: MaterialStateProperty.resolveWith<T>((states) {
+    if (states.contains(MaterialState.disabled)) return disabled;
+    if (states.contains(MaterialState.dragged)) return dragged;
+    if (states.contains(MaterialState.error)) return error;
+    if (states.contains(MaterialState.focused)) return focused;
+    if (states.contains(MaterialState.hovered)) return hovered;
+    if (states.contains(MaterialState.pressed)) return pressed;
+    if (states.contains(MaterialState.selected)) return selected;
+
+    return base;
+  });
+);
+```
+
+## cursor
+###### Shorten syntax of `mouseCursor`
+
+Set cursor when hovered on widget, providing all MaterialStateProperty.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..cursor(MouseCursor.uncontrolled);
+```
+
+Equivalent to
+```dart
+IconButton(
+  cursor: MaterialStateProperty.resolveWith<T>((_states) {
+    return input;
+  });
+);
+```
+
+## focusNode
+An object that can be used by a stateful widget to obtain the keyboard focus and to handle keyboard events.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..focusNode(
+    FocusNode(
+      canRequestFocus: true,
+    ),
+  );
+```
+
+Equivalent to
+```dart
+IconButton(
+  focusNode: input,
+);
+```
+
+## autofocus
+Determine whether button should be auto focus.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..autofocus(true);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  autofocus: true
+);
+```
+
+## tooltip
+Explaination of the button.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..tooltip("Click to login");
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  tooltip: true
+);
+```
+
+## enableFeedback
+Whether detected gestures should provide acoustic and/or haptic feedback.
+
+#### Default value is: `true`.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..enableFeedback(true);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  enableFeedback: true
+);
+```
+
+## constraints
+Set constraints layout of button.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..constraints(
+    BoxConstraints(
+      minWidth: 160,
+    ),
+  );
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  enableFeedback: true
+);
+```
+
+## size
+###### Shorten syntax of `constraints`
+
+Set size of button.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..size(100, 100);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  constraints: BoxConstraints(
+    minWidth: input1,
+    minHeight: input2,
+    maxWidth: input1,
+    maxHeight: input2,
+  );
+);
+```
+
+## maximumSize
+###### Shorten syntax of `size`
+
+Set maximum button size of both width and height.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..maximumSize(100, 100);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  constraints: BoxConstraints(
+    maxWidth: input1,
+    maxHeight: input2,
+  );
+);
+```
+
+## maxSize
+###### Shorten syntax of `maximumSize`
+
+Set maximum button size of both width and height.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..maxSize(100, 100);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  constraints: BoxConstraints(
+    maxWidth: input1,
+    maxHeight: input2,
+  );
+);
+```
+
+## minimumSize
+###### Shorten syntax of `size`
+
+Set manimum button size of both width and height.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..minimumSize(100, 100);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  constraints: BoxConstraints(
+    minWidth: input1,
+    minHeight: input2,
+  );
+);
+```
+
+## minSize
+###### Shorten syntax of `minimumSize`
+
+Set minimum button size of both width and height.
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..minSize(100, 100);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  constraints: BoxConstraints(
+    minWidth: input1,
+    minHeight: input2,
+  );
+);
+```
+
+## maximumWidth
+###### Shorten syntax of `size`
+
+Set maximum width of button
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..maximumWidth(100);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  constraints: BoxConstraints(
+    maxWidth: input,
+  );
+);
+```
+
+## maxWidth
+###### Shorten syntax of `maximumWidth`
+
+Set maximum width of button
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..maxWidth(100);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  constraints: BoxConstraints(
+    maxWidth: input,
+  );
+);
+```
+## minimumWidth
+###### Shorten syntax of `size`
+
+Set minimum width of button
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..minimumWidth(100);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  constraints: BoxConstraints(
+    minWidth: input,
+  );
+);
+```
+
+## minWidth
+###### Shorten syntax of `minimumWidth`
+
+Set minimum width of button
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..minWidth(100);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  constraints: BoxConstraints(
+    minWidth: input,
+  );
+);
+```
+
+## maximumHeight
+###### Shorten syntax of `size`
+
+Set maximum height of button
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..maximumHeight(100);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  constraints: BoxConstraints(
+    maxHeight: input,
+  );
+);
+```
+
+## maxHeight
+###### Shorten syntax of `maximumHeight`
+
+Set maximum height of button
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..maxHeight(100);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  constraints: BoxConstraints(
+    maxHeight: input,
+  );
+);
+```
+## minimumHeight
+###### Shorten syntax of `size`
+
+Set minimum height of button
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..minimumHeight(100);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  constraints: BoxConstraints(
+    minHeight: input,
+  );
+);
+```
+
+## minHeight
+###### Shorten syntax of `minimumHeight`
+
+Set minimum height of button
+
+Example Usage:
+```dart
+NikuIconButton()
+  ..minHeight(100);
+```
+
+Equivalent to
+```dart
+NikuIconButton(
+  constraints: BoxConstraints(
+    minHeight: input,
+  );
+);
+```
