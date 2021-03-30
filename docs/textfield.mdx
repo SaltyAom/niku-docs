@@ -45,49 +45,47 @@ NikuTextField("Username")
     width: 2,
   )
   .niku()
-  .px(8);
+  .my(8);
 ```
 
 Equivalent to
 ```dart
-Niku(
-  Padding(
-    padding: EdgeInsets.symmetric(
-      horizontal: 8,
-    ),
-    NikuTextField(
-      controller: controller,
-      decoration: InputDecoration(
-        labelText: "Username",
-        border: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.blue,
-            width: 2,
-          ),
+Container(
+  margin: EdgeInsets.symmetric(
+    vertical: 8,
+  ),
+  TextFormField(
+    controller: controller,
+    decoration: InputDecoration(
+      labelText: "Username",
+      border: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: Colors.blue,
+          width: 2,
         ),
-        enableBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.blue,
-            width: 2,
-          ),
+      ),
+      enableBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: Colors.blue,
+          width: 2,
         ),
-        disabledorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.blue,
-            width: 2,
-          ),
+      ),
+      disabledorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: Colors.blue,
+          width: 2,
         ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.blue,
-            width: 2,
-          ),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: Colors.blue,
+          width: 2,
         ),
-        errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.blue,
-            width: 2,
-          ),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: Colors.blue,
+          width: 2,
         ),
       ),
     ),
