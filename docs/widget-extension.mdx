@@ -1,0 +1,239 @@
+# Niku Extension
+This extension add `.asNiku()`, style property builder extension on predefined widget.
+
+## Availability
+```dart
+// All Widget
+import 'package:niku/niku.dart';
+
+// Just extension
+import 'package:niku/extension/widget.dart';
+```
+
+## Text
+Add `.asNiku` on Text to convert to NikuText.
+
+Example usage:
+```dart
+Text("Hello World")
+  .asNiku()
+  ..color(Colors.blue)
+```
+
+Equivalent to:
+```dart
+NikuText("Hello World")
+  ..color(Colors.blue);
+```
+
+## TextButton
+Add `.asNiku` on TextButton to convert to NikuTextButton.
+
+Example usage:
+```dart
+TextButton(
+  child: Text("Text Button")
+)
+  .asNiku()
+  ..onPressed(log);
+```
+
+Equivalent to:
+```dart
+NikuButton("Hello World")
+  ..onPressed(log);
+```
+
+## TextButton.icon
+Add `.asNiku` on TextButton.icon to convert to NikuTextButton.icon.
+
+Example usage:
+```dart
+TextButton.icon(
+  icon: Icon(Icons.edit),
+)
+  .asNiku()
+  ..onPressed(log);
+```
+
+Equivalent to:
+```dart
+NikuButton.icon(Icon(Icons.edit))
+  ..onPressed(log);
+```
+
+## Elevated
+Add `.asNiku` on Elevated to convert to NikuElevated.
+
+Example usage:
+```dart
+ElevatedButton(
+  child: Text("Elevated Button")
+)
+  .asNiku()
+  ..onPressed(log);
+```
+
+Equivalent to:
+```dart
+NikuButton.elevated("Hello World")
+  ..onPressed(log);
+```
+
+## ElevatedButton.icon
+Add `.asNiku` on Elevated.icon to convert to NikuElevated.icon.
+
+Example usage:
+```dart
+ElevatedButton.icon(
+  icon: Icon(Icons.edit),
+)
+  .asNikuIcon()
+  ..onPressed(log);
+```
+
+Equivalent to:
+```dart
+NikuButton.elevatedIcon(Icon(Icons.edit))
+  ..onPressed(log);
+```
+
+## OutlinedButton
+Add `.asNiku` on OutlinedButton to convert to NikuOutlinedButton.
+
+Example usage:
+```dart
+OutlinedButton(
+  child: Outlined("Outlined Button")
+)
+  .asNiku()
+  ..onPressed(log);
+```
+
+Equivalent to:
+```dart
+NikuButton.outlined("Hello World")
+  ..onPressed(log);
+```
+
+## OutlinedButton
+Add `.asNiku` on OutlinedButton.icon to convert to NikuOutlinedButton.icon.
+
+Example usage:
+```dart
+OutlinedButton.icon(
+  icon: Icon(Icons.edit),
+)
+  .asNikuIcon()
+  ..onPressed(log);
+```
+
+Equivalent to:
+```dart
+NikuButton.outlinedIcon(Icon(Icons.edit))
+  ..onPressed(log);
+```
+
+## IconButton
+Add `.asNiku` on IconButton to convert to NikuIconButton.
+
+Example usage:
+```dart
+IconButton(
+  icon: Icon(Icons.edit),
+)
+  .asNiku()
+  ..onPressed(log);
+```
+
+Equivalent to:
+```dart
+IconButton(Icon(Icons.edit))
+  ..onPressed(log);
+```
+
+## TextField
+Add `.asNiku` on TextField to convert to NikuTextField.
+
+Example usage:
+```dart
+TextField(
+  decoration: InputDecoration(
+    label: "Username",
+  ),
+)
+  .asNiku()
+  ..onChanged(log);
+```
+
+Equivalent to:
+```dart
+TextField("Username")
+  ..onChanged(log);
+```
+
+## Column
+Add `.asNiku` on Column to convert to NikuColumn.
+
+Example usage:
+```dart
+Column(
+  children: [
+    Text("Child"),
+  ],
+)
+  .asNiku()
+  ..mainStart();
+```
+
+Equivalent to:
+```dart
+NikuColumn([
+  Text("Child"),
+])
+  ..mainStart(log);
+```
+
+## Row
+Add `.asNiku` on Row to convert to NikuRow.
+
+Example usage:
+```dart
+Row(
+  children: [
+    Text("Child"),
+  ],
+)
+  .asNiku()
+  ..mainStart();
+```
+
+Equivalent to:
+```dart
+NikuRow([
+  Text("Child"),
+])
+  ..mainStart(log);
+```
+
+## Stack
+Add `.asNiku` on Stack to convert to NikuStack.
+
+Example usage:
+```dart
+Stack(
+  children: [
+    Text("Child"),
+  ],
+)
+  .asNiku()
+  ..mainStart();
+```
+
+Equivalent to:
+```dart
+NikuStack([
+  Text("Child"),
+])
+  ..mainStart(log);
+```
