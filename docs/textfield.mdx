@@ -219,7 +219,7 @@ NikuTextField()
 Equivalent to
 ```dart
 TextFormField(
-  focusNode: input,
+  keyboardType: input,
 );
 ```
 
@@ -6892,6 +6892,7 @@ InputDecoration(
   disabledBorder: input,
   focusedBorder: input,
   errorBorder: input,
+  errorFocusedBorder: input
 );
 ```
 
@@ -6903,6 +6904,7 @@ Set multiple shape of the border to draw around the decoration's container.
 - enabled
 - disabled
 - focused
+- focusedError
 - error
 
 Example Usage:
@@ -6998,6 +7000,29 @@ InputDecoration(
 );
 ```
 
+## errorFocusedBorder
+The shape of the border to draw around the decorations' container.
+
+Example Usage:
+```dart
+NikuTextField()
+  ..errorFocusedBorder(
+    OutlineInputBorder(
+      BorderSide(
+        width: 2,
+        color: Colors.blue,
+      ),
+    ),
+  );
+```
+
+Equivalent to
+```dart
+InputDecoration(
+  errorFocusedBorder: input,
+);
+```
+
 ## disabledBorder
 The shape of the border to draw around the decorations' container.
 
@@ -7054,7 +7079,7 @@ InputDecoration(
     BorderSide(
       width: width,
       color: color,
-      style: style
+      style: style,
     ),
     borderRadius: borderRadius,
     gapPadding: gap,
@@ -7063,7 +7088,7 @@ InputDecoration(
     BorderSide(
       width: width,
       color: color,
-      style: style
+      style: style,
     ),
     borderRadius: borderRadius,
     gapPadding: gap,
@@ -7072,7 +7097,7 @@ InputDecoration(
     BorderSide(
       width: width,
       color: color,
-      style: style
+      style: style,
     ),
     borderRadius: borderRadius,
     gapPadding: gap,
@@ -7081,7 +7106,7 @@ InputDecoration(
     BorderSide(
       width: width,
       color: color,
-      style: style
+      style: style,
     ),
     borderRadius: borderRadius,
     gapPadding: gap,
@@ -7089,8 +7114,17 @@ InputDecoration(
   errorBorder: OutlineInputBorder(
     BorderSide(
       width: width,
-      color: color,
-      style: style
+      color: Colors.red,
+      style: style,
+    ),
+    borderRadius: borderRadius,
+    gapPadding: gap,
+  ),
+  errorFocusedBorder: OutlineInputBorder(
+    BorderSide(
+      width: width,
+      color: Colors.red,
+      style: style,
     ),
     borderRadius: borderRadius,
     gapPadding: gap,
@@ -7150,15 +7184,23 @@ InputDecoration(
     BorderSide(
       width: width,
       color: color,
-      style: style
+      style: style,
     ),
     borderRadius: borderRadius,
   ),
   errorBorder: UnderlineInputBorder(
     BorderSide(
       width: width,
-      color: color,
-      style: style
+      color: Colors.red,
+      style: style,
+    ),
+    borderRadius: borderRadius,
+  ),
+  errorFocusedBorder: UnderlineInputBorder(
+    BorderSide(
+      width: width,
+      color: Colors.red,
+      style: style,
     ),
     borderRadius: borderRadius,
   ),
@@ -7174,6 +7216,7 @@ Setting multiple border color at once.
 - disabled
 - focused
 - error
+- focusedError
 
 Example Usage:
 ```dart
@@ -7190,31 +7233,37 @@ InputDecoration(
   border: UnderlineInputBorder(
     BorderSide(
       # ...Others properties
-      color: color,
+      color: base,
     ),
   ),
   enabledBorder: UnderlineInputBorder(
     BorderSide(
       # ...Others properties
-      color: color,
+      color: enabled,
     ),
   ),
   disabledBorder: UnderlineInputBorder(
     BorderSide(
       # ...Others properties
-      color: color,
+      color: disabled,
     ),
   ),
   focusedBorder: UnderlineInputBorder(
     BorderSide(
       # ...Others properties
-      color: color,
+      color: focused,
     ),
   ),
   errorBorder: UnderlineInputBorder(
     BorderSide(
       # ...Others properties
-      color: color,
+      color: error,
+    ),
+  ),
+  errorFocusedBorder: UnderlineInputBorder(
+    BorderSide(
+      # ...Others properties
+      color: errorFocused,
     ),
   ),
 );

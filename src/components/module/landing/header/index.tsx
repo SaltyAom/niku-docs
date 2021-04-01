@@ -6,7 +6,7 @@ import { Code } from '@components/atom'
 
 const LandingHeader = () => (
     <header
-        className={tw`flex flex-row justify-between items-center w-full max-w-[868px] max-h-[826px] h-[100vh] mx-auto px-12 md:px-6`}
+        className={tw`flex flex-row justify-between items-center w-full max-w-[868px] max-h-[1366px] h-[100vh] mx-auto px-12 md:px-6`}
     >
         <section className={tw`flex flex-col justify-center`}>
             <h1 className={tw`m-0 text-7xl font-normal text-gray-900 dark:text-gray-100`}>Niku</h1>

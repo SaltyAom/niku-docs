@@ -191,7 +191,7 @@ Equivalent to:
 NikuColumn([
   Text("Child"),
 ])
-  ..mainStart(log);
+  ..mainStart();
 ```
 
 ## Row
@@ -213,7 +213,7 @@ Equivalent to:
 NikuRow([
   Text("Child"),
 ])
-  ..mainStart(log);
+  ..mainStart();
 ```
 
 ## Stack
@@ -235,5 +235,27 @@ Equivalent to:
 NikuStack([
   Text("Child"),
 ])
-  ..mainStart(log);
+  ..mainStart();
+```
+
+## Wrap
+Add `.asNiku` on Stack to convert to NikuWrap.
+
+Example usage:
+```dart
+Wrap(
+  children: [
+    Text("Child"),
+  ],
+)
+  .asNiku()
+  ..start();
+```
+
+Equivalent to:
+```dart
+NikuStack([
+  Text("Child"),
+])
+  ..start();
 ```

@@ -1538,6 +1538,33 @@ AnimatedBuilder(
 )
 ```
 
+## form
+Wrap widget in Form.
+
+#### The arguments accept:
+- key
+- autovalidateMode
+- onWillPop
+- onChanged
+
+Example Usage:
+```dart
+final formKey = GlobalKey<FormState>();
+
+Niku()
+  ..form(
+    key: formKey,
+  );
+```
+
+Equivalent to:
+```dart
+AnimatedBuilder(
+  animation: input1,
+  builder: input2,
+)
+```
+
 ## on
 Wrap widget in `GestureDetector`.
 

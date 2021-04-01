@@ -1,0 +1,1052 @@
+## Niku Wrap
+Style property builder for building "Wrap".
+
+## Example usage:
+As Widget
+```dart
+NikuWrap([
+  Text("1"),
+  Text("2"),
+])
+  ..start();
+```
+
+As Property
+```dart
+Wrap(
+  children: [
+    Text("1"),
+    Text("2"),
+  ]
+)
+  .asNiku()
+  ..start();
+```
+
+## Availability 
+To use this widget, you can import from the following:
+
+```dart
+// All Widget
+import 'package:niku/niku.dart';
+
+// Extension
+import 'package:niku/extension/widget.dart';
+
+// With relatated widget
+import 'package:niku/widget/axis.dart';
+
+// Just widget
+import 'package:niku/widget/row.dart';
+```
+
+## niku
+Switch to use parent property builder.
+
+Example Usage:
+```dart
+NikuWrap()
+  .niku();
+```
+
+Equivalent to
+```dart
+Niku(
+  Wrap(),
+);
+```
+
+## alignment
+How the children within a run should be placed in the align axis.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..alignment(WrapAlignment.center);
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: input,
+);
+```
+
+## start
+###### Shorten syntax of `alignment`
+
+How the children within a run should be placed in the align axis.
+
+Set align axis alignment using `WrapAlignment.start`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..start();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.start,
+);
+```
+
+## justifyStart
+###### Shorten syntax of `alignment`
+
+How the children within a run should be placed in the align axis.
+
+Set align axis alignment using `WrapAlignment.start`.
+
+As a reference to CSS flexbox, `justify-content`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..justifyStart();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.start,
+);
+```
+
+## center
+###### Shorten syntax of `alignment`
+
+How the children within a run should be placed in the align axis.
+
+Set align axis alignment using `WrapAlignment.center`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..center();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.center,
+);
+```
+
+## justifyCenter
+###### Shorten syntax of `alignment`
+
+How the children within a run should be placed in the align axis.
+
+Set align axis alignment using `WrapAlignment.center`.
+
+As a reference to CSS flexbox, `justify-content`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..justifyCenter();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.center,
+);
+```
+
+## end
+###### Shorten syntax of `alignment`
+
+How the children within a run should be placed in the align axis.
+
+Set align axis alignment using `WrapAlignment.end`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..end();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.end,
+);
+```
+
+## justifyEnd
+###### Shorten syntax of `alignment`
+
+How the children within a run should be placed in the align axis.
+
+Set align axis alignment using `WrapAlignment.end`.
+
+As a reference to CSS flexbox, `justify-content`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..justifyEnd();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.end,
+);
+```
+
+## spaceAround
+###### Shorten syntax of `alignment`
+
+How the children within a run should be placed in the align axis.
+
+Set align axis alignment using `WrapAlignment.spaceAround`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..spaceAround();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.spaceAround,
+);
+```
+
+## spaceBetween
+###### Shorten syntax of `alignment`
+
+How the children within a run should be placed in the align axis.
+
+Set align axis alignment using `WrapAlignment.spaceBetween`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..spaceBetween();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.spaceBetween,
+);
+```
+
+## spaceEnd
+###### Shorten syntax of `alignment`
+
+How the children within a run should be placed in the align axis.
+
+Set align axis alignment using `WrapAlignment.spaceEnd`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..spaceEnd();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.spaceEnd,
+);
+```
+
+## spaceEvenly
+###### Shorten syntax of `alignment`
+
+How the children within a run should be placed in the align axis.
+
+Set align axis alignment using `WrapAlignment.spaceEvenly`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..spaceEvenly();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.spaceEvenly,
+);
+```
+
+## runAlignment
+How the children within a run should be placed in the  cross axis.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..runAlignment(WrapAlignment.center);
+```
+
+Equivalent to
+```dart
+Wrap(
+  runAlignment: input,
+);
+```
+
+## runStart
+###### Shorten syntax of `runAlignment`
+
+How the children within a run should be placed in the  cross axis.
+
+set alignment using `WrapAlignment.start`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..runStart();
+```
+
+Equivalent to
+```dart
+Wrap(
+  runAlignment: WrapAlignment.start,
+);
+```
+
+## runJustifyStart
+###### Shorten syntax of `runAlignment`
+
+How the children within a run should be placed in the  cross axis.
+
+set alignment using `WrapAlignment.start`.
+
+As a reference to CSS flexbox, `runJustify-content`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..runJustifyStart();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.start,
+);
+```
+
+## runCenter
+###### Shorten syntax of `runAlignment`
+
+How the children within a run should be placed in the  cross axis.
+
+set alignment using `WrapAlignment.center`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..runCenter();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.center,
+);
+```
+
+## runJustifyCenter
+###### Shorten syntax of `runAlignment`
+
+How the children within a run should be placed in the  cross axis.
+
+set alignment using `WrapAlignment.center`.
+
+As a reference to CSS flexbox, `runJustify-content`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..runJustifyCenter();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.center,
+);
+```
+
+## runEnd
+###### Shorten syntax of `runAlignment`
+
+How the children within a run should be placed in the  cross axis.
+
+set alignment using `WrapAlignment.end`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..runEnd();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.end,
+);
+```
+
+## runJustifyEnd
+###### Shorten syntax of `runAlignment`
+
+How the children within a run should be placed in the  cross axis.
+
+set alignment using `WrapAlignment.end`.
+
+As a reference to CSS flexbox, `runJustify-content`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..runJustifyEnd();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.end,
+);
+```
+
+## runSpaceAround
+###### Shorten syntax of `runAlignment`
+
+How the children within a run should be placed in the  cross axis.
+
+set alignment using `WrapAlignment.runSpaceAround`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..runSpaceAround();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.runSpaceAround,
+);
+```
+
+## runSpaceBetween
+###### Shorten syntax of `runAlignment`
+
+How the children within a run should be placed in the  cross axis.
+
+set alignment using `WrapAlignment.runSpaceBetween`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..runSpaceBetween();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.runSpaceBetween,
+);
+```
+
+## runSpaceEnd
+###### Shorten syntax of `runAlignment`
+
+How the children within a run should be placed in the  cross axis.
+
+set alignment using `WrapAlignment.runSpaceEnd`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..runSpaceEnd();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.runSpaceEnd,
+);
+```
+
+## runSpaceEvenly
+###### Shorten syntax of `runAlignment`
+
+How the children within a run should be placed in the  cross axis.
+
+set alignment using `WrapAlignment.runSpaceEvenly`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..runSpaceEvenly();
+```
+
+Equivalent to
+```dart
+Wrap(
+  alignment: WrapAlignment.runSpaceEvenly,
+);
+```
+
+## crossAxisAlignment
+How the children within a run should be aligned relative to each other in the cross axis.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..crossAxisAlignment(WrapCrossAlignment.center);
+```
+
+Equivalent to
+```dart
+Wrap(
+  crossAxisAlignment: input,
+);
+```
+
+## cross
+###### Shorten syntax of `crossAxisAlignment`
+
+How the children within a run should be aligned relative to each other in the cross axis.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..cross(WrapCrossAlignment.center);
+```
+
+Equivalent to
+```dart
+Wrap(
+  crossAxisAlignment: WrapCrossAlignment.center,
+);
+```
+
+## crossStart
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment using `WrapCrossAlignment.start`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..crossStart();
+```
+
+Equivalent to
+```dart
+Wrap(
+  crossAxisAlignment: WrapCrossAlignment.start,
+);
+```
+
+## itemsStart
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment using `WrapCrossAlignment.start`.
+
+As a reference to CSS flexbox, `align-items`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..crossStart();
+```
+
+Equivalent to
+```dart
+Wrap(
+  crossAxisAlignment: WrapCrossAlignment.start,
+);
+```
+
+## crossCenter
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment using `WrapCrossAlignment.center`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..crossCenter();
+```
+
+Equivalent to
+```dart
+Wrap(
+  crossAxisAlignment: WrapCrossAlignment.center,
+);
+```
+
+## itemsCenter
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment using `WrapCrossAlignment.center`.
+
+As a reference to CSS flexbox, `align-items`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..crossCenter();
+```
+
+Equivalent to
+```dart
+Wrap(
+  crossAxisAlignment: WrapCrossAlignment.center,
+);
+```
+
+## crossEnd
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment using `WrapCrossAlignment.end`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..crossEnd();
+```
+
+Equivalent to
+```dart
+Wrap(
+  crossAxisAlignment: WrapCrossAlignment.end,
+);
+```
+
+## itemsEnd
+###### Shorten syntax of `crossAxisAlignment`
+
+Set cross axis alignment using `WrapCrossAlignment.end`.
+
+As a reference to CSS flexbox, `align-items`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..crossEnd();
+```
+
+## textDirection
+Set whether text is left-to-right or right-to-left direction.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..textDirection(TextDirection.ltr);
+```
+
+Equivalent to
+```dart
+Wrap(
+  textDirection: input,
+);
+```
+
+## ltr
+###### Shorten syntax of `textDirection`
+
+Set whether text is left-to-right or right-to-left direction.
+
+Using `TextDirection.ltr`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..ltr();
+```
+
+Equivalent to
+```dart
+Wrap(
+  textDirection: TextDirection.ltr,
+);
+```
+
+## rtl
+###### Shorten syntax of `textDirection`
+
+Set whether text is left-to-right or right-to-left direction.
+
+Using `TextDirection.rtl`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..rtl();
+```
+
+Equivalent to
+```dart
+Wrap(
+  textDirection: TextDirection.rtl,
+);
+```
+
+## spacing
+How much space to place between children in a run in the main axis.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..spacing(8);
+```
+
+Equivalent to
+```dart
+Wrap(
+  spacing: input,
+);
+```
+
+## runSpacing
+How much space to place between the runs themselves in the cross axis.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..runSpacing(8);
+```
+
+Equivalent to
+```dart
+Wrap(
+  runSpacing: input,
+);
+```
+
+## verticalDirection
+Determines the order to lay children out vertically and how to interpret start and end in the vertical direction.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..verticalDirection(VerticalDirection.up);
+```
+
+Equivalent to
+```dart
+Wrap(
+  verticalDirection: input,
+);
+```
+
+## up
+###### Shorten syntax of `verticalDirection`
+
+Determines the order to lay children out vertically and how to interpret start and end in the vertical direction.
+
+Using `VerticalDirection.up`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..verticalDirection(VerticalDirection.up);
+```
+
+Equivalent to
+```dart
+Wrap(
+  verticalDirection: VerticalDirection.up,
+);
+```
+
+## down
+###### Shorten syntax of `verticalDirection`
+
+Determines the order to lay children out vertically and how to interpret start and end in the vertical direction.
+
+Using `VerticalDirection.down`.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..verticalDirection(VerticalDirection.down);
+```
+
+Equivalent to
+```dart
+Wrap(
+  verticalDirection: VerticalDirection.down,
+);
+```
+
+## clipBehavior
+Set clip behavior of widget.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..clipBehavior(Clip.antiAlias);
+```
+
+Equivalent to
+```dart
+Stack(
+  clipBehavior: input,
+);
+```
+
+## clip
+###### Shorten syntax of `clipBehavior`
+
+Set clip behavior of widget.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..clip(Clip.antiAlias);
+```
+
+Equivalent to
+```dart
+Stack(
+  clipBehavior: input,
+);
+```
+
+## child
+Append child.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..child(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Wrap(
+  children: [
+    # Others children,
+    input,
+  ]
+);
+```
+
+## append
+Append child.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..child(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Wrap(
+  children: [
+    # Others children,
+    input,
+  ]
+);
+```
+
+## appendChild
+Append child.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..appendChild(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Wrap(
+  children: [
+    # Others children,
+    input,
+  ]
+);
+```
+
+## children
+Append children.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..children([
+    Text("Child")
+  ]);
+```
+
+Equivalent to
+```dart
+Wrap(
+  children: [
+    # Others children,
+    ...input,
+  ]
+);
+```
+
+## appendChildren
+Append children.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..appendChildren([
+    Text("Child")
+  ]);
+```
+
+Equivalent to
+```dart
+Wrap(
+  children: [
+    # Others children,
+    ...input,
+  ]
+);
+```
+
+## prepend
+Prepend child.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..child(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Wrap(
+  children: [
+    input,
+    # Others children,
+  ]
+);
+```
+
+## prependChild
+Prepend child.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..prependChild(
+    Text("Child")
+  );
+```
+
+Equivalent to
+```dart
+Wrap(
+  children: [
+    input,
+    # Others children,
+  ]
+);
+```
+
+## children
+Prepend children.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..children([
+    Text("Child")
+  ]);
+```
+
+Equivalent to
+```dart
+Wrap(
+  children: [
+    ...input,
+    # Others children,
+  ]
+);
+```
+
+## prependChildren
+Prepend children.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..prependChildren([
+    Text("Child")
+  ]);
+```
+
+Equivalent to
+```dart
+Wrap(
+  children: [
+    ...input,
+    # Others children,
+  ]
+);
+```
+
+## insert
+Insert child at specific index.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..insert(2, Text("Child"));
+```
+
+Equivalent to
+```dart
+Wrap(
+  children: [
+    # Others children,
+    input,
+    # Others children,
+  ]
+);
+```
+
+## insertAll
+Insert children at specific index.
+
+Example Usage:
+```dart
+NikuWrap()
+  ..insertAll(2, [
+    Text("Child"),
+    Text("Child"),
+  ]);
+```
+
+Equivalent to
+```dart
+Wrap(
+  children: [
+    # Others children,
+    ...input,
+    # Others children,
+  ]
+);
+```

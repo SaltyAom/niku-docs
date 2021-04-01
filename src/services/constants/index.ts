@@ -28,6 +28,7 @@ export const navigations = [
             'Column',
             'Row',
             'Stack',
+            'Wrap',
             'Button',
             'Icon Button',
             'TextField'
