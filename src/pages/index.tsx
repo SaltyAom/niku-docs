@@ -7,13 +7,14 @@ import tw from '@tailwind'
 
 import { GitHub } from 'react-feather'
 
+import { DefaultOpenGraph } from '@components/atom'
+
 import {
     LandingHeader,
     BenefitSection,
     LandingSection,
     FeatureComponent
 } from '@components/module/landing'
-
 import { BenefitSectionProps } from '@components/module/landing/benefit/types'
 
 const benefits: BenefitSectionProps[] = [
@@ -80,6 +81,7 @@ const Landing = () => (
         <Head>
             <title>Niku</title>
         </Head>
+        <DefaultOpenGraph />
         <main className={tw`flex flex-col`}>
             <LandingHeader />
             <LandingSection

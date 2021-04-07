@@ -4,6 +4,8 @@ import Head from 'next/head'
 
 import tw from '@tailwind'
 
+import { DefaultOpenGraph } from '@components/atom'
+
 import {
     DocumentationContents,
     DocumentationNavbar,
@@ -29,6 +31,7 @@ const DocumentationLayout: DocumentationLayoutComponent = ({
             <Head>
                 <title>{chapter.current} - Niku</title>
             </Head>
+            <DefaultOpenGraph />
             <DocumentationNavbar
                 showNavbar={showNavbar}
                 toggleNavbar={toggleNavbar}

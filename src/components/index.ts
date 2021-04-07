@@ -1,1 +1,1 @@
-export { Code } from './atom'
+export { Code, DefaultOpenGraph } from './atom'
