@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import { Favicon } from '@components/atom'
+
 import { BlogOpenGraphComponent } from "./types"
 
 const web = "https://niku.saltyaom.com"
@@ -20,6 +22,8 @@ const BlogOpenGraph: BlogOpenGraphComponent = ({
             <meta name="twitter:image" content={`${web}/blog/${title}/cover.jpg`} />
 
             <link rel="canonical" href={web} />
+
+            <Favicon />
         </Head>
     )
 
