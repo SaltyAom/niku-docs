@@ -5,3 +5,4 @@ export {
     LandingSection
 } from './landing'
 export { default as DocumentationComponents } from './docs'
+export { BlogNavbar } from './blog'

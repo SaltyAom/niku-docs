@@ -19,7 +19,7 @@ const MarkdownImage: MarkdownImageComponent = (image) => {
     return (
         <figure className={`${isPng} ${styles.figure}`}>
             <Image
-                src={`/content/${src}`}
+                src={src}
                 alt={altMessage}
                 width={width}
                 height={height}

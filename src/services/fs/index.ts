@@ -14,6 +14,7 @@ export const getFiles = (path: string): string[][] => {
         files.push(
             subpath
                 .replace('docs/', '')
+                .replace('blog/', '')
                 .replace('.mdx', '')
                 .replace(/ /, '-')
                 .split('/')
@@ -30,3 +31,5 @@ export const documentationsPath = documentationsFile.map((paths) => {
     return paths
 })
 export const documentationList = documentationsFile.flat(Infinity)
+
+export const blogPaths = getFiles('./blog').flat(Infinity)

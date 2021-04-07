@@ -1,0 +1,180 @@
+## Niku 1
+Creating user interface shouldn't be confusing.
+
+"Everything in Flutter is Widget" is what you usually heard.
+But I have a different opinion and think, the concept of Flutter itself makes it too nested and verbose.
+
+Composing a simple Button with padding adds an extra level of nested in Layout, adding an extra maintenance effort.
+The representative should contain only a business logic widget, not an entire list of styling widgets.
+
+![800x800 | Korone Drake](/images/drake.jpg)
+
+That's why I'm proud to introduce, the release of Niku 1.0.
+
+## Niku 1
+Niku is an effortless property builder for composing maintainable Flutter UI.
+
+Removing unnecessary styling from the Widget tree itself and separates it from the main representative.
+Able also move into a different file and reuse styling everywhere in the codebase.
+
+Niku uses property builder, as same as SwiftUI does.
+Design to be able to compose reusable style, like CSS.
+Use the same naming convention of TailwindCSS.
+And running in Flutter.
+
+So composing your UI in Flutter should be fast and fluent while maintaining the codebase at the same time of the development process.
+
+---
+
+## Property Builder
+Composing a button using Niku is as simple as:
+```dart
+NikuButton(
+  Text("A flat button")
+)
+  ..fontSize(21)
+  ..fg(Colors.white)   // Foreground, eg. text color (idiomatic Flutter)
+  ..bg(Colors.blue);   // Background, color of button  
+```
+
+## Shorten Syntax
+Or a long styling of an outlined textfield is compact into a simple custom property like:
+```dart
+NikuTextField()
+  ..outlined(width: 4)
+  ..borderColor(
+    enabled: Colors.blue,
+  )
+  ..color(Colors.white);
+```
+
+Which is an equivalent to this in Flutter:
+```dart
+TextFormField(
+    style: TextStyle(
+    color: Colors.blue,
+  ),
+  decoration: InputDecoration(
+    border: OutlineInputBorder(
+      borderSide: BorderSide(
+        color: Colors.grey,
+        width: 2,
+        style: BorderStyle.solid,
+      ),
+      borderRadius: BorderRadius.all(Radius.circular(8)),
+      gapPadding: 4,
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(
+        color: Colors.blue,
+        width: 2,
+        style: BorderStyle.solid,
+      ),
+      borderRadius: BorderRadius.all(Radius.circular(8)),
+      gapPadding: 4,
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide(
+        color: Colors.grey,
+        width: 2,
+        style: BorderStyle.solid,
+      ),
+      borderRadius: BorderRadius.all(Radius.circular(8)),
+      gapPadding: 4,
+    ),
+    errorBorder: OutlineInputBorder(
+      borderSide: BorderSide(
+        color: Colors.red,
+        width: 2,
+        style: BorderStyle.solid,
+      ),
+      borderRadius: BorderRadius.all(Radius.circular(8)),
+      gapPadding: 4,
+    ),
+    focusedErrorBorder: OutlineInputBorder(
+      borderSide: BorderSide(
+        color: Colors.red,
+        width: 2,
+        style: BorderStyle.solid,
+      ),
+      borderRadius: BorderRadius.all(Radius.circular(8)),
+      gapPadding: 4,
+    ),
+    disabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(
+        color: Colors.grey,
+        width: 2,
+        style: BorderStyle.solid,
+      ),
+      borderRadius: BorderRadius.all(Radius.circular(8)),
+      gapPadding: 4,
+    ),
+  ),
+);
+```
+
+## Reusable Style
+Niku's best feature is being able to compose and reuse defined style anywhere like CSS.
+So you don't have to rewrite the entire nested widget for just styling widget which has a little different styling.
+```dart
+// Somewhere
+final systemTextField = NikuTextField()
+  ..outlined(width: 4)
+  ..borderColor(
+    enabled: Colors.blue,
+  )
+  ..color(Colors.white);
+
+// Widget 1
+return NikuColumn([
+  NikuTextField()
+    ..apply(systemTextField),
+  NikuTextField()
+    ..apply(systemTextField)
+    ..borderColor(
+      enabled: Colors.green,
+    ),
+]);
+```
+
+## Parent Builder
+Not only Niku supports styling of predefined Widgets.
+But also nest any Widget with parent property builder.
+```dart
+Niku(
+  ThirdPartyWidget(),
+)
+  ..my(20).  // Margin Y (Tailwind Convention)
+  ..bg(Colors.black.withOpacity(.2))
+  ..builder(customBuilder);
+```
+
+---
+
+## Releasing today
+Niku has just released version 1.0.0 and you can try it out today!
+
+No code generation.
+No dependency.
+With Flutter 2 support and null sound safety.
+Very low learning curve.
+From what you've already known.
+
+Niku can easily integrate with any codebase!
+
+You can easily install Niku from pub.dev like any other dependency.
+
+---
+
+## Afterword
+Niku is inspired by SwiftUI, Tailwind CSS.
+An Apple developer or web developer will be very familiar with Niku and already known half of Niku and ready to pick up.
+
+Niku brings the best of both worlds. Packed into familiar API and shipped directly into Flutter while being idiomatic to Dart.
+
+Niku is designed to help you to make Flutter easier and more maintainable.
+It's like a missing piece in Flutter for me, and I want it to be for you too.
+
+You can support Niku on [GitHub](https://github.com/saltyaom/niku) or see Niku in action at [Niku Documentation](https://niku.saltyaom.com).
+
+Thank you for your attention, see you in the next release~

@@ -118,8 +118,8 @@ const Landing = () => (
                 title="Loved by developers"
                 details={[
                     `Inspired by SwiftUI, Tailwind CSS.`,
-                    `If have been Apple developer or web developer before, chances are, you'll be very familiar with Niku and already known half of Niku and ready to pickup for using in real project.`,
-                    `Niku bring best of both world, packed into familiar API and shipped directly into Flutter while being idoimatic to Dart.`,
+                    `An Apple developer or web developer will be very familiar with Niku and already known half of Niku and ready to pick up.`,
+                    `Niku brings the best of both worlds. Packed into familiar API and shipped directly into Flutter while being idiomatic to Dart.`,
                     `You will be surprised at how easy it is to get started.`
                 ]}
             />
