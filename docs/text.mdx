@@ -72,6 +72,42 @@ Equivalent to
 Text(input);
 ```
 
+## style
+Style Text using `TextStyle`
+
+Example Usage:
+```dart
+NikuText()
+  ..style(TextStyle(
+    color: Colors.red,
+  ));
+
+NikuText()
+  ..style(Theme.of(context).textTheme.headline1);
+```
+
+Equivalent to
+```dart
+Text(style: input);
+```
+
+## theme
+Style Text using `TextTheme`
+
+Example Usage:
+```dart
+NikuText()
+  ..theme(
+    context,
+    (theme) => theme.headline1,
+  );
+```
+
+Equivalent to
+```dart
+Text(style: input2());
+```
+
 ## color
 Set text's color.
 

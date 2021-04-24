@@ -1288,6 +1288,45 @@ singleChildScrollView(
 );
 ```
 
+## scrollbar
+Wrap widget inside `scrollbar`.
+
+#### The argument accept named paramters:
+- controller
+- isAlwaysShown
+- showTrackOnHover
+- hoverThickness
+- thickness
+- radius
+- notificationPredicate
+
+Example Usage:
+```dart
+Niku()
+  ..scrollable(
+    controller,
+    isAlwaysShown,
+    showTrackOnHover,
+    hoverThickness,
+    thickness,
+    radius,
+    notificationPredicate,
+  );
+```
+
+Equivalent to:
+```dart
+Scrollbar(
+  controller: controller,
+  isAlwaysShown: isAlwaysShown,
+  showTrackOnHover: showTrackOnHover,
+  hoverThickness: hoverThickness,
+  thickness: thickness,
+  radius: radius,
+  notificationPredicate: notificationPredicate,
+);
+```
+
 ## flexible
 Wrap widget in `Flexible`.
 
