@@ -53,6 +53,19 @@ import { Prism } from 'astro/components'
                 radial-gradient(at 10% 3%, hsla(174,100%,95%,1) 0, transparent 59%),  
                 radial-gradient(at 14% 61%, hsla(3,0%,100%,1) 0, transparent 43%);        
         }
+
+        @media not all and (min-resolution:.001dpcm) { 
+            #heading {
+                background-image:
+                    radial-gradient(at 40% 20%, hsla(28,100%,74%,0.2) 0, transparent 50%),  
+                    radial-gradient(at 80% 0%, hsla(189,100%,56%,0.2) 0, transparent 50%),  
+                    radial-gradient(at 0% 50%, hsla(355,85%,93%,0.2) 0, transparent 50%),  
+                    radial-gradient(at 80% 50%, hsla(340,100%,76%,0.2) 0, transparent 100%),  
+                    radial-gradient(at 0% 100%, hsla(22,100%,77%,0.2) 0, transparent 50%),  
+                    radial-gradient(at 80% 100%, hsla(195,100%,43%,0.4) 0, transparent 50%),  
+                    radial-gradient(at 0% 0%, hsla(343,100%,76%,0.2) 0, transparent 50%)
+            }
+        }
     </style>
 
     <style lang="sass" global>
