@@ -1,0 +1,233 @@
+---
+import { Prism } from 'astro/components'
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Niku Docs</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+    <link rel="stylesheet" href={Astro.resolve('../styles/onenight.css')}>
+
+    <style global>
+        #heading {
+            @apply flex justify-center w-full pt-14;
+            height: 640px;
+            background-image: #ffffff;
+            background-image:  
+                radial-gradient(at 87% 93%, hsla(3,0%,100%,1) 0, transparent 54%),  
+                radial-gradient(at 41% 70%, hsla(54,100%,88%,1) 0, transparent 58%),  
+                radial-gradient(at 55% 32%, hsla(3,0%,100%,1) 0, transparent 49%),  
+                radial-gradient(at 67% 28%, hsla(260,100%,90%,1) 0, transparent 51%),  
+                radial-gradient(at 50% 82%, hsla(193,100%,94%,1) 0, transparent 50%),  
+                radial-gradient(at 10% 3%, hsla(174,100%,95%,1) 0, transparent 59%),  
+                radial-gradient(at 14% 61%, hsla(3,0%,100%,1) 0, transparent 43%);        
+        }
+    </style>
+
+    <style lang="sass" global>
+        pre
+            @apply p-4 my-0
+
+        #nav 
+            @apply absolute top-0 left-0 flex items-center w-full h-14 px-4
+
+        #niku
+            @apply text-xl font-light text-gray-400
+
+        #heading, #offers, #why
+            & > .wrapper
+                @apply flex flex-col justify-center items-start md:items-center gap-2 w-full h-full max-w-4xl mx-auto px-8
+
+                & > .title
+                    @apply text-4xl md:text-6xl font-bold md:text-center mb-4
+                    line-height: 1.2
+ 
+                & > .sub-title
+                    @apply text-lg md:text-2xl text-gray-500 md:text-center
+
+                & > .link
+                    @apply text-xl text-gray-700 mt-8 px-9 py-3 rounded-lg border border-gray-700 backdrop-blur-2xl
+
+        #why
+            @apply bg-white rounded-xl
+
+        #offers, #why
+            @apply w-full max-w-5xl py-12
+
+            & > .wrapper
+                & > .title
+                    @apply text-3xl md:text-4xl 
+
+                & > .sub-title
+                    @apply text-lg md:text-xl
+
+        .card
+            @apply flex flex-col md:flex-row items-center max-w-5xl w-full rounded-2xl bg-white md:p-12 gap-4 md:gap-12 overflow-hidden
+
+            &.-reverse
+                @apply md:flex-row-reverse
+
+            & > .content
+                @apply flex flex-1 flex-col gap-4 text-lg text-gray-600 p-8 md:py-0 md:px-2 md:px-0
+
+                & > .title
+                    @apply text-3xl font-semibold text-gray-800
+
+        #summarize
+            @apply flex flex-col justify-center items-center gap-4 w-full max-w-5xl text-gray-500 text-xl rounded-2xl bg-white p-12
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <h1 id="niku">Niku</h1>
+    </nav>
+    <header id="heading">
+        <div class="wrapper">
+            <h2 class="title">Create Flutter UI,<br />Easier, Faster, Smarter</h2>
+            <h3 class="sub-title">Compose Flutter UI from utilies Widget and extensions with <u>dot cascade</u>.</h3>
+            <h3 class="sub-title">Fluently developing without headache and Nested Hell.</h3>
+            <a class="link" href="/docs">
+                Getting Start
+            </a>
+        </div>
+    </header>
+    <main class="flex flex-col items-center w-full px-4 gap-12 py-16 bg-gray-50">
+        <section class="card">
+            <div class="content">
+                <h3 class="title">Styling with ease, effortlessly</h3>
+                <p>No more complex object, Niku offers composing both properties and parent directly without adding another layer of complexity.</p>
+                <p>Helping you focus on widget itself, no more redundant properties as a widget.</p>
+            </div>
+            <Prism class="flex-1 w-full" lang="dart" code={`n.Text("Hello Niku")
+  ..color = Colors.black
+  ..bold
+  ..useParent((v) => v
+    ..bg = Colors.red
+    ..rounded
+    ..center
+  );`} />
+        </section>
+
+        <section class="card -reverse">
+            <div class="content">
+                <h3 class="title">Shorten and shortcut property</h3>
+                <p>Reduce redundant boilerplate code from your codebase, Niku cover many a lot of common pattern code normally found in Flutter app.</p>
+                <p>Shorten your code, maintain your sanity. No more confusing complex basic pattern.</p>
+            </div>
+            <Prism class="flex-1 w-full" lang="dart" code={`n.TextFormField("Value")
+  ..useDecoration((v) => v
+    ..password
+    ..outlined
+    ..borderColor = Colors.blue
+  );
+
+n.Image.assets("assets/takodachi.png")
+  ..cover
+  ..circleProgress(
+    (progress) => CircularProgressIndicator(
+      value: progress,
+      color: Colors.white,
+    ),
+  );`} />
+        </section>
+
+        <section class="card">
+            <div class="content">
+                <h3 class="title">Says goodbye to Nested-Hell</h3>
+                <p>Nested Hell have been a problem for Flutter for a long time. It's undeniable that it's hard to read and maintain and nobody like that.</p>
+                <p>With Niku, composing UI is simple, you use dot cascade to compose both properties and parent.</p>
+            </div>
+            <Prism class="flex-1 w-full" lang="dart" code={`Container()
+  ..width = 50
+  ..height = 50
+  ..p = 10 // padiding
+  ..bg = Colors.blue
+  ..rounded = 8;`} />
+        </section>
+
+        <section class="card -reverse">
+            <div class="content">
+                <h3 class="title">And says hello to Stylesheet</h3>
+                <p>Niku allows you to extract your styling out to anywhere of your code, then reuse it on any widgets.</p>
+                <p>Without complex styling, helping you to focus on functionality of your apps instead.</p>
+            </div>
+            <Prism class="flex-1 w-full" lang="dart" code={`// Seperate from your main UI view
+class Styles {
+  static final title = n.Text("")
+    ..fontSize = 72
+    ..color = Colors.black
+    ..bold
+}
+
+// Then main part of your app
+n.Text()..apply = Styles.title`} />
+        </section>
+
+        <summarize id="summarize">
+            <h1 class="text-black text-4xl font-bold">TLDR;</h1>
+            <p>
+                Niku helps you compose your UI declaratively, without headache.
+            </p>
+            <picture>
+                <source type="image/webp" srcset="/assets/korone-drake-format.webp" />
+                <img src="/assets/korone-drake-format.jpg" loading="lazy" alt="Korone Drake" title="Korone Drake Format" class="w-full max-w-3xl" />
+                <figcaption class="text-sm text-center text-gray-400 font-light">Traditional Flutter vs Niku visualize with Korone Drake format</figcaption>
+            </picture>
+        </summarize>
+
+        <section class="card">
+            <div class="content">
+                <h3 class="title">How to get start?</h3>
+                <p>It's easy! Just add niku to your pubspec.yaml and that's just it! As simple as that.</p>
+                <p>Just one line of code away form you to the future of better of experience of developing Flutter apps.</p>
+            </div>
+            <Prism class="flex-1 w-full" lang="yaml" code={`# pubspec.yaml
+dependencies:
+  flutter:
+    sdk: flutter
+    
+  niku: 2.0.0-experimental.4`} />
+        </section>
+
+        <section class="card -reverse">
+            <div class="content">
+                <h3 class="title">Still not convinced?</h3>
+                <p>Not sure why Niku is created or how does Niku fits to your codebase?</p>
+                <p>There's an article written by the creator of Niku explaining the behind the scene, thought process, design decision, and why Niku is created in the first place.</p>
+            </div>
+            <a 
+                class="flex flex-col flex-1 gap-1"
+                href="https://medium.com/@saltyaom/niku-thought-process-of-designing-a-balance-framework-1d9218fcdabd" 
+                title="Read 'Niku: Thought Process of Designing a Balance Framework'"
+            >
+                <picture>
+                    <source type="image/webp" srcset="/assets/article.webp" />
+                    <img 
+                        src="/assets/article.jpg" 
+                        alt="Probably some anime writing some code" 
+                        loading="lazy" 
+                        class="w-full max-w-3xl mb-1 rounded shadow-xl"
+                    />
+                </picture>
+                <h4 class="text-lg">Thought Process of Designing a Balance Framework</h4>
+                <p class="text-gray-500 text-sm font-light">Behind the scene, why I created it and how I balancing DX and performance</p>
+            </a>
+        </section>
+
+        <section id="offers">
+            <div class="wrapper">
+                <h2 class="title">Build better apps together</h2>
+                <h3 class="sub-title">Flutter without effortlessly styling, reusable stylesheet, elimating Nested Hell.</h3>
+                <h3 class="sub-title">Join communities of developer building better Flutter apps.</h3>
+                <a class="px-9 py-3 text-blue-500 font-medium text-xl bg-blue-100/50 rounded-lg mt-6" href="/docs/quickstart">
+                    Quickstart
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

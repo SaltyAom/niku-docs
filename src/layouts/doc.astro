@@ -1,0 +1,126 @@
+---
+import Link from '../components/link.astro'
+
+const { content } = Astro.props
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{content.title}</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+    <link rel="stylesheet" href={Astro.resolve('../styles/onenight.css')}>
+
+    <style lang="sass" global>
+        #doc
+            @apply flex gap-8 w-full max-w-5xl mx-auto py-8
+
+        #aside
+            @apply sticky top-24 flex flex-col self-start gap-1 text-gray-500 max-w-[16ch] w-full
+
+            & > h4 
+                @apply text-sm font-semibold px-4 py-2
+
+                &:not(:first-child)
+                    @apply mt-6
+
+            & > a
+                @apply px-4 py-2 rounded-lg
+
+                &:hover,
+                &:focus,
+                &.-active
+                    @apply font-medium bg-blue-100/50 text-blue-500
+
+        #heading
+            @apply contents
+
+            & > .title
+                @apply text-5xl font-medium text-black py-2
+
+        #article
+            @apply flex flex-col gap-4 text-lg text-gray-600 whitespace-pre-line w-full leading-7
+
+            & > h1
+                @apply text-4xl text-black font-medium mt-4
+
+            & > h2
+                @apply text-3xl text-black font-medium mt-4
+            
+            & > p > code
+                @apply font-sans text-blue-500 p-1 bg-blue-100/50 rounded
+
+            & > pre
+                @apply text-sm leading-6 p-4 rounded
+
+            & > a,
+            & > * > a
+                @apply text-blue-500 bg-blue-100/50 px-1 py-0.5 rounded
+
+        #nav
+            @apply sticky top-0 z-30 flex justify-center w-full h-14 bg-white border-b border-b-gray-200
+
+            & > .body
+                @apply flex justify-between items-center w-full max-w-5xl h-full px-4
+
+                & > .header
+                    @apply flex items-center gap-3
+
+                    & > .title
+                        @apply text-xl font-medium
+
+                    & > .select
+                        @apply appearance-none text-sm font-light text-gray-700 px-4 py-1 bg-gray-100 rounded-full    
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <div class="body">
+            <header class="header">
+                <a href="/" class="title">Niku</a>
+                <select id="version" class="select">
+                    <option>v2</option>
+                    <option>v1</option>
+                </select>
+                <script>
+                    document.getElementById('version').onchange = function(event) {
+                        if(event.target.value === "v1") {
+                            window.location.href = "https://niku.saltyaom.com"
+                        }
+                    }
+                </script>
+            </header>
+            <div class="content">
+            </div>
+        </div>
+    </nav>
+    <main id="doc">
+        <aside id="aside">
+            <h4>Getting Start</h4>
+            <Link href="/docs">Introduction</Link>
+            <Link href="/docs/quickstart">Quickstart</Link>
+            <Link href="/docs/hook">Hook</Link>
+            <Link href="/docs/parent">Parent</Link>
+            <Link href="/docs/what-next">What's next</Link>
+
+            <h4>Advance Concept</h4>
+            <Link href="/docs/extending-niku">Extending Niku</Link>
+            <Link href="/docs/custom-widget">Custom Widget</Link>
+            <Link href="/docs/macro">Macro</Link>
+            <Link href="/docs/repaint">Repaint</Link>
+            <Link href="/docs/use-query">useQuery</Link>
+        </aside>
+
+        <article id="article">
+            <header id="heading">
+                <h1 class="title">{content.title}</h1>
+            </header>
+
+            <slot />
+        </article>
+    </main>
+</body>
+</html>

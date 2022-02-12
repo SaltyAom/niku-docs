@@ -1,0 +1,8 @@
+---
+const { href } = Astro.props
+
+const isActive = Astro.request.url.pathname === href
+---
+<a href={href} class={isActive ? '-active' : ''}>
+  <slot />
+</a>
