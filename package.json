@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "generate": "ts-node generator"
   },
   "devDependencies": {
     "@astrojs/renderer-svelte": "^0.3.1",
@@ -14,6 +15,7 @@
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.6",
     "tailwindcss": "^3.0.18",
+    "ts-node": "^10.5.0",
     "vite": "^2.7.13"
   }
 }
