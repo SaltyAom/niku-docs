@@ -5,14 +5,13 @@ const catchProperty = /class([^{]+){([^(]+)/gs
 const catchFactory = /factory ([^(]+)/gs
 const catchGetSet =
     /(get|set) ([\w]+)([^{=;]+)(\{(?:[^}{]+|\{(?:[^}{]+|\{[^}{]*\})*\})*\}|[^;]+)/gs
+const catchFunction =
+    /(void) ([\w]+)\((?:[^)(]+|\((?:[^)(]+|\([^)(]*\))*\))*\)([^>{]+)([^;]+|([^{=;]+|\{(?:[^}{]+|\{(?:[^}{]+|\{[^}{]*\})*\})*\}))/gs
 
 const widgetWhitelist = ['niku.dart', 'widget.dart', 'macros.dart']
 
 const capitalize = (string: string) =>
     string.charAt(0).toUpperCase() + string.slice(1)
-
-const decapitalize = ([first, ...rest]: string) =>
-    first.toLowerCase() + rest.join('')
 
 const main = async () => {
     const source = await stat('./niku')
@@ -25,15 +24,16 @@ const main = async () => {
         readdir('./niku/lib/objects')
     ])
 
-    const macros: Map<
+    const macros: Record<
         string,
-        {
-            type: 'get' | 'set'
+        Array<{
+            type: 'shortcut' | 'set' | 'hook'
             name: string
             argument: string
             code: string
-        }
-    > = new Map()
+            macro: string
+        }>
+    > = {}
     await Promise.all(
         macroFiles
             .filter((file) => !widgetWhitelist.includes(file))
@@ -43,23 +43,60 @@ const main = async () => {
                     encoding: 'utf-8'
                 })
 
-                const matched = [...widget.matchAll(catchGetSet)]
+                const matchedGetSet = [...widget.matchAll(catchGetSet)]
 
-                if (!matched.length)
+                if (!matchedGetSet.length)
                     throw new Error(`Can't find Niku widget class in ${file}`)
 
-                matched.forEach(([, type, name, argument, code]) => {
-                    if (!code || name.startsWith('_')) return
-
-                    macros.set(
+                matchedGetSet.forEach(([, type, name, argument, code]) => {
+                    console.log(
                         `${capitalize(file).replace('.dart', '')}Macro`,
-                        {
-                            type: type as 'get' | 'set',
-                            name,
-                            argument,
-                            code: code.trim().replace(/^=>/, '').trim()
-                        }
+                        name
                     )
+
+                    if (!code || name.startsWith('_') || name === 'build')
+                        return
+
+                    const macro = `${capitalize(file).replace(
+                        '.dart',
+                        ''
+                    )}Macro`
+
+                    if (!macros[macro]) macros[macro] = []
+
+                    macros[macro].push({
+                        type:
+                            type === 'set'
+                                ? 'set'
+                                : type === 'get'
+                                ? 'shortcut'
+                                : 'hook',
+                        name,
+                        argument,
+                        code: code.trim().replace(/^=>/, '').trim(),
+                        macro
+                    })
+                })
+
+                const matchedFunction = [...widget.matchAll(catchFunction)]
+
+                matchedFunction.forEach(([, name, argument, code]) => {
+                    if (!code) return
+
+                    const macro = `${capitalize(file).replace(
+                        '.dart',
+                        ''
+                    )}Macro`
+
+                    if (!macros[macro]) macros[macro] = []
+
+                    macros[macro].push({
+                        type: 'hook',
+                        name,
+                        argument,
+                        code: code.trim().replace(/^=>/, '').trim(),
+                        macro
+                    })
                 })
             })
     )
@@ -90,7 +127,7 @@ const main = async () => {
                 const macrosData = macrosName
                     .split(',')
                     .map((a) => a.trim().split('<')[0])
-                    .map((a) => macros.get(a))
+                    .map((a) => macros[a])
                     .filter((a) => a)
 
                 return {
@@ -102,7 +139,7 @@ const main = async () => {
                         .replaceAll(';', '')
                         .split('\n')
                         .map((a) => a.trimStart())
-                        .filter((a) => a && a !== ' ')
+                        .filter((a) => a && a !== ' '),
                 }
             })
     )
