@@ -16,3 +16,8 @@ yarn-error.log*
 
 # macOS-specific files
 .DS_Store
+
+# Generated docs
+src/components/generated
+src/pages/docs/macros
+src/pages/docs/widgets
