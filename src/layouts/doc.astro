@@ -56,11 +56,11 @@ const { content } = Astro.props
 
     <style lang="sass" global>
         #doc
-            @apply flex gap-8 w-full max-w-7xl mx-auto py-8 gap-4 lg:gap-8
+            @apply flex flex-col-reverse md:flex-row gap-8 w-full max-w-7xl mx-auto py-8 gap-4 lg:gap-8
 
         #aside,
         #on-this-page
-            @apply sticky top-24 flex flex-col self-start text-gray-500 max-w-[24ch] text-sm w-full overflow-y-scroll
+            @apply sticky top-24 flex flex-col self-start text-gray-500 max-w-[24ch] text-sm w-full overflow-y-scroll px-4
             height: calc(100vh - 6rem)
 
             & > h4 
@@ -84,13 +84,14 @@ const { content } = Astro.props
                 @apply flex
 
         #on-this-page
-            @apply hidden md:flex min-w-[18ch]
+            @apply static md:sticky flex min-w-[18ch] w-full max-w-[64ch] md:max-w-[24ch] mx-auto
+            height: auto
 
         #heading
             @apply contents
 
             & > .title
-                @apply text-5xl font-medium text-black py-2
+                @apply text-4xl sm:text-5xl font-medium text-black py-2 break-words
 
         #article
             @apply flex flex-col gap-4 text-lg w-full max-w-[52ch] lg:max-w-[56ch] text-gray-600 whitespace-pre-line w-full leading-7 mx-auto px-4
@@ -98,16 +99,16 @@ const { content } = Astro.props
             & > h1,
             & > h2,
             & > h3
-                @apply scroll-mt-16
+                @apply scroll-mt-16 break-words
 
             & > h1
-                @apply text-4xl text-black font-medium mt-4
+                @apply text-3xl sm:text-4xl text-black font-medium mt-4
 
             & > h2
-                @apply text-3xl text-black font-medium mt-4
+                @apply text-2xl sm:text-3xl text-black font-medium mt-4
 
             & > h3
-                @apply text-3xl text-gray-800 font-bold font-medium border-t pt-4
+                @apply text-2xl sm:text-3xl text-gray-800 font-bold font-medium border-t pt-4
 
                 & > code
                     @apply text-sm
@@ -124,7 +125,7 @@ const { content } = Astro.props
                 @apply text-blue-500 underline px-1 py-0.5 rounded
 
             & > ul
-                @apply flex flex-col gap-2
+                @apply flex flex-col gap-2 pl-4
                 list-style-type: circle
 
         #nav
