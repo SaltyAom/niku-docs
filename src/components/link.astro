@@ -3,6 +3,6 @@ const { href } = Astro.props
 
 const isActive = Astro.request.url.pathname === href || `${Astro.request.url.pathname}/` === href
 ---
-<a href={href} class={isActive ? '-active' : ''}>
+<a href={href} class={`${isActive ? '-active' : ''} ${Astro.props.class}`}>
   <slot />
 </a>

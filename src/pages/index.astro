@@ -111,8 +111,11 @@ import { Prism } from 'astro/components'
             &.-reverse
                 @apply md:flex-row-reverse
 
+            & > pre
+                @apply m-0
+
             & > .content
-                @apply flex flex-1 flex-col gap-4 text-lg text-gray-600 p-8 md:py-0 md:px-2 md:px-0
+                @apply flex flex-1 flex-col gap-4 text-lg text-gray-600 p-6 pb-0 md:py-0 md:px-2 md:px-0
 
                 & > .title
                     @apply text-3xl font-semibold text-gray-800
@@ -243,7 +246,7 @@ dependencies:
                 <p>There's an article written by the creator of Niku explaining the behind the scene, thought process, design decision, and why Niku is created in the first place.</p>
             </div>
             <a 
-                class="flex flex-col flex-1 gap-1"
+                class="flex flex-col flex-1 gap-1 p-4 lg:p-0"
                 href="https://medium.com/@saltyaom/niku-thought-process-of-designing-a-balance-framework-1d9218fcdabd" 
                 target="_blank"
                 title="Read 'Niku: Thought Process of Designing a Balance Framework'"

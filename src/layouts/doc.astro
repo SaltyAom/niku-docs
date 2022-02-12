@@ -56,7 +56,7 @@ const { content } = Astro.props
 
     <style lang="sass" global>
         #doc
-            @apply flex flex-col-reverse md:flex-row gap-8 w-full max-w-7xl mx-auto py-8 gap-4 lg:gap-8
+            @apply flex flex-col-reverse md:flex-row gap-8 w-full max-w-7xl mx-auto py-2 md:py-8 gap-4 lg:gap-8
 
         #aside,
         #on-this-page
@@ -84,14 +84,14 @@ const { content } = Astro.props
                 @apply flex
 
         #on-this-page
-            @apply static md:sticky flex min-w-[18ch] w-full max-w-[64ch] md:max-w-[24ch] mx-auto
+            @apply static md:sticky flex min-w-[18ch] w-full max-w-[64ch] md:max-w-[24ch] mx-auto md:mx-0 mb-4 max-h-[50vh] md:max-h-screen
             height: auto
 
         #heading
             @apply contents
 
-            & > .title
-                @apply text-4xl sm:text-5xl font-medium text-black py-2 break-words
+        #title
+                @apply text-3xl sm:text-5xl font-medium text-black py-2 break-words scroll-mt-24
 
         #article
             @apply flex flex-col gap-4 text-lg w-full max-w-[52ch] lg:max-w-[56ch] text-gray-600 whitespace-pre-line w-full leading-7 mx-auto px-4
@@ -206,7 +206,7 @@ const { content } = Astro.props
 
         <article id="article">
             <header id="heading">
-                <h1 class="title">{content.title}</h1>
+                <h1 id="title" class="title">{content.title}</h1>
             </header>
 
             <slot />
@@ -226,6 +226,7 @@ const { content } = Astro.props
 
         <aside id="on-this-page">
             <h4>On this page</h4>
+            <Link href="#title">{content.title}</Link>
             {chapters.map(chapter => {
                 const title = chapter.replaceAll("#", '').trimStart()
                 const href = title
@@ -233,8 +234,9 @@ const { content } = Astro.props
                                 .replaceAll(' ', '-')
                                 .replaceAll('`', '')
                                 .replaceAll(':', '')
+                const isTitle = chapter.match(/#/g).length <= 2
 
-                return <Link href={`#${href}`}>{title}</Link>
+                return <Link class={isTitle ? '!border-l-0' : ''} href={`#${href}`}>{title}</Link>
             })}
         </aside>
     </main>
