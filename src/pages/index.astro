@@ -121,7 +121,18 @@ import { Prism } from 'astro/components'
                     @apply text-3xl font-semibold text-gray-800
 
         #summarize
-            @apply flex flex-col justify-center items-center gap-4 w-full max-w-5xl text-gray-500 text-xl rounded-2xl bg-white p-12
+            @apply flex flex-col justify-center items-center gap-4 w-full max-w-5xl text-gray-500 text-xl rounded-2xl bg-white md:p-8
+
+            & > h1
+                @apply pt-6
+
+            & > picture > figcaption
+                @apply pt-2 pb-4 md:pb-0
+
+            & > h1,
+            & > p,
+            & > picture > figcaption
+                @apply px-6
     </style>
 </head>
 <body>
