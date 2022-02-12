@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/doc.astro
+prev: quickstart
+next: parent
 title: Hook
-setup: |
-    import { Prism } from 'astro/components';
 ---
 In Flutter, there's some complex styling that require you to add a class as a parameter.
 

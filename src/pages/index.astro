@@ -4,11 +4,38 @@ import { Prism } from 'astro/components'
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Niku Docs</title>
+    <title>Niku - Create Flutter UI, Easier, Faster, Smarter</title>
 
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="theme-color" content="#fff">
+
+    <!-- Search Engine -->
+    <meta name="title" content="Niku - Create Flutter UI, Easier, Faster, Smarter">
+    <meta name="description" content="Compose Flutter UI from utilies Widget and extensions with dot cascade. Fluently developing without headache and Nested Hell. Niku: Create Flutter UI, Easier, Faster, Smarter">
+    <meta name="author" content="saltyaom">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⾁</text></svg>" />
+
+    <!-- Open Graph -->
+    <link rel="canonical" href="https://v2.niku.saltyaom.com">
+    <meta property="og:title" content="Niku - Create Flutter UI, Easier, Faster, Smarter">
+    <meta property="og:description" content="Compose Flutter UI from utilies Widget and extensions with dot cascade. Fluently developing without headache and Nested Hell. Niku: Create Flutter UI, Easier, Faster, Smarter">
+    <meta property='article:author' content="saltyaom">
+    <meta property='og:site_name' content="Niku Documentation">
+    <meta property="og:image" content="https://v2.niku.saltyaom.com/assets/og.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Niku - Create Flutter UI, Easier, Faster, Smarter">
+    <meta name="twitter:description" content="Compose Flutter UI from utilies Widget and extensions with dot cascade. Fluently developing without headache and Nested Hell. Niku: Create Flutter UI, Easier, Faster, Smarter">
+    <meta name="twitter:site" content="@saltyaom">
+    <meta name="twitter:image" content="https://v2.niku.saltyaom.com/assets/og.jpg">
+    <meta name="twitter:creator" content="@saltyaom">
+
     <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
     <link rel="stylesheet" href={Astro.resolve('../styles/onenight.css')}>
 
@@ -33,7 +60,7 @@ import { Prism } from 'astro/components'
             @apply p-4 my-0
 
         #nav 
-            @apply absolute top-0 left-0 flex items-center w-full h-14 px-4
+            @apply absolute top-0 left-0 flex justify-between items-center w-full h-14 px-4
 
         #niku
             @apply text-xl font-light text-gray-400
@@ -83,7 +110,10 @@ import { Prism } from 'astro/components'
 </head>
 <body>
     <nav id="nav">
-        <h1 id="niku">Niku</h1>
+        <a id="niku" href="/" role="heading" aria-level={1}>Niku</a>
+        <a class="text-gray-400" href="https://github.com/saltyaom/niku" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
     </nav>
     <header id="heading">
         <div class="wrapper">
@@ -202,6 +232,7 @@ dependencies:
             <a 
                 class="flex flex-col flex-1 gap-1"
                 href="https://medium.com/@saltyaom/niku-thought-process-of-designing-a-balance-framework-1d9218fcdabd" 
+                target="_blank"
                 title="Read 'Niku: Thought Process of Designing a Balance Framework'"
             >
                 <picture>
@@ -228,6 +259,9 @@ dependencies:
                 </a>
             </div>
         </section>
+        <footer class="text-gray-400 mt-8">
+            &copy; Provide to you by <a href="https://github.com/saltyaom">saltyAom</a>
+        </footer>
     </main>
 </body>
 </html>

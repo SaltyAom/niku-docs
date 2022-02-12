@@ -1,8 +1,7 @@
 ---
 layout: ../../layouts/doc.astro
+next: quickstart
 title: Introduction
-setup: |
-    import { Prism } from 'astro/components';
 ---
 Styling in Flutter is complex and verbose.
 

@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/doc.astro
+prev: custom-widget
+next: repaint
 title: Macro
-setup: |
-    import { Prism } from 'astro/components';
 ---
 Macro is an abstract class to use Dependency Injection into our widget.
 

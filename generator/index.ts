@@ -1,4 +1,6 @@
-import { readFile, stat, readdir } from 'fs/promises'
+import { existsSync } from 'fs'
+import { readFile, stat, readdir, mkdir, writeFile } from 'fs/promises'
+import { sync as rmdir } from 'rimraf'
 
 const catchWidget = /class (.*)? extends StatelessWidget(.*)? with([^{]+)/gs
 const catchProperty = /class([^{]+){([^(]+)/gs
@@ -7,53 +9,53 @@ const catchGetSet =
     /(get|set) ([\w]+)([^{=;]+)(\{(?:[^}{]+|\{(?:[^}{]+|\{[^}{]*\})*\})*\}|[^;]+)/gs
 const catchFunction =
     /(void) ([\w]+)\((?:[^)(]+|\((?:[^)(]+|\([^)(]*\))*\))*\)([^>{]+)([^;]+|([^{=;]+|\{(?:[^}{]+|\{(?:[^}{]+|\{[^}{]*\})*\})*\}))/gs
+const catchFunctionWithoutArrow =
+    /(void) ([\w]+)\((?:[^)(]+|\((?:[^)(]+|\([^)(]*\))*\))*\)([^>{]+)([^{=;]+|\{(?:[^}{]+|\{(?:[^}{]+|\{[^}{]*\})*\})*\})/gs
 
 const widgetWhitelist = ['niku.dart', 'widget.dart', 'macros.dart']
 
 const capitalize = (string: string) =>
     string.charAt(0).toUpperCase() + string.slice(1)
 
+const decapitalize = ([first, ...rest]: string) =>
+    first.toLowerCase() + rest.join('')
+
+type Macros = Array<{
+    type: 'shortcut' | 'set' | 'hook'
+    name: string
+    argument: string
+    code: string
+    macro: string
+}>
+
+type MacroMap = Record<string, Macros>
+
 const main = async () => {
     const source = await stat('./niku')
 
     if (!source.isDirectory()) throw new Error('./niku is not directory')
 
-    const [widgetFiles, macroFiles, objectFiles] = await Promise.all([
+    const [widgetFiles, macroFiles] = await Promise.all([
         readdir('./niku/lib/widget'),
-        readdir('./niku/lib/macros'),
-        readdir('./niku/lib/objects')
+        readdir('./niku/lib/macros')
     ])
 
-    const macros: Record<
-        string,
-        Array<{
-            type: 'shortcut' | 'set' | 'hook'
-            name: string
-            argument: string
-            code: string
-            macro: string
-        }>
-    > = {}
+    const macros: MacroMap = {}
     await Promise.all(
         macroFiles
             .filter((file) => !widgetWhitelist.includes(file))
             // Use map to return empty promise
             .map(async (file) => {
-                const widget = await readFile(`./niku/lib/macros/${file}`, {
+                const macroFile = await readFile(`./niku/lib/macros/${file}`, {
                     encoding: 'utf-8'
                 })
 
-                const matchedGetSet = [...widget.matchAll(catchGetSet)]
+                const matchedGetSet = [...macroFile.matchAll(catchGetSet)]
 
                 if (!matchedGetSet.length)
                     throw new Error(`Can't find Niku widget class in ${file}`)
 
                 matchedGetSet.forEach(([, type, name, argument, code]) => {
-                    console.log(
-                        `${capitalize(file).replace('.dart', '')}Macro`,
-                        name
-                    )
-
                     if (!code || name.startsWith('_') || name === 'build')
                         return
 
@@ -78,10 +80,10 @@ const main = async () => {
                     })
                 })
 
-                const matchedFunction = [...widget.matchAll(catchFunction)]
+                const matchedFunction = [...macroFile.matchAll(catchFunction)]
 
-                matchedFunction.forEach(([, name, argument, code]) => {
-                    if (!code) return
+                matchedFunction.forEach(([, , name, argument, code]) => {
+                    if (!code || name === "void") return
 
                     const macro = `${capitalize(file).replace(
                         '.dart',
@@ -90,11 +92,14 @@ const main = async () => {
 
                     if (!macros[macro]) macros[macro] = []
 
+                    let example = code.trim().replace(/^=>/, '').trim()
+                    if (example.startsWith('{')) example += '\n}'
+
                     macros[macro].push({
                         type: 'hook',
                         name,
                         argument,
-                        code: code.trim().replace(/^=>/, '').trim(),
+                        code: example,
                         macro
                     })
                 })
@@ -130,19 +135,252 @@ const main = async () => {
                     .map((a) => macros[a])
                     .filter((a) => a)
 
+                const localMacros: Macros = []
+
+                /** Extract hook */
+                const matchedFunction = [
+                    ...widget.matchAll(catchFunctionWithoutArrow)
+                ]
+
+                matchedFunction.forEach(([, name, argument, code]) => {
+                    if (!code || name === "void") return
+
+                    localMacros.push({
+                        type: 'hook',
+                        name,
+                        argument,
+                        code: code.trim(),
+                        macro: name
+                    })
+                })
+
                 return {
-                    widget: name,
+                    widget: name.split('<')[0],
                     macros: macrosData,
                     factories,
+                    localMacros,
                     properties: properties
                         .replaceAll(name, '')
                         .replaceAll(';', '')
                         .split('\n')
                         .map((a) => a.trimStart())
-                        .filter((a) => a && a !== ' '),
+                        .filter((a) => a && a !== ' ')
+                        .map((a) => {
+                            const [type, name, ...rest] = a.split(' ')
+
+                            return `${name} ${type} ${rest
+                                .join(' ')
+                                .replace(',', ' ')}`.trim()
+                        })
                 }
             })
     )
+
+    if (existsSync('./src/pages/docs/widgets'))
+        rmdir('./src/pages/docs/widgets')
+    await mkdir('./src/pages/docs/widgets')
+
+    await Promise.all([
+        widgets.forEach(
+            async ({ widget, properties, factories, macros, localMacros }) => {
+                const widgetName = widget.replace('Niku', '')
+
+                let content = `---
+layout: ../../../layouts/doc.astro
+title: ${widgetName}
+---
+Representation of ${widgetName}
+\n
+To use this widget, simply import from the of the following:
+\`\`\`dart
+import 'package:niku/niku.dart';
+import 'package:niku/namespace.dart';
+import 'package:niku/widget/widget.dart';
+import 'package:niku/widget/${widgetName}.dart';
+\`\`\`\n`
+
+                if (factories.length) {
+                    content += '## Factory method:\n'
+                    factories.forEach((factory) => `- ${factory}\n`)
+                }
+
+                content += '\n## Cascasde properties:'
+                properties.forEach((property) => `- ${property}\n`)
+
+                content +=
+                    '\nTo use dot cascade, simply use the following syntax:\n'
+                content += '\n```dart\n'
+                content += `${widget}
+  ..${properties[0] || 'data'} = data
+  ..${properties[1] || properties[0] || 'data'} = data`
+                content += '\n```'
+
+                content += '\n\n## Macros:\n'
+                content +=
+                    'This widget implement the following macros (shortcut):\n'
+                macros.forEach(
+                    (macroList) =>
+                        (content += `- [${
+                            macroList[0].macro
+                        }](/docs/macros/${decapitalize(
+                            macroList[0].macro.replace('Macro', '')
+                        )})\n`)
+                )
+                content += '\n'
+
+                if (localMacros.length) {
+                    content += '\n\n## Local Macros:\n'
+                    content += 'local macro that implements in this widget\n'
+
+                    localMacros.forEach(
+                        ({ type, name, argument, code, macro }, index) => {
+                            if (index === 0) content += `## ${macro}\n\n`
+
+                            content += `### ${name} \`${type}\`\n`
+
+                            if (argument.trim()) {
+                                content += `\nArguments:\n`
+                                content += '```dart'
+                                content += `\n${argument}\n`
+                                content += '```\n'
+                            }
+
+                            content += `\nEquivalent to:\n`
+                            content += '```dart'
+                            content += `\n${code}\n`
+                            content += '```\n\n'
+                        }
+                    )
+                }
+
+                macros.forEach((macroList) =>
+                    macroList.forEach(
+                        ({ type, name, argument, code, macro }, index) => {
+                            if (index === 0) {
+                                content += `## ${macro}\n`
+                                content += `Implement [${macro}](/docs/macros/${decapitalize(
+                                    macro.replace('Macro', '')
+                                )}) abstract class\n\n`
+                            }
+
+                            content += `### ${name} \`${type}\`\n`
+
+                            if (argument.trim()) {
+                                content += `\nArguments:\n`
+                                content += '```dart'
+                                content += `\n${argument}\n`
+                                content += '```\n'
+                            }
+
+                            content += `\nEquivalent to:\n`
+                            content += '```dart'
+                            content += `\n${code}\n`
+                            content += '```\n\n'
+                        }
+                    )
+                )
+
+                await writeFile(
+                    `./src/pages/docs/widgets/${decapitalize(widgetName)}.md`,
+                    content
+                )
+            }
+        )
+    ])
+
+    if (existsSync('./src/pages/docs/macros')) rmdir('./src/pages/docs/macros')
+    await mkdir('./src/pages/docs/macros')
+
+    await Promise.all([
+        Object.entries(macros).forEach(async ([name, macro]) => {
+            const macroName = decapitalize(name.replace('Macro', ''))
+
+            let content = `---
+layout: ../../../layouts/doc.astro
+title: ${name}
+---
+Reusable shortcuts abstract class used in:\n`
+
+            widgets
+                .filter(({ macros }) => (macros[0][0].macro = name))
+                .forEach(({ widget }) => {
+                    const widgetName = widget.replace('Niku', '')
+
+                    content += `- [${widgetName}](/docs/widgets/${decapitalize(
+                        widgetName
+                    )})\n`
+                })
+
+            content += `\n\nTo use this macro, simply import from one of the following:
+\`\`\`dart
+import 'package:niku/niku.dart';
+import 'package:niku/macros/macros.dart';
+import 'package:niku/macros/${name}.dart';
+\`\`\`\n`
+
+            macro.forEach(({ type, name, argument, code, macro }, index) => {
+                if (index === 0) content += `## ${macro}\n\n`
+
+                content += `### ${name} \`${type}\`\n`
+
+                if (argument.trim()) {
+                    content += `\nArguments:\n`
+                    content += '```dart'
+                    content += `\n${argument}\n`
+                    content += '```\n'
+                }
+
+                content += `\nEquivalent to:\n`
+                content += '```dart'
+                content += `\n${code}\n`
+                content += '```\n\n'
+            })
+
+            await writeFile(
+                `./src/pages/docs/macros/${decapitalize(macroName)}.md`,
+                content
+            )
+        })
+    ])
+
+    if (existsSync('./src/components/generated'))
+        rmdir('./src/components/generated')
+    await mkdir('./src/components/generated')
+
+    let chapters = `---
+import Link from '../../components/link.astro'
+---
+<h4>Widgets</h4>
+@widget
+
+<h4>Macros</h4>
+@macro
+<Link href="/docs/extending-niku">Extending Niku</Link>`
+
+    const widgetChapters: string[] = []
+    const macroChapters: string[] = []
+
+    widgets.forEach(({ widget }) => {
+        const widgetName = decapitalize(widget.replace('Niku', ''))
+
+        widgetChapters.push(
+            `<Link href="/docs/widgets/${widgetName}">${widgetName}</Link>`
+        )
+    })
+
+    Object.entries(macros).forEach(([, [{ macro }]]) => {
+        const macroName = decapitalize(macro.replace('Macro', ''))
+
+        macroChapters.push(
+            `<Link href="/docs/macros/${macroName}">${macroName}</Link>`
+        )
+    })
+
+    chapters = chapters
+        .replace('@widget', widgetChapters.join('\n'))
+        .replace('@macro', macroChapters.join('\n'))
+
+    await writeFile('./src/components/generated/chapter.astro', chapters)
 }
 
 main()

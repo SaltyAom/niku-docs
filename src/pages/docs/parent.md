@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/doc.astro
+prev: hook
+next: what-next
 title: Parent
-setup: |
-    import { Prism } from 'astro/components';
 ---
 Not only that Niku allows you to style widget with property builder, it also allows you to create nested widget with a property builder.
 

@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/doc.astro
+prev: what-next
+next: custom-widget
 title: Extending Niku
-setup: |
-    import { Prism } from 'astro/components';
 ---
 If predefined Niku property doesn't have what you looking for and you want to extends your Niku widget, you do that with `extension` method.
 

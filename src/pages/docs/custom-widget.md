@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/doc.astro
+prev: extending-niku
+next: macro
 title: Custom Widget
-setup: |
-    import { Prism } from 'astro/components';
 ---
 If collection of predefined widget doesn't have what you're looking for, you can create one yourself.
 

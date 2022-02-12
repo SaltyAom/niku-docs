@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/doc.astro
+prev: macro
+next: use-query
 title: Repaint
-setup: |
-    import { Prism } from 'astro/components';
 ---
 
 You can improve performance of Niku by repreventing repaint of Niku widget.

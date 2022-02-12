@@ -1,13 +1,12 @@
 ---
 layout: ../../layouts/doc.astro
+next: hook
 title: Quickstart
-setup: |
-    import { Prism } from 'astro/components';
 ---
 It's easy to to get start with Niku.
 
 Like any other Flutter widget, all you have to do is just add niku to your `pubspec.yaml` and that's it.
-```dart
+```yaml
 // pubspec.yaml
 dependencies:
   flutter:
