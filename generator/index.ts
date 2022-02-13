@@ -83,7 +83,7 @@ const main = async () => {
                 const matchedFunction = [...macroFile.matchAll(catchFunction)]
 
                 matchedFunction.forEach(([, , name, argument, code]) => {
-                    if (!code || name === "void") return
+                    if (!code || name === 'void') return
 
                     const macro = `${capitalize(file).replace(
                         '.dart',
@@ -143,7 +143,7 @@ const main = async () => {
                 ]
 
                 matchedFunction.forEach(([, name, argument, code]) => {
-                    if (!code || name === "void") return
+                    if (!code || name === 'void') return
 
                     localMacros.push({
                         type: 'hook',
@@ -201,7 +201,10 @@ import 'package:niku/widget/${decapitalize(widgetName)}.dart';
 
                 if (factories.length) {
                     content += '## Factory method:\n'
-                    factories.forEach((factory) => `- ${factory}\n`)
+                    factories.forEach((factory) => {
+                        content += `- ${factory.split(".")[1]}\n`
+                    })
+                    content += '\n'
                 }
 
                 content += '\n## Cascasde properties:'
@@ -211,8 +214,10 @@ import 'package:niku/widget/${decapitalize(widgetName)}.dart';
                     '\nTo use dot cascade, simply use the following syntax:\n'
                 content += '\n```dart\n'
                 content += `${widget}
-  ..${properties[0]?.split(" ")[0] ?? 'data'} = data
-  ..${properties[1]?.split(" ")[0] ?? properties[0]?.split(" ")[0] ?? 'data'} = data`
+  ..${properties[0]?.split(' ')[0] ?? 'data'} = data
+  ..${
+      properties[1]?.split(' ')[0] ?? properties[0]?.split(' ')[0] ?? 'data'
+  } = data`
                 content += '\n```'
 
                 content += '\n\n## Macros:\n'
