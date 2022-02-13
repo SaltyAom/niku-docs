@@ -196,7 +196,7 @@ To use this widget, simply import from the of the following:
 import 'package:niku/niku.dart';
 import 'package:niku/namespace.dart';
 import 'package:niku/widget/widget.dart';
-import 'package:niku/widget/${widgetName}.dart';
+import 'package:niku/widget/${decapitalize(widgetName)}.dart';
 \`\`\`\n`
 
                 if (factories.length) {
@@ -211,8 +211,8 @@ import 'package:niku/widget/${widgetName}.dart';
                     '\nTo use dot cascade, simply use the following syntax:\n'
                 content += '\n```dart\n'
                 content += `${widget}
-  ..${properties[0] || 'data'} = data
-  ..${properties[1] || properties[0] || 'data'} = data`
+  ..${properties[0]?.split(" ")[0] ?? 'data'} = data
+  ..${properties[1]?.split(" ")[0] ?? properties[0]?.split(" ")[0] ?? 'data'} = data`
                 content += '\n```'
 
                 content += '\n\n## Macros:\n'

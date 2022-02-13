@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/doc.astro
 title: What's next
-prev: parent
+prev: naming-convention
 next: extending-niku
 setup: |
     import WhatNext from '../../components/docs/what-next.astro'
