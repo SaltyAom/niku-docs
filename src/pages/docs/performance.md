@@ -54,7 +54,7 @@ n.On(
 );
 ```
 
-Although, `NikuOn` have significant increase performance, but Niku is build on top of the idea to improve `Developer Experience` first while `NikuOn` added more nested syntax to the widget itself which is harder to maintain.
+Although, `NikuOn` have significant increase in performance, but Niku is build on top of the idea to improve `Developer Experience` first while `NikuOn` added more nested syntax to the widget itself which is harder to maintain.
 
 Thus, `.freezed` and `.on` is fast enough for most of the time.
 
@@ -65,7 +65,7 @@ A stateless widget that hold the properties of the widget that it's going to ren
 
 With `extension` method that is reuse on many Niku widget to shorten the getter and setter process.
 
-For example, this is the entire source code of `NikuCheckbox`:
+For example, this is the entire source code of `NikuColumn`:
 ```dart
 class NikuColumn extends StatelessWidget
     with
