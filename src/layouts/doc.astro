@@ -98,7 +98,9 @@ const { content } = Astro.props
 
             & > h1,
             & > h2,
-            & > h3
+            & > h3,
+            & > h4,
+            & > h6
                 @apply scroll-mt-16 break-words
 
             & > h1
@@ -112,9 +114,17 @@ const { content } = Astro.props
 
                 & > code
                     @apply text-sm
-            
+
+            & > h4
+                @apply text-xl sm:text-2xl text-gray-700 font-medium mt-4
+
+            & > h6
+                @apply text-sm text-gray-400 mt-1
+
+            & > ul > li > code,
             & > p > code,
-            & > h3 > code
+            & > h3 > code,
+            & > h6 > code
                 @apply font-sans text-blue-500 p-1 bg-blue-100/50 rounded
 
             & > pre
@@ -202,6 +212,7 @@ const { content } = Astro.props
             <Link href="/docs/repaint">Repaint</Link>
             <Link href="/docs/use-query">useQuery</Link>
             <Link href="/docs/adaptive">Adaptive</Link>
+            <Link href="/docs/styled-widget">Styled Widget</Link>
 
             <Chapter />
         </aside>

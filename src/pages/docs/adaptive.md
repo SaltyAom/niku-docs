@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/doc.astro
 prev: use-query
+next: styled-widget
 title: Adaptive
 ---
 Want to have your UI native to OS your app is running on? Niku got you cover.

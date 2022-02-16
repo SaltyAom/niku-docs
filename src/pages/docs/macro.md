@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/doc.astro
 prev: custom-widget
-next: repaint
+next: performance
 title: Macro
 ---
 Macro is an abstract class to use Dependency Injection into our widget.

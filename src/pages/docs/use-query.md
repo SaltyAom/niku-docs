@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/doc.astro
-prev: repaint
+prev: performance
 next: adaptive
 title: useQuery
 ---
