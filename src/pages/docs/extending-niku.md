@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/doc.astro
-prev: what-next
+prev: stylesheet
 next: custom-widget
 title: Extending Niku
 ---

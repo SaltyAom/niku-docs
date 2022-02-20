@@ -2,7 +2,7 @@
 layout: ../../layouts/doc.astro
 title: What's next
 prev: naming-convention
-next: extending-niku
+next: stylesheet
 setup: |
     import WhatNext from '../../components/docs/what-next.astro'
 ---
