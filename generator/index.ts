@@ -12,7 +12,7 @@ const catchFunction =
 const catchFunctionWithoutArrow =
     /(void) ([\w]+)\((?:[^)(]+|\((?:[^)(]+|\([^)(]*\))*\))*\)([^>{]+)([^{=;]+|\{(?:[^}{]+|\{(?:[^}{]+|\{[^}{]*\})*\})*\})/gs
 
-const widgetWhitelist = ['niku.dart', 'widget.dart', 'macros.dart']
+const widgetWhitelist = ['niku.dart', 'widget.dart', 'macros.dart', 'nikuBuild.dart']
 
 const capitalize = (string: string) =>
     string.charAt(0).toUpperCase() + string.slice(1)
@@ -307,7 +307,7 @@ title: ${name}
 Reusable shortcuts abstract class used in:\n`
 
             widgets
-                .filter(({ macros }) => (macros[0][0].macro = name))
+                .filter(({ macros }) => (macros[0]?.[0].macro == name))
                 .forEach(({ widget }) => {
                     const widgetName = widget.replace('Niku', '')
 
