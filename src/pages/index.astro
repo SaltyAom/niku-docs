@@ -198,9 +198,9 @@ n.Image.assets("assets/takodachi.png")
                 <p>Nested Hell have been a problem for Flutter for a long time. It's undeniable that it's hard to read and maintain and nobody like that.</p>
                 <p>With Niku, composing UI is simple, you use dot cascade to compose both properties and parent.</p>
             </div>
-            <Prism class="flex-1 w-full" lang="dart" code={`Container()
-  ..width = 50
-  ..height = 50
+            <Prism class="flex-1 w-full" lang="dart" code={`n.Box()
+  ..w = 50
+  ..h = 50
   ..p = 10 // padiding
   ..bg = Colors.blue
   ..rounded = 8;`} />
@@ -247,7 +247,7 @@ dependencies:
   flutter:
     sdk: flutter
     
-  niku: 2.0.0-rc.8`} />
+  niku: 2.0.0`} />
         </section>
 
         <section class="card -reverse">
