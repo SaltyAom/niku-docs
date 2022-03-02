@@ -53,7 +53,7 @@ const main = async () => {
                 const matchedGetSet = [...macroFile.matchAll(catchGetSet)]
 
                 if (!matchedGetSet.length)
-                    throw new Error(`Can't find Niku widget class in ${file}`)
+                    return
 
                 matchedGetSet.forEach(([, type, name, argument, code]) => {
                     if (!code || name.startsWith('_') || name === 'build')

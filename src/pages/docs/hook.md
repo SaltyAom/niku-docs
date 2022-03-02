@@ -81,3 +81,26 @@ To put it simply, it's a property that receive a callback function that recieve 
 The returned value will be used to style the widget.
 
 The naming convention is that any property start with `use` is a hook, and it will always recieve a callback function with a value, the accepted value and a purpose is based on it's name.
+
+Hooks is not only limited to sub property setter is just a subset of hook, there's also more of convenient collection of functions like `useThemeSelector` which allows you to apply custom style in light/dark mode. 
+```dart
+n.Text("Title")
+  ..fontSize = 36
+  ..useThemeSelector(
+    context,
+    light: (v) => v..color = Colors.black,
+    dark: (v) => v..color = Colors.white,
+  );
+```
+
+## Proxy
+Proxy is an abstract class for mapping your setter and shortcut to a nested object property without using a hook.
+It handles creating object if doesn't exist and just write the property, that's it, no magic or expensive calculation.
+
+This allows you to write the direct setter without having `useTextStyle` or `useButtonStyle` hook.
+```dart
+n.Button(Text("Delete"))
+  ..onPressed = log
+  ..color = Colors.red
+  ..splash = Colors.red.withOpacity(.15);
+```
