@@ -81,3 +81,24 @@ n.Box()
     return n.Box()..bg = Colors.blue
   });
 ```
+
+## useThemeSelector
+Dark theme has become an essential part of app development, with Niku you can use `useThemeSelector` to handle the case.
+
+It provide you the same syntax as `useScreen` but for dark mode and handle the rest of for diffing and applyment for you. 
+```dart
+n.Box()
+  ..useThemeSelector(
+    light: (v) => v..bg = Colors.white,
+    dark: (v) => v..bg = Colors.grey.shade800,
+  );
+```
+
+## useDarkMode
+For more imperative approach of `useThemeSelector`, you can use `useDarkMode` which provide you with `isDark` like `useQuery` but for dark theme.
+
+```dart
+n.Box()
+  ..useDarkMode((v, isDark) => v
+    ..bg = isDark ? Colors.grey.shade800 : Colors.white);
+```
