@@ -176,11 +176,9 @@ import { Prism } from 'astro/components'
                 <p>Shorten your code, maintain your sanity. No more confusing complex basic pattern.</p>
             </div>
             <Prism class="flex-1 w-full" lang="dart" code={`n.TextFormField("Value")
-  ..useDecoration((v) => v
-    ..password
-    ..outlined
-    ..borderColor = Colors.blue
-  );
+  ..asPassword
+  ..outlined
+  ..borderColor = Colors.blue;
 
 n.Image.assets("assets/takodachi.png")
   ..cover
