@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  niku: 2.1.1
+  niku: 2.2.0
 ```
 
 Niku doesn't require any native side implementation, it just work out of the box.
