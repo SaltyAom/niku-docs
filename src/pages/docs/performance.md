@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/doc.astro
 prev: hook
-next: naming-convention
+next: use-query
 title: Performance
 ---
 ## Pseudo Constant

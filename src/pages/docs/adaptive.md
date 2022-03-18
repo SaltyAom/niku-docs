@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/doc.astro
-prev: use-query
+prev: use-transition
 next: styled-widget
 title: Adaptive
 ---

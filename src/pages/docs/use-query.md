@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/doc.astro
 prev: performance
-next: adaptive
+next: use-transition
 title: useQuery
 ---
 Niku have some utilities method which helps you in cross platform environment where you need to adapt your UI to adapt to screen size, dark mode and etc.
