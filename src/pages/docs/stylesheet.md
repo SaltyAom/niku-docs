@@ -16,10 +16,8 @@ class MyStyleSheet {
 
   static final roundedBox = n.Text("")
     ..center
-    ..useParent((v) => v
-      ..p = 24
-      ..rounded
-    );
+    ..p = 24
+    ..rounded
 
   static final withBg = (Color color) => n.Text("")
     ..useParent((v) => v..bg = color);

@@ -58,7 +58,7 @@ Both supports every platform
 
 #### Example
 - Styled Widget, [@see example section](https://pub.dev/packages/styled_widget)
-- Niku, [@see example on repo](https://github.com/SaltyAom/niku/tree/exp/heaven-and-earth/example/lib)
+- Niku, [@see example on repo](https://github.com/SaltyAom/niku/tree/main/example/lib)
 
 ## Side note
 Before settle down with which library to use, I highly recommended you to try [Styled Widget](https://pub.dev/packages/styled_widget) first, because both library try to assist you with just the same thing but if you don't usually need to handle styling of "others" widget much, you most likely wants to go with Styled Widget.

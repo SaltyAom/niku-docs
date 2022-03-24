@@ -47,12 +47,15 @@ You can use `useParent` hook which handle parent builder where widget transforma
 n.Text("Hi")
   ..fontSize = 18
   ..color = Colors.red
+  ..p = 20
   ..useParent((v) => v
-    ..p = 20
     ..bg = Colors.red
-    ..rounded
   )
+  ..rounded
 ```
+
+Some property is not presented in `Parent Proxy` because of name conflict.
+Imagine what would happens if `Button` which already has property of `bg` conflict with the parent builder `bg`. One would have to go away, so Niku decided to drop some parent builder with conflict and place it in Parent Builder.
 
 ## Custom Parent
 `Niku` parent builder has a lot of shorten property builder, but sometime it might doesn't have what you need, when that time come, you can use `useChild` hook to add a custom widget yourself.

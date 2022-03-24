@@ -44,7 +44,7 @@ import 'package:niku/niku.dart'; // <--- Import Niku library
 NikuText("Hello World")
   ..color = Colors.blue
   ..fontSize = 21
-  ..useParent((v) => v..p = 20)
+  ..p = 20
 ```
 
 Or even better readability with namespace:
@@ -55,10 +55,7 @@ import 'package:niku/namespace.dart' as n; // <--- Import namespace
 n.Text("Hello World")
   ..color = Colors.blue
   ..fontSize = 21
-  ..useParent((v) => v
-    ..p = 20
-    ..bg = Colors.red
-  )
+  ..p = 20
 ```
 
 As you might guess the code, instead of reading inside-out of traditional Flutter, Niku provides top-to-bottom to describe the styling, make it more predictable and straightforward.

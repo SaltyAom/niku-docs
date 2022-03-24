@@ -38,20 +38,22 @@ For example:
 Even with the `useScreen` predefined screen size's naming convention is also borrow from Tailwind.
 ```dart
 void useScreen(
-BuildContext context, {
-// > 568px
-T Function(T)? base,
-// 568 - 640px
-T Function(T)? xs,
-// 640 - 768px
-T Function(T)? sm,
-// 768 - 920px
-T Function(T)? md,
-// 920 - 1024px
-T Function(T)? lg,
-// > 1024px
-T Function(T)? xl,
-})
+  BuildContext context, 
+  {
+    // > 568px
+    T Function(T)? base,
+    // 568 - 640px
+    T Function(T)? xs,
+    // 640 - 768px
+    T Function(T)? sm,
+    // 768 - 920px
+    T Function(T)? md,
+    // 920 - 1024px
+    T Function(T)? lg,
+    // > 1024px
+    T Function(T)? xl,
+  },
+)
 ```
 
 However, Niku also trying to match to idiomatic Flutter and dart for example:
