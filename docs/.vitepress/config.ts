@@ -91,9 +91,70 @@ export default defineConfig({
                 ]
             },
             {
-                text: 'Widget',
+                text: 'Widgets',
                 collapsible: true,
-                items: []
+                items: [
+                    {
+                        "text": "Alert",
+                        "link": "/alert"
+                    },
+                    {
+                        "text": "Button",
+                        "link": "/button"
+                    },
+                    {
+                        "text": "Checkbox",
+                        "link": "/checkbox"
+                    },
+                    {
+                        "text": "Checkbox List Tile",
+                        "link": "/checkbox-list-tile"
+                    },
+                    {
+                        "text": "Column",
+                        "link": "/column"
+                    },
+                    {
+                        "text": "Dismissible",
+                        "link": "/dismissible"
+                    },
+                    {
+                        "text": "Dropdown Button",
+                        "link": "/dropdown-button"
+                    },
+                    {
+                        "text": "Dropdown Button Form Field",
+                        "link": "/dropdown-button-form-field"
+                    },
+                    {
+                        "text": "Grid View",
+                        "link": "/grid-view"
+                    },
+                    {
+                        "text": "Icon",
+                        "link": "/icon"
+                    },
+                    {
+                        "text": "Icon Button",
+                        "link": "/icon-button"
+                    },
+                    {
+                        "text": "Image",
+                        "link": "/image"
+                    },
+                    {
+                        "text": "List Tile",
+                        "link": "/list-tile"
+                    },
+                    {
+                        "text": "List View",
+                        "link": "/list-view"
+                    },
+                    // {
+                    //     "text": "",
+                    //     "link": "/"
+                    // },
+                ]
             }
         ],
         socialLinks: [
