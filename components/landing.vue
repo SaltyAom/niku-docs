@@ -177,7 +177,7 @@ pre
     ..outlined
     ..borderColor = Colors.blue;
 
-n.Image.assets("assets/takodachi.png")
+n.Image.assets("img/takodachi.png")
     ..cover
     ..useCircleProgress(
         color: Colors.blue
@@ -204,7 +204,7 @@ n.Image.assets("assets/takodachi.png")
                     {{
                         `n.Box()
     ..w = 50
-    ..h= 50
+    ..h = 50
     ..p = 10 // padding 
     ..bg = Colors.blue
     ..rounded = 8;`
