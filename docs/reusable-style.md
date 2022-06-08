@@ -45,7 +45,10 @@ n.Button("".n)
 
 // ✅ Or combine multiple style into 1 line with 'use'
 n.Button("".n)
-    ..use([ ButtonStyle.confirm]);
+    ..use([
+        ButtonStyle.confirm, 
+        ButtonStyle.large
+    ]);
 ```
 
 And when you need it to be more dynamic, you can also accept a parameters to the styling it.
