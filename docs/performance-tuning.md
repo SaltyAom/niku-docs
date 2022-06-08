@@ -60,7 +60,7 @@ n.On(
 );
 ```
 
-Because of dot cascade purpose, every Niku widget always allocate some memory even if it doesn’t get repaint, using NikuOn will prevent that memory allocation and only allocate when only the state is change.
+Because of cascade purpose, every Niku widget always allocate some memory even if it doesn’t get repaint, using NikuOn will prevent that memory allocation and only allocate when only the state is change.
 
 ## Drawback
 The only performance drawback is that it will compare state **everytime** the state is updated.

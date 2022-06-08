@@ -122,7 +122,7 @@ pre
                 </h2>
                 <h3 class="sub-title">
                     Compose Flutter UI from utilies Widget and extensions with
-                    <u>dot cascade</u>.
+                    <u>cascade notation</u>.
                 </h3>
                 <h3 class="sub-title">
                     Fluently developing without headache and Nested Hell.
@@ -196,7 +196,7 @@ n.Image.assets("takodachi.png")
                         maintain and nobody like that.
                     </p>
                     <p>
-                        With Niku, composing UI is simple, you use dot cascade
+                        With Niku, composing UI is simple, you use cascade notation
                         to compose both properties and parent.
                     </p>
                 </div>

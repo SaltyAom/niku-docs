@@ -8,7 +8,7 @@ export default defineConfig({
     lang: 'en-US',
     title: 'Niku',
     description:
-        'Compose Flutter UI from utilities Widget and extensions with dot cascade. Fluently developing without headache and Nested Hell.',
+        'Compose Flutter UI from utilities Widget and extensions with cascade notation. Fluently developing without headache and Nested Hell.',
     lastUpdated: true,
     head: [
         [
