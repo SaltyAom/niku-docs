@@ -177,7 +177,7 @@ pre
     ..outlined
     ..borderColor = Colors.blue;
 
-n.Image.assets("img/takodachi.png")
+n.Image.assets("takodachi.png")
     ..cover
     ..useCircleProgress(
         color: Colors.blue
