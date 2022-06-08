@@ -24,7 +24,7 @@ Niku provide you utilities to prevent a repaint.
 ## Freezed
 Simply add .freezed to expensive Widget which doesn’t required any change no matter what.
 ```dart
-n.Button("".)
+n.Button("".n)
     ..apply = ExpensiveStyle.button
     ..freezed;
 ```
@@ -36,7 +36,7 @@ Deps is stand for **dependencies**.
 Basically, you provide a state that might trigger a re-render to the widget.
 
 ```dart
-n.Button("".)
+n.Button("".n)
     ..apply = ExpensiveStyle.button
     ..deps = [
         color,
@@ -55,7 +55,7 @@ This is a custom widget which does the same job as on but will also prevent the 
 
 ```dart
 n.On(
-    n.Button("".)
+    n.Button("".n)
         ..apply = ExpensiveStyle.button
 );
 ```
