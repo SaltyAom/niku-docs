@@ -8,8 +8,8 @@ Because Flutter treat almost everythgin as a widget, mixing between an actual re
 
 Take a look at this:
 ```dart
-Padding(
-  padding: EdgeInsets.all(20),
+Container(
+  margin: EdgeInsets.all(20),
   child: Text(
     "Hello World",
     style: const TextStyle(
@@ -41,8 +41,6 @@ n.Text("Hello Niku")
   ..fontSize = 21
   ..m = 20; // margin
 ```
-
-#### Note: You can use margin instead of padding or vice-versa, because Flutter implementation of margin is actually padding under the hood. [@see Parent Styling](/widget-type.html#parent-styling) for more information
 
 As you might have guessed, Niku treat **property widget as property**, chaining it to read from top-to-bottom style.
 
