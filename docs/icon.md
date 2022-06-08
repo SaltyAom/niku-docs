@@ -2,6 +2,8 @@
 title: Icon
 ---
 # Icon
+![Icon demo](/widgets/icon.png)
+
 A representation of [Icon](https://material.io/design/iconography/system-icons.html).
 
 `NikuIcon` accepts all the props as same as [Icon](https://api.flutter.dev/flutter/widgets/Icon-class.html).

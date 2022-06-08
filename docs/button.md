@@ -2,7 +2,9 @@
 title: Button
 ---
 # Button
-A representation of [Button](https://material.io/components/buttons/flutter#toggle-button).
+![Button demo](/widgets/button.png)
+
+A representation of [Button](https://material.io/components/buttons).
 
 `NikuButton` accepts all the props as same as [Button](https://api.flutter.dev/flutter/material/TextButton-class.html).
 

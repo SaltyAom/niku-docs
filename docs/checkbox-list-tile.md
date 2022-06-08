@@ -2,6 +2,8 @@
 title: Checkbox List Tile
 ---
 # Checkbox List Tile
+![Checkbox List Tile demo](/widgets/checkbox-list-tile.png)
+
 A representation of [Checkbox](https://material.io/components/checkboxes).
 
 `NikuCheckboxListTile` accepts all the props as same as [CheckboxListTile](https://api.flutter.dev/flutter/material/Checkbox-class.html).

@@ -2,9 +2,11 @@
 title: List View
 ---
 # List Tile
+![List View demo](/widgets/list-view.png)
+
 A representation of [Lists](https://material.io/components/lists).
 
-`NikuListView` accepts all the props as same as [List](https://api.flutter.dev/flutter/material/ListView-class.html).
+`NikuListView` accepts all the props as same as [ListView](https://api.flutter.dev/flutter/material/ListView-class.html).
 
 ```dart
 // Using namespace

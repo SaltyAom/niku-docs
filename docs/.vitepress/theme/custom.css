@@ -1,0 +1,15 @@
+:root {
+    --vp-c-brand: #ef5350;
+    --vp-c-brand-light: #ef5350;
+    --vp-c-brand-dark: #eb5755;
+}
+
+.dark {
+    --vp-c-bg: #1f2937;
+    --vp-c-bg-alt: #111827;
+}
+
+.VPNavBar > .container > .content {
+    background-color: var(--vp-c-bg);
+    border-bottom: 1px solid rgba(0,0,0,.1)
+}

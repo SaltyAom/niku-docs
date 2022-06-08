@@ -2,6 +2,8 @@
 title: Dropdown Button
 ---
 # Dropdown Button
+![Dropdown Button demo](/widgets/dropdown-button.png)
+
 A representation of [Menu](https://material.io/components/menus).
 
 `NikuDropDownButton` accepts all the props as same as [DropDownButton](https://api.flutter.dev/flutter/material/DropdownButton-class.html).

@@ -2,6 +2,8 @@
 title: Icon Button
 ---
 # Icon Button
+![Icon Button demo](/widgets/icon-button.png)
+
 A representation of [Icon Button](https://material.io/develop/web/components/buttons/icon-buttons).
 
 `NikuIconButton` accepts all the props as same as [IconButton](https://api.flutter.dev/material/widgets/IconButton-class.html).
@@ -38,7 +40,6 @@ Niku can accepts 2 factory method.
 | Factory Method        | Equivalent Widget   |
 |-----------------------|---------------------|
 | n.IconButton          | [IconButton](https://api.flutter.dev/flutter/material/TextButton-class.html) |
-|-----------------------|---------------------|
 | n.IconButton.widget   | - |
 
 

@@ -25,11 +25,8 @@ n.Image.assets("/assets/images/yae.jpg")
 ```dart
 n.Image.assets("assets/takodachi.png")
     ..cover
-    ..circleProgress(
-        (progress) => CircularProgressIndicator(
-            value: progress,
-            color: Colors.white,
-        ),
+    ..useCircleProgress(
+        color: Colors.blue,
     );
 ```
 

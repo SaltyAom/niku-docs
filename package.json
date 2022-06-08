@@ -12,6 +12,13 @@
     "serve": "vitepress serve docs"
   },
   "devDependencies": {
+    "@types/node": "^17.0.41",
+    "sass": "^1.52.2",
+    "vite-plugin-windicss": "^1.8.4",
     "vitepress": "1.0.0-alpha.1"
+  },
+  "dependencies": {
+    "prismjs": "^1.28.0",
+    "vue-prism-component": "^2.0.0"
   }
 }

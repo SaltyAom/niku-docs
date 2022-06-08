@@ -2,6 +2,8 @@
 title: Checkbox
 ---
 # Checkbox
+![Checkbox demo](/widgets/checkbox.png)
+
 A representation of [Checkbox](https://material.io/components/checkboxes).
 
 `NikuCheckbox` accepts all the props as same as [Checkbox](https://api.flutter.dev/flutter/material/Checkbox-class.html).

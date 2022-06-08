@@ -4,14 +4,14 @@ title: Column
 # Column
 A representation of Y-axis layout.
 
-`NikuColumn` accepts all the props as same as [Column](https://api.flutter.dev/flutter/material/Column-class.html).
+`NikuColumn` accepts all the props as same as [Column](https://api.flutter.dev/flutter/widgets/Column-class.html).
 
 ```dart
 // Using namespace
 n.Column([]);
 
 // Using Niku Prefix
-NikuCheckbox([]);
+NikuColumn([]);
 ```
 
 ## Example Usage
@@ -36,7 +36,7 @@ Column([
     ..hFull;
 ```
 
-### Make column scrollable
+### Scrollable
 ```dart
 Column([
     "This should be".n,

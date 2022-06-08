@@ -2,6 +2,8 @@
 title: Alert
 ---
 # Alert
+![Alert demo](/widgets/alert.png)
+
 A representation of [Dialog](https://material.io/components/dialogs).
 
 `NikuAlert` accepts all the props as same as [AlertDialog](https://api.flutter.dev/flutter/material/AlertDialog-class.html).

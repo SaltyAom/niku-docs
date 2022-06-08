@@ -2,6 +2,8 @@
 title: Dismissible
 ---
 # Dismissible
+![Dismissible demo](/widgets/dismissible.png)
+
 A representation of [List](https://material.io/components/lists).
 
 `NikuDismissible` accepts all the props as same as [Dismissible](https://api.flutter.dev/flutter/widgets/Dismissible-class.html).
