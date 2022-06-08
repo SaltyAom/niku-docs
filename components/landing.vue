@@ -92,7 +92,7 @@ pre
             @apply text-3xl font-semibold text-gray-800
             @apply dark:text-gray-100
 
-#summary
+#summarize
     @apply flex flex-col justify-center items-center gap-4 w-full max-w-5xl text-gray-500 text-xl rounded-2xl bg-white md:p-8
     @apply dark:bg-gray-700 dark:text-gray-300
 
