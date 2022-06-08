@@ -258,7 +258,7 @@ export default defineConfig({
             { icon: 'github', link: 'https://github.com/saltyaom/niku' }
         ],
         editLink: {
-            repo: 'saltyaom/niku-doc',
+            repo: 'saltyaom/niku-docs',
             dir: 'docs',
             text: 'Edit this page on GitHub'
         }

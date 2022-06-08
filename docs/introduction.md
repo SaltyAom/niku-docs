@@ -39,8 +39,10 @@ import 'package:niku/namespace.dart' as n;
 n.Text("Hello Niku")
   ..color = Colors.blue
   ..fontSize = 21
-  ..p = 20;
+  ..m = 20; // margin
 ```
+
+#### Note: You can use margin instead of padding or vice-versa, because Flutter implementation of margin is actually padding under the hood.
 
 As you might have guessed, Niku treat **property widget as property**, chaining it to read from top-to-bottom style.
 
@@ -63,15 +65,15 @@ n.Text(
         color: Colors.blue,
     )
 )
-    ..pt = 20   // Padding top 
-    ..px = 8;   // Padding x-axis
+    ..mt = 20   // Padding top 
+    ..mx = 8;   // Padding x-axis
 
 // ✅ This is also fine
 n.Text("Mixed")
     ..fontSize = 21
     ..color = Colors.blue
-    ..pt = 20
-    ..px = 8;
+    ..mt = 20
+    ..mx = 8;
 ```
 
 ## Adaptive property
