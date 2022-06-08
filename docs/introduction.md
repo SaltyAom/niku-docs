@@ -42,7 +42,7 @@ n.Text("Hello Niku")
   ..m = 20; // margin
 ```
 
-#### Note: You can use margin instead of padding or vice-versa, because Flutter implementation of margin is actually padding under the hood. [@see Parent Styling](https://niku.saltyaom.com/widget-type.html#parent-styling) for more information
+#### Note: You can use margin instead of padding or vice-versa, because Flutter implementation of margin is actually padding under the hood. [@see Parent Styling](/widget-type.html#parent-styling) for more information
 
 As you might have guessed, Niku treat **property widget as property**, chaining it to read from top-to-bottom style.
 
