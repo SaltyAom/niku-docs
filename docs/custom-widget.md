@@ -35,7 +35,7 @@ class MyFitBox extends StatelessWidget with
     Widget? child;
     BoxFit? fit;
 
-    Widget get widget => FittedBox(
+    widget(context) => FittedBox(
         chjild: child,
         fit: fit,
     );

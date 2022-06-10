@@ -2,9 +2,9 @@
 title: Introduction
 ---
 # Introduction
-Structuring Flutter widget is too complex, verbose.
+Sometime, structuring Flutter widget is a bit too complex, and verbose.
 
-Because Flutter treat almost everythgin as a widget, mixing between an actual representation component and styling property as a widget. Things get confusing very fast.
+Because Flutter treat almost everything as a widget, mixing between an actual representation component and styling property as a widget. Things get confusing very fast.
 
 Take a look at this:
 ```dart
