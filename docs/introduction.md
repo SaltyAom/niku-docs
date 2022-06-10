@@ -8,8 +8,8 @@ Because Flutter treat almost everything as a widget, mixing between an actual re
 
 Take a look at this:
 ```dart
-Container(
-  margin: EdgeInsets.all(20),
+Padding(
+  padding: EdgeInsets.all(20),
   child: Text(
     "Hello World",
     style: const TextStyle(
