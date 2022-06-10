@@ -26,7 +26,7 @@ Padding(
 ---
 Mixing UI components with and property looks very confusing as it leads to:
 - Too much widget, knowns as "**Nested Hell**"
-- Unable to focused which 
+- Unable to focused main part of the UI
 - Mixing business logic with UI Representation
 
 Things get confusing very quick, adding more and more widgets and styling.
