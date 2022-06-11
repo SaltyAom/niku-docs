@@ -105,6 +105,10 @@ export default defineConfig({
                         text: 'Velocity X',
                         link: '/velocity-x'
                     },
+                    {
+                        text: 'Styled Widget',
+                        link: '/styled-widget'
+                    },
                 ]
             },
             {
