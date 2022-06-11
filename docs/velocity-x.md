@@ -52,7 +52,7 @@ The above code would be written like this in Niku:
         ..rounded = 12
         ..bg = Colors.red
         ..shadow = BoxShadow(color: Colors.black)
-        ..wFactor = 50
+        ..wFactor = .5
         ..center,
     );
 
@@ -65,7 +65,7 @@ The above code would be written like this in Niku:
     ..n.rounded = 12
     ..n.bg = Colors.red
     ..n.shadow = BoxShadow(color: Colors.black)
-    ..wFactor = 50
+    ..wFactor = .5
     ..n.center;
 ```
 
@@ -83,7 +83,7 @@ n.Button("Increment".n)
     ..w500
     ..color = color
     ..bg = Colors.blue.shade50
-    ..splash = Colors.blue.shade100,
+    ..splash = Colors.blue.shade100
     ..rounded = 4
     ..px = 24
     ..py = 12;
