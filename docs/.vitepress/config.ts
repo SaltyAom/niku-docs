@@ -98,6 +98,16 @@ export default defineConfig({
                 ]
             },
             {
+                text: 'Comparison',
+                collapsible: true,
+                items: [
+                    {
+                        text: 'Velocity X',
+                        link: '/velocity-x'
+                    },
+                ]
+            },
+            {
                 text: 'Hooks',
                 collapsible: true,
                 items: [
