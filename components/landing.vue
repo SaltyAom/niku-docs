@@ -152,7 +152,7 @@ pre
                         `"Hello Niku".n
     ..bold
     ..color = Colors.blue
-    ..fontSize = 24`
+    ..fontSize = 24;`
                     }}
                 </Prism>
             </section>
