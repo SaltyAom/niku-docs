@@ -179,8 +179,9 @@ pre
 
 n.Image.assets("takodachi.png")
     ..cover
+    ..rounded = 8
     ..useCircleProgress(
-        color: Colors.blue
+        color: Colors.blue,
     );
 );`
                     }}
