@@ -21,7 +21,7 @@ NikuRichText(
 ## Example Usage
 ```dart
 n.RichText(
-    n.TextSpan("Rich Text: ")
+    "Rich Text: ".n.span
         ..color = Colors.black
         ..children = [
             n.TextSpan("with "),

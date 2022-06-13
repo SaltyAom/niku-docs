@@ -11,7 +11,7 @@ A representation of [Imagery](https://material.io/design/communication/imagery.h
 n.Image.network("https://user-images.githubusercontent.com/35027979/172061535-4fc5b0b7-4c78-44ee-9549-40ada89ced74.gif")
 
 // Using Niku Prefix
-NikuIcon.network("https://user-images.githubusercontent.com/35027979/172061535-4fc5b0b7-4c78-44ee-9549-40ada89ced74.gif)
+NikuImage.network("https://user-images.githubusercontent.com/35027979/172061535-4fc5b0b7-4c78-44ee-9549-40ada89ced74.gif)
 ```
 
 ## Example Usage
