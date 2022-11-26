@@ -281,7 +281,7 @@ dependencies:
     flutter: 
         sdk: flutter 
     
-    niku: 2.3.1`
+    niku: 2.3.3`
                     }}
                 </Prism>
             </section>
