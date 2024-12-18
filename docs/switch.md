@@ -30,7 +30,7 @@ n.Switch.cupertino(state)
 
 ### Using adaptive
 ```dart
-n.Switch.adaptive()
+n.Switch.adaptive(state)
     ..activeColor = Colors.amber
     ..onChanged = updateState;
 ```

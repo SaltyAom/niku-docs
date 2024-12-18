@@ -1,5 +1,6 @@
 {
   "name": "niku-doc-vite",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,13 +13,12 @@
     "serve": "vitepress serve docs"
   },
   "devDependencies": {
-    "@types/node": "^17.0.41",
-    "sass": "^1.52.2",
-    "vite-plugin-windicss": "^1.8.4",
-    "vitepress": "1.0.0-alpha.1"
+    "@types/node": "^22.10.2",
+    "sass": "^1.83.0",
+    "vite-plugin-windicss": "^1.9.4",
+    "vitepress": "1.5.0"
   },
   "dependencies": {
-    "prismjs": "^1.28.0",
-    "vue-prism-component": "^2.0.0"
+    "vue": "^3.5.13"
   }
 }
