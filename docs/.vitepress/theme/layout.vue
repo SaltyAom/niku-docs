@@ -42,7 +42,7 @@ provide("toggle-appearance", async ({ clientX: x, clientY: y }: MouseEvent) => {
 	<link
 		rel="preload"
 		as="image"
-		href="/assets/shigure-ui.webp"
+		href="/assets/moechakkafire.webp"
 		fetchpriority="low"
 	/>
 	<DefaultTheme.Layout />
