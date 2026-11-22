@@ -75,7 +75,7 @@ dependencies:
     flutter:
         sdk: flutter
 
-    niku: 2.4.2
+    niku: 2.4.3
 ```
 
 </template>
